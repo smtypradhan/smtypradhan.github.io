@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Data Science Projects</title>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/tailwind.css">    
+    
+</head>
+
+<body class="bg-white">
+    <!-- Header with Microsoft-inspired styling -->
+    <header class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <nav>
+                    <ul class="flex space-x-6">
+                        <li><a href="home.html" class="text-ms-gray hover:text-ms-black">Go back</a></li>
+                        <li><a href="merry-go-round-of-life.html" class="text-ms-gray hover:text-ms-black">Merry-go-round of Life</a></li>
+                        <li><a href="https://medium.com/@smty.pradhan" class="text-ms-gray hover:text-ms-black">Read my blogs</a></li>
+                    </ul>
+                </nav>
+                <!-- Animation -->
+                <div class="flex items-center space-x-4">
+                    <!-- Dark Mode Toggle Button --> 
+                    <button class="toggle-switch" id="darkToggle">
+                        <div class="toggle-slider"></div>
+                    </button>
+                    <lottie-player
+                        src="https://assets4.lottiefiles.com/private_files/lf30_jmgekfqg.json"
+                        background="transparent"
+                        speed="1"
+                        style="width: 50px; height: 50px;"
+                        loop autoplay>
+                    </lottie-player>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with light background and black/grey text -->
+    <section class="container mx-auto px-4 pt-24 pb-12 section-fade">
+        <div class="flex flex-col md:flex-row items-center md:items-start justify-between space-y-6 md:space-y-0">
+            <div class="max-w-4xl">
+                <h1 class="text-3xl font-bold tracking-tight sm:text-3xl mb-4 text-ms-black">
+                    Data-Driven Solutions for Real Business Impact
+                </h1>
+                <h2 class="text-lg italic font-medium mb-6 text-ms-gray">
+                    Bridging analytics and strategy with Python, SQL, R, and Machine Learning techniques.
+                </h2>
+                <p class="text-base leading-relaxed text-gray-500">
+                    I help businesses unlock insights from data and turn them into action. With an understanding of business needs 
+                    and fluency in data science tools, I design end-to-end solutions that solve complex problems and deliver results.<br>
+                    Explore my portfolio to see how I bring clarity to chaos through data.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Grid -->
+    <section id="projects" class="py-12 bg-ms-light-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project Card 1 -->
+                <div class="project-card bg-white rounded-lg shadow overflow-hidden transition-all duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="home/icons/EDA.png" alt="Bank Risk Assessment" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Exploratory Data Analysis for Bank Risk Assessment</h3>
+                        <p class="text-gray-600 mb-4">Exploratory Data Analysis for banking data to understand the driving factors or driver variables behind loan defaults.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-ms-gray">Python, Pandas, Data Visualization</span>
+                            <a href="https://github.com/smtypradhan/Exploratory-Data-Analysis-for-Bank-Data-with-Python/blob/main/EDA%20Credit%20-%20Bank%20Case%20Study.ipynb" target="_blank" class="text-ms-blue hover:underline flex items-center">
+                                <span>View Project</span>
+                                <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card bg-white rounded-lg shadow overflow-hidden transition-all duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="home/icons/retail.png" alt="Late Payments and Customer Segmentation" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Forecasting Late Payments and Customer Segmentation</h3>
+                        <p class="text-gray-600 mb-4">Exploratory Data Analysis to mitigate late payment issues and model building with the 3 main customer segments.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-ms-gray">Clustering, Forecasting</span>
+                            <a href="https://github.com/smtypradhan/Case-study-of-Retail-and-Ecommerce-Data/blob/main/E-Commerce%20and%20Retail%20-%20%20Case%20Study%20Final.ipynb" target="_blank" class="text-ms-blue hover:underline flex items-center">
+                                <span>View Project</span>
+                                <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card bg-white rounded-lg shadow overflow-hidden transition-all duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="home/icons/sql.png" alt="Movie Recommendation" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Movie Recommendation using SQL</h3>
+                        <p class="text-gray-600 mb-4">Data analysis of IMDB data for Movie Recommendation using SQL.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-ms-gray">SQL, Database Analysis</span>
+                            <a href="https://github.com/smtypradhan/IMDB-Movie-Recommendation-using-SQL/blob/main/IMDB%2Bquestion-answers.sql" target="_blank" class="text-ms-blue hover:underline flex items-center">
+                                <span>View Project</span>
+                                <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="project-card bg-white rounded-lg shadow overflow-hidden transition-all duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="home/icons/leadscore.png" alt="Scoring Leads" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Regression Model Building for Scoring Leads</h3>
+                        <p class="text-gray-600 mb-4">Improving conversion from 30% to 92% using ML Techniques. Developed a logistic regression model for lead scoring.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-ms-gray">Machine Learning, Regression</span>
+                            <a href="https://github.com/smtypradhan/Case-Study-for-Lead-Scoring-using-ML/blob/main/Lead_Scoring_Case_Study.ipynb" target="_blank" class="text-ms-blue hover:underline flex items-center">
+                                <span>View Project</span>
+                                <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="project-card bg-white rounded-lg shadow overflow-hidden transition-all duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="home/icons/worldhappiness.png" alt="World Happiness" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">World Happiness Data Analysis using R</h3>
+                        <p class="text-gray-600 mb-4">A Project on World Happiness Report and Introduction to R Programming.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-ms-gray">R Programming, Data Analysis</span>
+                            <a href="https://github.com/smtypradhan/World-Happiness-Data-Analysis-using-R/blob/master/Project%20World%20Happiness%20Report.R" target="_blank" class="text-ms-blue hover:underline flex items-center">
+                                <span>View Project</span>
+                                <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 6 -->
+                <div class="project-card bg-white rounded-lg shadow overflow-hidden transition-all duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="home/icons/100days.jpg" alt="100 Days of Python" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">100 Projects Bootcamp on Python</h3>
+                        <p class="text-gray-600 mb-4">Projects describing various tools and techniques, covering different types of programs developed.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-ms-gray">Python, Programming</span>
+                            <a href="https://github.com/smtypradhan/100-Days-of-Python" target="_blank" class="text-ms-blue hover:underline flex items-center">
+                                <span>View Project</span>
+                                <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="py-12 bg-ms-light-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-8 text-center">My Approach</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded shadow-lg">
+                    <div class="h-12 w-12 bg-ms-blue rounded-full flex items-center justify-center text-white mb-4">
+                        <i class="fas fa-lightbulb text-xl"></i>
+                    </div>
+                    <h3 class="font-medium text-lg mb-2 text-ms-black dark:text-black">Business Understanding</h3>
+                    <p class="text-gray-600 dark:text-gray-600">I start by deeply understanding the business context and objectives before diving into the data.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded shadow-lg">
+                    <div class="h-12 w-12 bg-ms-blue rounded-full flex items-center justify-center text-white mb-4">
+                        <i class="fas fa-search text-xl"></i>
+                    </div>
+                    <h3 class="font-medium text-lg mb-2 text-ms-black dark:text-black">Data Exploration</h3>
+                    <p class="text-gray-600 dark:text-gray-600">Rigorous exploratory analysis to uncover patterns and insights that drive decision-making.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded shadow-lg">
+                    <div class="h-12 w-12 bg-ms-blue rounded-full flex items-center justify-center text-white mb-4">
+                        <i class="fas fa-cogs text-xl"></i>
+                    </div>
+                    <h3 class="font-medium text-lg mb-2 text-ms-black dark:text-black">Technical Excellence</h3>
+                    <p class="text-gray-600 dark:text-gray-600">Applying appropriate statistical and machine learning techniques to solve complex problems.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded shadow-lg">
+                    <div class="h-12 w-12 bg-ms-blue rounded-full flex items-center justify-center text-white mb-4">
+                        <i class="fas fa-chart-line text-xl"></i>
+                    </div>
+                    <h3 class="font-medium text-lg mb-2 text-ms-black dark:text-black">Impact Measurement</h3>
+                    <p class="text-gray-600 dark:text-gray-600">Focus on quantifiable business outcomes and measuring the impact of data solutions.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded shadow-lg">
+                    <div class="h-12 w-12 bg-ms-blue rounded-full flex items-center justify-center text-white mb-4">
+                        <i class="fas fa-comments text-xl"></i>
+                    </div>
+                    <h3 class="font-medium text-lg mb-2 text-ms-black dark:text-black">Clear Communication</h3>
+                    <p class="text-gray-600 dark:text-gray-600">Translating complex findings into actionable recommendations for stakeholders.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded shadow-lg">
+                    <div class="h-12 w-12 bg-ms-blue rounded-full flex items-center justify-center text-white mb-4">
+                        <i class="fas fa-sync-alt text-xl"></i>
+                    </div>
+                    <h3 class="font-medium text-lg mb-2 text-ms-black dark:text-black">Continuous Learning</h3>
+                    <p class="text-gray-600 dark:text-gray-600">Staying current with the latest tools and techniques in the rapidly evolving field of data science.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Skills Section -->
+    <section id="skills" class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-8 text-center">Technical Expertise</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Skills Column 1 -->
+                <div>
+                    <h3 class="text-lg font-medium text-ms-darkgray mb-4">Programming & Tools</h3>
+                    <div class="space-y-4">
+                        <div class="bg-ms-light-gray p-4 rounded">
+                            <h4 class="font-medium mb-2 flex items-center">
+                                <i class="fab fa-python mr-2 text-ms-blue"></i>
+                                Python
+                            </h4>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-ms-blue h-2 rounded-full w-11/12"></div>
+                            </div>
+                            <p class="mt-2 text-sm text-gray-600">Data analysis, machine learning, automation</p>
+                        </div>
+                        
+                        <div class="bg-ms-light-gray p-4 rounded">
+                            <h4 class="font-medium mb-2 flex items-center">
+                                <i class="fas fa-database mr-2 text-ms-blue"></i>
+                                SQL
+                            </h4>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-ms-blue h-2 rounded-full w-10/12"></div>
+                            </div>
+                            <p class="mt-2 text-sm text-gray-600">Database management, complex queries, data modeling</p>
+                        </div>
+                        
+                        <div class="bg-ms-light-gray p-4 rounded">
+                            <h4 class="font-medium mb-2 flex items-center">
+                                <i class="fas fa-chart-line mr-2 text-ms-blue"></i>
+                                R Programming
+                            </h4>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-ms-blue h-2 rounded-full w-9/12"></div>
+                            </div>
+                            <p class="mt-2 text-sm text-gray-600">Statistical analysis, visualization, reporting</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Skills Column 2 -->
+                <div>
+                    <h3 class="text-lg font-medium text-ms-darkgray mb-4">Data Science & Analytics</h3>
+                    <div class="space-y-4">
+                        <div class="bg-ms-light-gray p-4 rounded">
+                            <h4 class="font-medium mb-2 flex items-center">
+                                <i class="fas fa-brain mr-2 text-ms-blue"></i>
+                                Machine Learning
+                            </h4>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-ms-blue h-2 rounded-full w-10/12"></div>
+                            </div>
+                            <p class="mt-2 text-sm text-gray-600">Regression, classification, clustering algorithms</p>
+                        </div>
+                        
+                        <div class="bg-ms-light-gray p-4 rounded">
+                            <h4 class="font-medium mb-2 flex items-center">
+                                <i class="fas fa-search mr-2 text-ms-blue"></i>
+                                Exploratory Data Analysis
+                            </h4>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-ms-blue h-2 rounded-full w-11/12"></div>
+                            </div>
+                            <p class="mt-2 text-sm text-gray-600">Pattern identification, data cleaning, visualization</p>
+                        </div>
+                        
+                        <div class="bg-ms-light-gray p-4 rounded">
+                            <h4 class="font-medium mb-2 flex items-center">
+                                <i class="fas fa-project-diagram mr-2 text-ms-blue"></i>
+                                Tableau
+                            </h4>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-ms-blue h-2 rounded-full w-8/12"></div>
+                            </div>
+                            <p class="mt-2 text-sm text-gray-600">Data visualisation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Connection CTA -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Connect With My Work</h2>
+            <p class="max-w-2xl mx-auto text-gray-600 mb-8">
+                All projects are connected to my GitHub repositories. Follow me to stay updated with my latest work and contributions.
+            </p>
+            <a href="https://github.com/smtypradhan" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-ms-gray hover:bg-ms-darkblue transition-colors duration-300">
+                <i class="fab fa-github mr-2"></i>
+                Visit My GitHub Profile
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer (preserved as requested) -->
+    <footer>
+        <div class="footer-content">
+            <ul class="footer-links">
+                <li><a href="home.html">Go back to Home</a></li>
+                <li><a href="merry-go-round-of-life.html">Merry-go-round of Life</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+            </ul>
+        </div>
+    </footer>
+
+  <!-- Include external JavaScript files -->
+    <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/darkmode.js"></script>
+    <script src="assets/js/collab-swiper.js"></script>
+    <script src="assets/js/animation.js"></script>
+
+</body>
+</html>

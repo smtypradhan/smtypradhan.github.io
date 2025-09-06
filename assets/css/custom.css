@@ -1,0 +1,237 @@
+/* ===========================================
+   BASE STYLES & GLOBAL SETTINGS
+   =========================================== */
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Global smooth transitions for theme switching */
+*,
+*::before,
+*::after {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ===========================================
+   INTERACTIVE CARDS & HOVER EFFECTS
+   =========================================== */
+
+.project-card:hover,
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ===========================================
+   CAROUSEL COMPONENT
+   =========================================== */
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 1.2s ease;
+    padding: 4px;
+}
+
+/* Responsive carousel items */
+.carousel-item {
+    flex: 0 0 100%;
+    padding: 4px;
+}
+
+@media (min-width: 640px)  { .carousel-item { flex: 0 0 50%; } }
+@media (min-width: 768px)  { .carousel-item { flex: 0 0 33.333%; } }
+@media (min-width: 1024px) { .carousel-item { flex: 0 0 16.666%; } }
+
+/* Carousel navigation controls */
+.carousel-control {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+.carousel-control:hover {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.carousel-control.prev { left: 10px; }
+.carousel-control.next { right: 10px; }
+
+.carousel-control i {
+    font-size: 16px;
+    color: #374151;
+}
+
+/* ===========================================
+   DARK MODE TOGGLE SWITCHES
+   =========================================== */
+
+/* Animated sliding toggle switch */
+.toggle-switch {
+    width: 44px;
+    height: 22px;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    border: none;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.toggle-switch:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.toggle-slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.toggle-slider::before {
+    content: '☀️';
+    transition: all 0.4s ease;
+}
+
+/* Alternative circular icon toggle */
+.icon-toggle {
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: 2px solid #e5e7eb;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.icon-toggle:hover {
+    transform: rotate(180deg) scale(1.1);
+    border-color: #3b82f6;
+}
+
+/* ===========================================
+   DARK MODE STYLES
+   =========================================== */
+
+body.dark {
+    background-color: #121a28;
+    color: white;
+}
+
+/* Dark mode text and background overrides */
+body.dark a { color: #60a5fa; }
+body.dark .text-gray-800 { color: #f3f4f6; }
+body.dark .text-gray-600 { color: #cbd5e1; }
+body.dark .bg-gray-100 { background-color: #334155; }
+body.dark .bg-blue-100 { background-color: #3b82f6; color: #e0f2fe; }
+body.dark .bg-purple-100 { background-color: #8b5cf6; color: #f3e8ff; }
+
+/* Dark mode toggle switch styles */
+body.dark .toggle-switch {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+body.dark .toggle-slider {
+    transform: translateX(22px);
+}
+
+body.dark .toggle-slider::before {
+    content: '🌙';
+}
+
+/* Dark mode icon toggle */
+body.dark .icon-toggle {
+    border-color: #4b5563;
+}
+
+body.dark .icon-toggle:hover {
+    border-color: #60a5fa;
+}
+
+/* Dark mode carousel controls */
+body.dark .carousel-control {
+    background-color: rgba(55, 65, 81, 0.9);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark .carousel-control:hover {
+    background-color: rgba(55, 65, 81, 1);
+}
+
+body.dark .carousel-control i {
+    color: #f3f4f6;
+}
+
+/* Dark mode indicators */
+body.dark .indicator {
+    background-color: #4b5563;
+}
+
+body.dark .indicator.active {
+    background-color: #9ca3af;
+}
+
+/* ===========================================
+   ANIMATIONS & KEYFRAMES
+   =========================================== */
+
+/* Fade in animation for sections */
+.section-fade {
+    opacity: 1;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Theme change animation (optional) */
+.theme-changing {
+    animation: themeChange 0.3s ease;
+}
+
+@keyframes themeChange {
+    0% { opacity: 1; }
+    50% { opacity: 0.95; }
+    100% { opacity: 1; }
+}
