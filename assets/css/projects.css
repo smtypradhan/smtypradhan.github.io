@@ -1,0 +1,65 @@
+/* Smooth fade-in effect for sections */
+.section-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.section-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Project card hover animation */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+  background-color: #1a202c;
+  color: #f7fafc;
+}
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p {
+  color: #f7fafc;
+}
+body.dark-mode .project-card {
+  background-color: #2d3748;
+  color: #edf2f7;
+}
+body.dark-mode .bg-ms-light-gray {
+  background-color: #2d3748;
+}
+
+/* Toggle switch button */
+.toggle-switch {
+  width: 50px;
+  height: 24px;
+  border-radius: 9999px;
+  background: #cbd5e0;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.toggle-switch.active {
+  background: #3182ce;
+}
+.toggle-slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.3s ease;
+}
+.toggle-switch.active .toggle-slider {
+  transform: translateX(26px);
+}
