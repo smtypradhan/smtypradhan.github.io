@@ -7,10 +7,9 @@
     <!-- Google Fonts - Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/projects.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/tailwind.css">  
-    <link rel="stylesheet" href="assets/css/custom.css">  
+    <link rel="stylesheet" href="assets/css/tailwind.css">    
     
 </head>
 
@@ -26,20 +25,6 @@
                         <li><a href="https://medium.com/@smty.pradhan" class="text-ms-gray hover:text-ms-black">Read my blogs</a></li>
                     </ul>
                 </nav>
-                <!-- Animation -->
-                <div class="flex items-center space-x-4">
-                    <!-- Dark Mode Toggle Button --> 
-                    <button class="toggle-switch" id="darkToggle">
-                        <div class="toggle-slider"></div>
-                    </button>
-                    <lottie-player
-                        src="https://assets4.lottiefiles.com/private_files/lf30_jmgekfqg.json"
-                        background="transparent"
-                        speed="1"
-                        style="width: 50px; height: 50px;"
-                        loop autoplay>
-                    </lottie-player>
-                </div>
             </div>
         </div>
     </header>
@@ -48,17 +33,27 @@
     <section class="container mx-auto px-4 pt-24 pb-12 section-fade">
         <div class="flex flex-col md:flex-row items-center md:items-start justify-between space-y-6 md:space-y-0">
             <div class="max-w-4xl">
-                <h1 class="text-3xl font-bold tracking-tight sm:text-3xl mb-4 text-ms-black ">
+                <h1 class="text-3xl font-bold tracking-tight sm:text-3xl mb-4 text-ms-black">
                     Data-Driven Solutions for Real Business Impact
                 </h1>
                 <h2 class="text-lg italic font-medium mb-6 text-ms-gray">
-                    Bridging analytics and strategy with Python, SQL, R, and Machine Learning techniques.
+                    Bridging analytics and strategy with a focus on measurable outcomes.
                 </h2>
                 <p class="text-base leading-relaxed text-gray-500">
-                    I help businesses unlock insights from data and turn them into action. With an understanding of business needs 
-                    and fluency in data science tools, I design end-to-end solutions that solve complex problems and deliver results.<br>
-                    Explore my portfolio to see how I bring clarity to chaos through data.
+                    Through my projects, I’ve transformed raw data into clear insights and actionable strategies. Each project highlights end-to-end problem solving—from understanding business challenges to building solutions that deliver tangible results.
+Dive into my portfolio to see how these projects bring clarity to complexity and impact to decision-making.
                 </p>
+                <!-- Impact metrics -->
+                <div class="grid grid-cols-3 gap-6 mt-8">
+                    <div class="text-center">
+                        <div class="impact-number">6+</div>
+                        <div class="text-sm text-gray-500">Projects Completed</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="impact-number">3</div>
+                        <div class="text-sm text-gray-500">Business Domains</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -88,11 +83,7 @@
                 <!-- Project Card 2 -->
                 <div class="project-card bg-white rounded-lg shadow overflow-hidden transition-all duration-300">
                     <div class="h-48 bg-gray-200 flex items-center justify-center">
-<<<<<<< Updated upstream
-                        <img src="assetts/icons/retail.png" alt="Late Payments and Customer Segmentation" class="h-full w-full object-cover">
-=======
                         <img src="assets/icons/retail.png" alt="Late Payments and Customer Segmentation" class="h-full w-full object-cover">
->>>>>>> Stashed changes
                     </div>
                     <div class="p-6">
                         <h3 class="text-lg font-semibold text-gray-800 mb-2">Forecasting Late Payments and Customer Segmentation</h3>
@@ -182,205 +173,112 @@
         </div>
     </section>
 
-    <!-- Approach Section -->
-    <section class="py-12 bg-ms-light-gray">
+    <!-- Redesigned Process Section -->
+    <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-8 text-center">My Approach</h2>
+            <h2 class="text-3xl font-bold text-center mb-4" style="color: var(--ms-black);">How I Deliver Value</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                My proven methodology transforms complex business challenges into data-driven solutions that deliver measurable impact.
+            </p>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded shadow-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="process-step">
                     <div class="h-12 w-12 bg-ms-blue rounded-full flex items-center justify-center text-white mb-4">
-                        <i class="fas fa-lightbulb text-xl"></i>
+                        <i class="fas fa-question-circle text-lg"></i>
                     </div>
-<<<<<<< Updated upstream
-                    <h3 class="font-medium text-lg mb-2 text-ms-black dark:text-black">Asking Questions</h3>
-                    <p class="text-gray-600 dark:text-gray-600">I start by deeply understanding the business context and objectives by asking relevant questions that help create strong hypotheses to drive business decisions.</p>
-=======
-                    <h3 class="font-medium text-lg mb-2 text-ms-black dark:text-black">Business Understanding</h3>
-                    <p class="text-gray-600 dark:text-gray-600">I start by askinng questions and understanding the business context and objectives before diving into the data.</p>
->>>>>>> Stashed changes
+                    <h3 class="font-semibold text-lg mb-2" style="color: var(--ms-black);">Asking Questions</h3>
+                    <p class="text-gray-600 text-sm">Define the right problems by asking focused, business-relevant questions that guide the entire analysis.</p>
                 </div>
                 
-                <div class="bg-white p-6 rounded shadow-lg">
+                <div class="process-step">
                     <div class="h-12 w-12 bg-ms-blue rounded-full flex items-center justify-center text-white mb-4">
-                        <i class="fas fa-search text-xl"></i>
+                        <i class="fas fa-database text-lg"></i>
                     </div>
-                    <h3 class="font-medium text-lg mb-2 text-ms-black dark:text-black">Data Exploration</h3>
-<<<<<<< Updated upstream
-                    <p class="text-gray-600 dark:text-gray-600">Clean and process data to uncover patterns and insights that drive decision-making.</p>
-=======
-                    <p class="text-gray-600 dark:text-gray-600"> exploratory analysis to uncover patterns and insights that drive decision-making.</p>
->>>>>>> Stashed changes
+                    <h3 class="font-semibold text-lg mb-2" style="color: var(--ms-black);">Data Exploration</h3>
+                    <p class="text-gray-600 text-sm">Collect, clean, and explore data to uncover opportunities, limitations, and initial insights.</p>
                 </div>
                 
-                <div class="bg-white p-6 rounded shadow-lg">
+                <div class="process-step">
                     <div class="h-12 w-12 bg-ms-blue rounded-full flex items-center justify-center text-white mb-4">
-                        <i class="fas fa-cogs text-xl"></i>
+                        <i class="fas fa-project-diagram text-lg"></i>
                     </div>
-                    <h3 class="font-medium text-lg mb-2 text-ms-black dark:text-black">Identify Patterns and Trends</h3>
-                    <p class="text-gray-600 dark:text-gray-600">By applying appropriate statistical techniques and looking beyond surface issues to solve complex problems.</p>
+                    <h3 class="font-semibold text-lg mb-2" style="color: var(--ms-black);">Identify Patterns and Trends</h3>
+                    <p class="text-gray-600 text-sm">Use statistical methods and visualizations to reveal meaningful patterns and emerging trends in the data.</p>
                 </div>
                 
-                <div class="bg-white p-6 rounded shadow-lg">
+                <div class="process-step">
                     <div class="h-12 w-12 bg-ms-blue rounded-full flex items-center justify-center text-white mb-4">
-                        <i class="fas fa-chart-line text-xl"></i>
+                        <i class="fas fa-chart-bar text-lg"></i>
                     </div>
-                    <h3 class="font-medium text-lg mb-2 text-ms-black dark:text-black">Impact Measurement</h3>
-                    <p class="text-gray-600 dark:text-gray-600">Focus on quantifiable business outcomes and measuring the impact of data solutions.</p>
+                    <h3 class="font-semibold text-lg mb-2" style="color: var(--ms-black);">Impact Measurement</h3>
+                    <p class="text-gray-600 text-sm">Quantify business outcomes and track the effectiveness of solutions against KPIs and goals.</p>
                 </div>
                 
-                <div class="bg-white p-6 rounded shadow-lg">
+                <div class="process-step">
                     <div class="h-12 w-12 bg-ms-blue rounded-full flex items-center justify-center text-white mb-4">
-                        <i class="fas fa-comments text-xl"></i>
+                        <i class="fas fa-bullhorn text-lg"></i>
                     </div>
-                    <h3 class="font-medium text-lg mb-2 text-ms-black dark:text-black">Clear Communication</h3>
-                    <p class="text-gray-600 dark:text-gray-600">Translate complex findings into actionable insights for stakeholders.</p>
+                    <h3 class="font-semibold text-lg mb-2" style="color: var(--ms-black);">Clear Communication</h3>
+                    <p class="text-gray-600 text-sm">Translate technical findings into simple, compelling insights that drive decision-making.</p>
                 </div>
                 
-                <div class="bg-white p-6 rounded shadow-lg">
+                <div class="process-step">
                     <div class="h-12 w-12 bg-ms-blue rounded-full flex items-center justify-center text-white mb-4">
-                        <i class="fas fa-sync-alt text-xl"></i>
+                        <i class="fas fa-sync-alt text-lg"></i>
                     </div>
-                    <h3 class="font-medium text-lg mb-2 text-ms-black dark:text-black">Continuous Learning</h3>
-                    <p class="text-gray-600 dark:text-gray-600">Staying current with the latest tools and techniques in the rapidly evolving field of data and analytics.</p>
+                    <h3 class="font-semibold text-lg mb-2" style="color: var(--ms-black);">Continuous Learning</h3>
+                    <p class="text-gray-600 text-sm">Refine skills, tools, and approaches through ongoing learning and feedback loops for lasting value.</p>
                 </div>
             </div>
         </div>
     </section>
 
-<!-- Skills Section -->
-    <section id="skills" class="py-12 bg-white">
+    <!-- Technology Stack Section -->
+    <section class="py-12 bg-ms-light-gray">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-8 text-center">Technical Expertise</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Skills Column 1 -->
-                <div>
-                    <h3 class="text-lg font-medium text-ms-darkgray mb-4">Programming & Tools</h3>
-                    <div class="space-y-4">
-<<<<<<< Updated upstream
-                        <div class="bg-ms-light-gray p-4 rounded">
-                            <h4 class="font-medium mb-2 flex items-center">
-                                <i class="fab fa-python mr-2 text-ms-blue"></i>
-                                Excel
-                            </h4>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-ms-blue h-2 rounded-full w-11/12"></div>
-                            </div>
-                        </div>
-=======
-                        
->>>>>>> Stashed changes
-                        <div class="bg-ms-light-gray p-4 rounded">
-                            <h4 class="font-medium mb-2 flex items-center">
-                                <i class="fas fa-database mr-2 text-ms-blue"></i>
-                                Excel
-                            </h4>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-ms-blue h-2 rounded-full w-10/12"></div>
-                            </div>
-<<<<<<< Updated upstream
-                        </div>
-=======
-                            <p class="mt-2 text-sm text-gray-600">>Tables, VLOOKUP/HLOOKUP, INDEX-MATCH, IF & logical functions, Conditional Formatting, Data Validation, Charts & Graphs, Power Query, Macros & Automation.</p>
-                        </div>
-                        
-                        <div class="bg-ms-light-gray p-4 rounded">
-                            <h4 class="font-medium mb-2 flex items-center">
-                                <i class="fas fa-chart-line mr-2 text-ms-blue"></i>
-                                SQL
-                            </h4>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-ms-blue h-2 rounded-full w-9/12"></div>
-                            </div>
-                            <p class="mt-2 text-sm text-gray-600">Joins & Subqueries, CTEs, Window Functions, Aggregate Queries, Case Statements, String/Date Functions, Indexing & Optimization, Stored Procedures, Database Management.</p>
-                        </div>
-                    </div>
+            <h2 class="text-2xl font-bold text-center mb-8" style="color: var(--ms-black);">Technology Stack</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 text-center">
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <i class="fab fa-python text-2xl text-yellow-500 mb-2"></i>
+                    <div class="font-medium">Python</div>
                 </div>
-                
-                <!-- Skills Column 2 -->
-                <div>
-                    <h3 class="text-lg font-medium text-ms-darkgray mb-4">Data Science & Analytics</h3>
-                    <div class="space-y-4">
-                        <div class="bg-ms-light-gray p-4 rounded">
-                            <h4 class="font-medium mb-2 flex items-center">
-                                <i class="fas fa-brain mr-2 text-ms-blue"></i>
-                                Machine Learning
-                            </h4>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-ms-blue h-2 rounded-full w-10/12"></div>
-                            </div>
-                            <p class="mt-2 text-sm text-gray-600">Data Cleaning (Pandas, NumPy), Data Visualization (Matplotlib, Seaborn), Feature Engineering, Model Building (Scikit-learn), Regression & Classification, Clustering.</p>
-                        </div>
-                        
->>>>>>> Stashed changes
-                        <div class="bg-ms-light-gray p-4 rounded">
-                            <h4 class="font-medium mb-2 flex items-center">
-                                <i class="fas fa-project-diagram mr-2 text-ms-blue"></i>
-                                Tableau
-                            </h4>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-ms-blue h-2 rounded-full w-8/12"></div>
-                            </div>
-<<<<<<< Updated upstream
-=======
-                            <p class="mt-2 text-sm text-gray-600">Calculated Fields, Table Calculations, Parameters, Filters & Sets, Data Blending & Joins, LOD Expressions, Interactive Dashboards, Custom Visualizations, Extracts & Data Source Management</p>
->>>>>>> Stashed changes
-                        </div>
-                        <div class="bg-ms-light-gray p-4 rounded">
-                            <h4 class="font-medium mb-2 flex items-center">
-                                <i class="fas fa-project-diagram mr-2 text-ms-blue"></i>
-                                Machine Learning
-                            </h4>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-ms-blue h-2 rounded-full w-8/12"></div>
-                            </div>
-                        </div>
-            
-                    </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <i class="fab fa-r-project text-2xl text-blue-600 mb-2"></i>
+                    <div class="font-medium">R</div>
                 </div>
-
-    </section>
-
-    <!-- GitHub Connection CTA -->
-    <section class="py-12 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Connect With My Work</h2>
-            <p class="max-w-2xl mx-auto text-gray-600 mb-8">
-                All projects are connected to my GitHub repositories. Follow me to stay updated with my latest work and contributions.
-            </p>
-            <a href="https://github.com/smtypradhan" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-ms-gray hover:bg-ms-darkblue transition-colors duration-300">
-                <i class="fab fa-github mr-2"></i>
-                Visit My GitHub Profile
-            </a>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <i class="fas fa-database text-2xl text-orange-500 mb-2"></i>
+                    <div class="font-medium">SQL</div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <i class="fas fa-chart-bar text-2xl text-green-500 mb-2"></i>
+                    <div class="font-medium">Pandas</div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <i class="fas fa-brain text-2xl text-purple-500 mb-2"></i>
+                    <div class="font-medium">Scikit-learn</div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <i class="fas fa-chart-line text-2xl text-red-500 mb-2"></i>
+                    <div class="font-medium">Visualization</div>
+                </div>
+            </div>
         </div>
     </section>
+
+    <!-- Back to top button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
 
     <!-- Footer (preserved as requested) -->
     <footer>
-        <div class="footer-content">
-            <ul class="footer-links">
-<<<<<<< Updated upstream
-                <li><a href="index.html">Go back to Home</a></li>
-=======
-                <li><a href="index.html">Go back to assets</a></li>
->>>>>>> Stashed changes
-                <li><a href="merry-go-round-of-life.html">Merry-go-round of Life</a></li>
-                <li><a href="blogs.html">Blogs</a></li>
-            </ul>
-        </div>
+      <p class="text-gray-700 dark:text-black">&copy; 2024 Aumbide. All rights reserved.</p>
     </footer>
 
   <!-- Include external JavaScript files -->
-<<<<<<< Updated upstream
     <script src="assets/js/main.js"></script>
     <script src="assets/js/darkmode.js"></script>
-=======
-
-    <script src="assets/js/darkmode.js"></script>
-    <script src="assets/js/projects.js"></script>
-    <script src="assets/js/collab-swiper.js"></script>
->>>>>>> Stashed changes
     <script src="assets/js/animation.js"></script>
 
 </body>
