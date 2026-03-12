@@ -1,637 +1,580 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio and More</title>
-    
-    <!-- Only include Tailwind CSS and Inter font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/tailwind.css">
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <!-- Tailwind CSS (if not already included) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- SwiperJS CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smty Pradhan — Business Strategy & Analytics</title>
 
+  <!-- Google Fonts: Cormorant Garamond (editorial serif) + Space Grotesk (clean sans) + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Space+Grotesk:wght@300;400;500&family=JetBrains+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+<body>
 
+  <!-- ══════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════ -->
+  <nav>
+    <a href="#" class="nav-logo">Smty Pradhan</a>
+    <ul class="nav-links">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#ai-chat">Ask AI</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button
+      class="nav-cta"
+      onclick="document.getElementById('ai-chat').scrollIntoView({ behavior: 'smooth' })"
+    >
+      Ask the AI
+    </button>
+  </nav>
 
-<body class="bg-white">
-    <!-- Header with Microsoft-inspired styling -->
-    <header class="bg-white shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <div class="flex justify-between items-center">
-                <nav>
-                    <ul class="flex space-x-6">
-                        <li><a href="projects.html" class="text-ms-gray hover:text-ms-black">Technical Projects</a></li>
-                        <li><a href="merry-go-round-of-life.html" class="text-ms-gray hover:text-ms-black">Merry-go-round of Life</a></li>
-                        <li><a href="https://medium.com/@smty.pradhan" class="text-ms-gray hover:text-ms-black">Read my blogs</a></li>
-                    </ul>
-                </nav>
-                <!-- Animation -->
-                <div class="flex items-center space-x-4">
-                    <!-- Dark Mode Toggle Button --> 
-                    <button class="toggle-switch" id="darkToggle">
-                        <div class="toggle-slider"></div>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Introduction Section -->
-
-    <section id="introduction" class="container mx-auto px-4 pt-24 pb-12 section-fade">
-        <div class="flex flex-col md:flex-row items-center md:items-start justify-between space-y-6 md:space-y-0">
-            
-            <!-- LEFT: Intro Text -->
-            <div class="w-full md:w-2/3">
-            <h3 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                Hi, I'm Smty Pradhan — a Business Strategy and Analytics professional based in New York City. 
-            </h3>
-            <p class="text-gray-500 text-base mb-4">
-                A curious person with an analytical mindset. Skilled in Advanced Excel, Tableau, and SQL to transform data into actionable insights and visualization for effective storytelling!
-            </p>
-            <p class="text-gray-500 text-base mb-6">
-                Worked with 100+ startups, leading marketing, community-building, and early-stage investment programs. Facilitated $3M+ in seed funding for startups through programs like META XR Startup Program, Startup India Seedfund, and Wadhwani Foundation Startup School. Drove 25% higher stakeholder engagement via integrated marketing campaigns. Coached student founders, achieving a 30% acceptance rate to incubation programs and improving overall startup success rates by 20%. This experience has equipped me with a deep understanding of the startup ecosystem and the skills to navigate its challenges.
-            </p>
-            <p class="text-gray-500 text-base mb-6">
-            I'm excited to leverage my expertise to help businesses and entrepreneurs succeed in today's fast-paced and dynamic environment. 
-            Let's connect and explore how we can work together to create innovative solutions and drive business success. 
-            </p>    
-
-            <div class="flex space-x-6">
-                <a href="https://www.linkedin.com/in/smtypradhan" target="_blank" class="text-gray-500 hover:text-gray-800 transition-colors">LinkedIn</a>
-                <a href="https://www.github.com/smtypradhan" target="_blank" class="text-gray-500 hover:text-gray-800 transition-colors">Git</a>
-                <a href="mailto:smty@gmail.com" class="text-gray-500 hover:text-gray-800 transition-colors">Mail</a>
-            </div>
-            </div>
-
-             <!-- Right: Display Picture -->
-            <div class="w-full md:w-1/3 flex justify-center md:justify-end">
-                <img src="assets/images/profile.png" alt="Smty Pradhan Profile" class="rounded-full shadow-lg w-80 h-80 object-cover" />
-
-        </div>
-    </section>
-
-
-    <!-- Skills & Interests Section -->
-    <section class="container mx-auto px-4 py-16">
-    <h2 class="text-3xl font-extrabold text-gray-800 mb-10 text-center">What I Bring</h2>
-
-    <div class="grid md:grid-cols-2 gap-10">
-
-        <!-- Skills -->
-        <div>
-        <h3 class="text-xl font-semibold text-gray-800 mb-6">Skills & Responsibilities</h3>
-
-        <!-- Technical -->
-        <h4 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Technical</h4>
-        <div class="flex flex-wrap gap-2 mb-6">
-            <span class="tag-chip">SQL</span>
-            <span class="tag-chip">Excel (formulas, pivot tables)</span>
-            <span class="tag-chip">Basic Python/R</span>
-            <span class="tag-chip">Tableau</span>
-            <span class="tag-chip">Power BI</span>
-            <span class="tag-chip">Data Cleaning</span>
-            <span class="tag-chip">Data Modeling</span>
-        </div>
-
-        <!-- Core Soft Skills -->
-        <h4 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Core Soft Skills</h4>
-        <div class="flex flex-wrap gap-2 mb-6">
-            <span class="tag-chip">Leadership</span>
-            <span class="tag-chip">Program / Project Management</span>
-            <span class="tag-chip">Communication with Stakeholders</span>
-            <span class="tag-chip">Mentoring Teams</span>
-            <span class="tag-chip">Adaptability</span>
-            <span class="tag-chip">Creativity</span>
-            <span class="tag-chip">Presentation Skills</span>
-            <span class="tag-chip">Ethical Considerations</span>
-            <span class="tag-chip">Stakeholder Management</span>
-        </div>
-
-        <!-- Responsibilities -->
-        <h4 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Responsibilities</h4>
-        <div class="flex flex-wrap gap-2">
-            <span class="tag-chip">Lead Strategic Analysis</span>
-            <span class="tag-chip">Present Insights to Non-Technical Audiences</span>
-            <span class="tag-chip">Oversee Dashboards</span>
-            <span class="tag-chip">Mentor Juniors</span>
-            <span class="tag-chip">Cross-Team Collaboration</span>
-            <span class="tag-chip">Drive Business Decisions</span>
-            <span class="tag-chip">Create Scalable Analytics Solutions</span>
-        </div>
-        </div>
-
-        <!-- Interests -->
-        <div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-6">Interests</h3>
-            <div class="flex flex-wrap gap-2 mb-10">
-                <span class="tag-chip">Reading</span>
-                <span class="tag-chip">Creative Writing</span>
-                <span class="tag-chip">Music Production</span>
-                <span class="tag-chip">Buddhist Philosophy</span>
-                <span class="tag-chip">Mindfulness & Journaling</span>
-                <span class="tag-chip">Startup Ecosystem</span>
-            </div>
-
-            <!-- Awards -->
-            <h3 class="text-xl font-semibold text-gray-800 mb-6">Awards</h3>
-            <div class="flex flex-wrap gap-2 mb-10">
-                <span class="tag-chip">Diplomacy Award – Best Delegate (NEIMUN)</span>
-                <span class="tag-chip">2nd Place – Social Innovation Week</span>
-                <span class="tag-chip">State Typing Champion (3 yrs) – 101 WPM</span>
-            </div>
-
-            <!-- Leadership -->
-            <h3 class="text-xl font-semibold text-gray-800 mb-6">Leadership</h3>
-            <div class="flex flex-wrap gap-2">
-                <span class="tag-chip">G20 Startup20 Delegate</span>
-                <span class="tag-chip">VP Marketing – Youth Speak Forum</span>
-                <span class="tag-chip">United Nations Volunteer</span>
-            </div>
-        </div>
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-left fade-up">
+      <p class="hero-index"><span>01 /</span> Introduction</p>
+      <h1 class="hero-title">
+        Strategy.<br />Analytics.<br /><em>Impact.</em>
+      </h1>
+      <p class="hero-desc">
+        Business Strategy &amp; Analytics professional based in New York City.
+        I turn data into decisions — from startup ecosystems and seed funding
+        programs to ML-driven growth models and executive dashboards.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#ai-chat" class="btn-ghost">Ask the AI ↓</a>
+      </div>
     </div>
-    </section>
 
-    <!-- Minimalist pill style -->
-    <style>
-    .tag-chip {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0.4rem 0.9rem;
-        font-size: 0.9rem;
-        border-radius: 9999px;
-        background-color: #f9fafb; /* gray-50 */
-        color: #111827; /* gray-900 */
-        border: 1px solid #e5e7eb; /* gray-200 */
-        white-space: nowrap;
-    }
-
-    .tag-chip:hover {
-        background-color: #f3f4f6; /* gray-100 */
-    }
-    </style>
-
-    <!-- Project Preview -->
-
-    <section class="container mx-auto px-4 py-12">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6">Featured Projects</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="bg-gray-100 p-4 rounded hover:shadow-lg transition duration-300">
-            <h3 class="font-semibold text-gray-900 mb-6">Startup Funding Dashboard</h3>
-            <p class="text-base text-gray-600 mb-6">Built with Excel and Tableau. Visualized startup funding trends.</p>
-            <a href="https://public.tableau.com/app/profile/smriti3730/viz/StartupFundingRaised-CrunchbaseDataset/Dashboard-FundedStartups" class="text-blue-600 hover:underline">See more →</a>
-            </div>
-            <div class="bg-gray-100 p-4 rounded hover:shadow-lg transition duration-300">
-            <h3 class="font-semibold text-gray-900 mb-6">Machine Learning Model Building</h3>
-            <p class="text-base text-gray-600 mb-6">Built with Python. Improved conversion rate from 30% to 92% using a logistic regression model.</p>
-            <a href="https://github.com/smtypradhan/ML_for_eCommerce_Leads_Scoring" class="text-blue-600 hover:underline">See more →</a>
-            </div>
-            <div class="bg-gray-100 p-4 rounded hover:shadow-lg transition duration-300">
-            <h3 class="font-semibold text-gray-900 mb-6">Creative Writing Blog</h3>
-            <p class="text-base text-gray-600 mb-6">Personal reflections and essays on growth, mindset, and creativity.</p>
-            <a href="https://medium.com/@smty.pradhan" class="text-blue-600 hover:underline">Visit Medium Blog →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Badges Section -->
-    <section id="badges" class="container mx-auto px-4 py-12 section-fade">
-        <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Certifications & Badges</h2>
-        <div class="flex flex-wrap justify-center gap-6">
-            <img src="assets/badges/badge1.png" alt="Badge 1" class="w-24 h-auto hover:scale-105 transition-transform duration-300">
-            <img src="assets/badges/badge2.png" alt="Badge 2" class="w-24 h-auto hover:scale-105 transition-transform duration-300">
-            <img src="assets/badges/badge3.png" alt="Badge 3" class="w-24 h-auto hover:scale-105 transition-transform duration-300">
-            <img src="assets/badges/badge4.png" alt="Badge 4" class="w-24 h-auto hover:scale-105 transition-transform duration-300">
-            <img src="assets/badges/badge5.png" alt="Badge 5" class="w-24 h-auto hover:scale-105 transition-transform duration-300">
-            <img src="assets/badges/badge6.png" alt="Badge 6" class="w-24 h-auto hover:scale-105 transition-transform duration-300">
-            <img src="assets/badges/badge7.png" alt="Badge 7" class="w-24 h-auto hover:scale-105 transition-transform duration-300">
-            <img src="assets/badges/badge8.png" alt="Badge 8" class="w-24 h-auto hover:scale-105 transition-transform duration-300">
-            <img src="assets/badges/badge9.png" alt="Badge 9" class="w-24 h-auto hover:scale-105 transition-transform duration-300">
-        </div>
-    </section>
-
-
-
-    <!-- Fixed Continuous Learning Section with Carousel -->
-    <section id="continuous-learning" class="container mx-auto px-4 py-12 section-fade">
-        <h2 class="text-2xl font-bold text-gray-800 mb-8">Continuous Learning</h2> 
-        <div class="carousel">
-            <div class="carousel-container" id="carouselContainer">
-                <!-- Item 1 -->
-                <div class="carousel-item">
-                    <div class="text-center">
-                        <img src="assets/logos/databricks.svg" alt="Gen AI Fundamentals" class="w-24 h-auto mx-auto mb-2">
-                        <h6 class="font-semibold text-gray-800 text-base">Generative AI Fundamentals</h6> 
-                        <br>
-                        <div class="inline-block bg-gray-200 rounded px-3 py-1">
-                            <p class="text-gray-600 text-sm"><a href="https://credentials.databricks.com/ecc4d337-d67b-4c57-bee9-f2dbd613ba89#acc.LUE2ukhe" class="font-semibold italic">Know more</span></p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Item 1 -->
-                <div class="carousel-item">
-                    <div class="text-center">
-                        <img src="assets/logos/iiitb.png" alt="Advanced Program in Data Science" class="w-24 h-auto mx-auto mb-2">
-                        <h6 class="font-semibold text-gray-800 not-italic text-base">Advanced Program in Data Science</h6> 
-                        <br>
-                        <div class="inline-block bg-gray-200 rounded px-3 py-1">
-                            <p class="text-gray-600 text-sm"><a href="https://www.credential.net/3a19e6bb-8a9a-4224-9a97-54bbab7350b5#acc.PrFEiegw" class="font-semibold italic">Know more</span></p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Item 2 -->
-                <div class="carousel-item">
-                    <div class="text-center">
-                        <img src="assets/logos/google.png" alt="Google Data Analytics Specialization" class="w-24 h-auto mx-auto mb-2">
-                        <h6 class="font-semibold text-gray-800 not-italic text-base">Google Data Analytics Specialization</h6> 
-                        <br>
-                        <div class="inline-block bg-gray-200 rounded px-3 py-1">
-                            <p class="text-gray-600 text-sm"><a href="https://www.coursera.org/account/accomplishments/professional-cert/2WWLC3U25AD7" class="font-semibold italic hover:text-gray-900">Know more</a></p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Item 3 -->
-                <div class="carousel-item">
-                    <div class="text-center">
-                        <img src="assets/logos/ibm.png" alt="IBM Data Analytics Visualization Foundation" class="w-24 h-auto mx-auto mb-2">
-                        <h6 class="font-semibold text-gray-800 text-base">IBM Data Analytics Visualization Foundation</h6>
-                        <br>
-                        <div class="inline-block bg-gray-200 rounded px-3 py-1">
-                            <p class="text-gray-600 text-sm"><a href="https://www.coursera.org/account/accomplishments/specialization/SVAJQCMT7T3Q" class="font-semibold italic hover:text-gray-900">Know more</a></p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Item 4 -->
-                <div class="carousel-item">
-                    <div class="text-center">
-                        <img src="assets/logos/meta.png" alt="META Social Media Marketing" class="w-24 h-auto mx-auto mb-2">
-                        <h6 class="font-semibold text-gray-800 text-base">META Social Media Marketing</h6>
-                        <br>
-                        <div class="inline-block bg-gray-200 rounded px-3 py-1">
-                            <p class="text-gray-600 text-sm"><a href="https://www.coursera.org/account/accomplishments/professional-cert/RBLFBS27XTB2" class="font-semibold italic hover:text-gray-900">Know more</a></p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Item 5 -->
-                <div class="carousel-item">
-                    <div class="text-center">
-                        <img src="assets/logos/lsb1.png" alt="Brand Management London School of Business" class="w-24 h-auto mx-auto mb-2">
-                        <h6 class="font-semibold text-gray-800 text-base px-10">Brand Management</h6>
-                        <br>
-                        <div class="inline-block bg-gray-200 rounded px-3 py-1">
-                            <p class="text-gray-600 text-sm"><a href="https://www.coursera.org/account/accomplishments/verify/8NKCMYRVFG37" class="font-semibold italic hover:text-gray-900">Know more</a></p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Item 6 -->
-                <div class="carousel-item">
-                    <div class="text-center">
-                        <img src="assets/logos/university-of-chicago.png" alt="Internet Giants: The Law and Economics of Media Platforms" class="w-24 h-auto mx-auto mb-2">
-                        <h6 class="font-semibold text-gray-800 text-base">Internet Giants: The Law and Economics of Media Platforms</h6>
-                        <div class="inline-block bg-gray-200 rounded px-3 py-1 mt-2">
-                            <p class="text-gray-600 text-sm"><a href="https://www.coursera.org/account/accomplishments/verify/FKZ4P5DSXECM" class="font-semibold italic hover:text-gray-900">Know more</a></p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Item 7 -->
-                <div class="carousel-item">
-                    <div class="text-center">
-                        <img src="assets/logos/isb.png" alt="Trading Algorithms Indian School of Business" class="w-24 h-auto mx-auto mb-2">
-                        <h6 class="font-semibold text-gray-800 text-base px-10">Trading Algorithms</h6>
-                        <br>
-                        <div class="inline-block bg-gray-200 rounded px-3 py-1">
-                            <p class="text-gray-600 text-sm"><a href="https://www.coursera.org/account/accomplishments/verify/CUCC2UKKPZZR" class="font-semibold italic hover:text-gray-900">Know more</a></p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Item 8 -->
-                <div class="carousel-item">
-                    <div class="text-center">
-                        <img src="assets/logos/isb.png" alt="Trading Basics Indian School of Business" class="w-24 h-auto mx-auto mb-2">
-                        <h6 class="font-semibold text-gray-800 text-base">Trading Basics Indian School of Business</h6>
-                        <br>
-                        <div class="inline-block bg-gray-200 rounded px-3 py-1">
-                            <p class="text-gray-600 text-sm"><a href="https://www.coursera.org/account/accomplishments/verify/JUH7CAADJXXX" class="font-semibold italic hover:text-gray-900">Know more</a></p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Item 9 -->
-                <div class="carousel-item">
-                    <div class="text-center">
-                        <img src="assets/logos/isb.png" alt="Introduction to Financial Markets" class="w-24 h-auto mx-auto mb-2">
-                        <h6 class="font-semibold text-gray-800 text-base">Introduction to Financial Markets</h6>
-                        <br>
-                        <div class="inline-block bg-gray-200 rounded px-3 py-1">
-                            <p class="text-gray-600 text-sm"><a href="https://www.coursera.org/account/accomplishments/verify/YYM2EPZM7D7E" class="font-semibold italic hover:text-gray-900">Know more</a></p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Item 10 -->
-                <div class="carousel-item">
-                    <div class="text-center">
-                        <img src="assets/logos/dts.png" alt="Learning How to Learn" class="w-24 h-auto mx-auto mb-2">
-                        <h6 class="font-semibold text-gray-800 text-base px-10">Learning How to Learn</h6>
-                        <br>
-                        <div class="inline-block bg-gray-200 rounded px-3 py-1">
-                            <p class="text-gray-600 text-sm"><a href="https://www.coursera.org/account/accomplishments/verify/E5T4XBW7WTM3" class="font-semibold italic hover:text-gray-900">Know more</a></p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Item 11 -->
-                <div class="carousel-item">
-                    <div class="text-center">
-                        <img src="assets/logos/macquarieuniversity.png" alt="Storytelling and Influencing" class="w-24 h-auto mx-auto mb-2">
-                        <h6 class="font-semibold text-gray-800 text-base">Storytelling and Influencing</h6>
-                        <br>
-                        <div class="inline-block bg-gray-200 rounded px-3 py-1">
-                            <p class="text-gray-600 text-sm"><a href="https://www.coursera.org/account/accomplishments/verify/MREPJBJ53UKN" class="font-semibold italic hover:text-gray-900">Know more</a></p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Item 12 -->
-                <div class="carousel-item">
-                    <div class="text-center">
-                        <img src="assets/logos/isb.png" alt="Business Analytics and Digital Media" class="w-24 h-auto mx-auto mb-2">
-                        <h6 class="font-semibold text-gray-800 text-base">Business Analytics and Digital Media</h6>
-                        <br>
-                        <div class="inline-block bg-gray-200 rounded px-3 py-1">
-                            <p class="text-gray-600 text-sm"><a href="https://www.coursera.org/account/accomplishments/verify/35FAN5V56UTQ" class="font-semibold italic hover:text-gray-900">Know more</a></p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Item 13 -->
-                <div class="carousel-item">
-                    <div class="text-center">
-                        <img src="assets/logos/ie.png" alt="Marketing Strategy IE Business School" class="w-24 h-auto mx-auto mb-2">
-                        <h6 class="font-semibold text-gray-800 text-base">Marketing Strategy Specialization</h6>
-                        <br>
-                        <div class="inline-block bg-gray-200 rounded px-3 py-1">
-                            <p class="text-gray-600 text-sm"><a href="https://www.coursera.org/account/accomplishments/verify/8NKCMYRVFG37" class="font-semibold italic hover:text-gray-900">Know more</a></p>
-                        </div>
-                    </div>
-                </div>
-                    
-                <!-- Item 14 -->
-                <div class="carousel-item">
-                    <div class="text-center">
-                        <img src="assets/logos/isb.png" alt="Digital Transformation Indian School of Business" class="w-24 h-auto mx-auto mb-2">
-                        <h6 class="font-semibold text-gray-800 text-base px-10">Digital Transformation</h6>
-                        <br>
-                        <div class="inline-block bg-gray-200 rounded px-3 py-1">
-                            <p class="text-gray-600 text-sm"><a href="https://www.coursera.org/account/accomplishments/verify/UAGSZLT897J4" class="font-semibold italic hover:text-gray-900">Know more</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Carousel controls with proper IDs -->
-            <div class="carousel-control prev" id="prevBtn">
-                <i class="fas fa-chevron-left"></i>
-            </div>
-            <div class="carousel-control next" id="nextBtn">
-                <i class="fas fa-chevron-right"></i>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Volunteer Work Section -->
-    <section id="volunteer-work" class="container mx-auto px-8 py-12 section-fade">
-        <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Volunteer Work</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
-            <!-- AIESEC -->
-            <div class="flex flex-col items-center p-4 hover:scale-105 transition-transform duration-300">
-                <img src="assets/logos/aiesec.png" alt="AIESEC" class="w-32 h-auto mb-4">
-                <a href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:0c344274-3b84-4b04-898f-8ad15f82c470" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline text-center mb-2">
-                    Final Project 
-                </a>
-                <a href="assets/volunteer-certificates/aiesec.jpg" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline text-center">
-                    View Certificate
-                </a>
-            </div>
-            <!-- TedXSMIT -->
-            <div class="flex flex-col items-center p-4 hover:scale-105 transition-transform duration-300">
-                <img src="assets/logos/tedxsmit.png" alt="TedXSMIT" class="w-28 h-auto mb-4">
-                <a href="assets/volunteer-certificates/tedxsmit.jpg" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline text-center">
-                View Certificate
-                </a> 
-            </div>
-            <!-- UNV -->
-            <div class="flex flex-col items-center p-4 hover:scale-105 transition-transform duration-300">
-                <img src="assets/logos/unv.png" alt="UNV" class="w-32 h-auto mb-4">
-                <a href="assets/volunteer-certificates/Global Goals Manifesto.mp4" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline text-center mb-2">
-                View Final Project 
-                </a>
-                <a href="assets/volunteer-certificates/unv.png" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline text-center">
-                View Certificate
-                </a>
-            </div>
-            <!-- Dharma Life -->
-            <div class="flex flex-col items-center p-4 hover:scale-105 transition-transform duration-300">
-                <img src="assets/logos/dharmalife.png" alt="Dharma Life" class="w-32 h-auto mb-4">
-                <a href="assets/volunteer-certificates/dharmalife.jpg" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline text-center">
-                View Certificate
-                </a>
-            </div>
-            <!-- Round Square -->
-            <div class="flex flex-col items-center p-4 hover:scale-105 transition-transform duration-300">
-                <img src="assets/logos/rs.png" alt="Round Square" class="w-28 h-auto mb-4">
-                <br>
-                <a href="assets/volunteer-certificates/roundsquare.jpg" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline text-center">
-                View Certificate
-                </a>
-            </div>
-            <!-- NITI Aayog -->
-            <div class="flex flex-col items-center p-4 hover:scale-105 transition-transform duration-300">
-                <img src="assets/logos/movehack.png" alt="NITI Aayog" class="w-32 h-auto mb-4">
-                <a href="assets/volunteer-certificates/movehack.jpg" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline text-center">
-                View Certificate
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials & Recommendations Section -->
-    <section id="testimonials" class="container mx-auto px-4 py-12 section-fade">
-        <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Testimonials & Recommendations</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Testimonial 1 -->
-            <div class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center hover:shadow-lg transition-shadow duration-300">
-                <img src="assets/images/pm.jpeg" alt="Pankaj Manchanda" class="w-16 h-16 rounded-full mb-4">
-                <p class="text-gray-700 italic mb-4">“Smty was a key enabler during Augtraveler’s journey through the XR Accelerator Program by MEITY and META, hosted at the Sikkim Manipal University incubation centre.”</p>
-                <div class="text-center">
-                    <span class="font-semibold text-gray-800">Pankaj Manchanda</span>
-                    <div class="text-gray-500 text-sm">Founder & CEO, Augtraveler</div>
-                    <a href="https://www.linkedin.com/in/pankajmanchanda/" target="_blank" class="mt-2 inline-block text-blue-700 hover:text-blue-900">
-                        <i class="fab fa-linkedin fa-lg"></i>
-                    </a>
-                </div>
-            </div>
-            <!-- Testimonial 2 -->
-            <div class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center hover:shadow-lg transition-shadow duration-300">
-                <img src="assets/images/nr.jpeg" alt="Nitin Rai" class="w-16 h-16 rounded-full mb-4">
-                <p class="text-gray-700 italic mb-4">"Smty's professionalism, proactive approach, and genuine interest in helping startups grow truly set her apart. Any organization would be lucky to have her on board!"</p>
-                <div class="text-center">
-                    <span class="font-semibold text-gray-800">Nitin Rai</span>
-                    <div class="text-gray-500 text-sm">Co-founder, O2 Himalaya</div>
-                    <a href="https://www.linkedin.com/in/nitin-rai-5b099851/" target="_blank" class="mt-2 inline-block text-blue-700 hover:text-blue-900">
-                        <i class="fab fa-linkedin fa-lg"></i>
-                    </a>
-                </div>
-            </div>
-            <!-- Testimonial 3 -->
-            <div class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center hover:shadow-lg transition-shadow duration-300">
-                <img src="assets/images/au.jpeg" alt="Aditya Upadhyay" class="w-16 h-16 rounded-full mb-4">
-                <p class="text-gray-700 italic mb-4">"Smty has played a key role in supporting and enabling several promising startups in Northeast India. She brings a strong ability to manage stakeholders effectively and would be a great fit for any dynamic, fast-paced environment."</p>
-                <div class="text-center">
-                    <span class="font-semibold text-gray-800">Aditya Upadhyay</span>
-                    <div class="text-gray-500 text-sm">Technology Lead, MeMeraki</div>
-                    <a href="https://www.linkedin.com/in/aditya-upadhyay2k24/" target="_blank" class="mt-2 inline-block text-blue-700 hover:text-blue-900">
-                        <i class="fab fa-linkedin fa-lg"></i>
-                    </a>
-                </div>
-            </div>
-            <!-- Testimonial 4 -->
-            <div class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center hover:shadow-lg transition-shadow duration-300">
-                <img src="assets/images/pn.jpeg" alt="Pratul Narayan" class="w-16 h-16 rounded-full mb-4">
-                <p class="text-gray-700 italic mb-4">“Smty is skilled at solving problems and helps others succeed. She is passionate about supporting startups and works to create opportunities for growth and innovation in the community.”</p>
-                <div class="text-center">
-                    <span class="font-semibold text-gray-800">Pratul Narayan Singh</span>
-                    <div class="text-gray-500 text-sm">Associate Director - ESG Advisory, KPMG India</div>
-                    <a href="https://www.linkedin.com/in/pratul-narayan-singh-91130932/" target="_blank" class="mt-2 inline-block text-blue-700 hover:text-blue-900">
-                        <i class="fab fa-linkedin fa-lg"></i>
-                    </a>
-                </div>
-            </div>
-            <!-- Testimonial 5 -->
-            <div class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center hover:shadow-lg transition-shadow duration-300">
-                <img src="assets/images/sc.jpeg" alt="Sibarata Choudhury" class="w-16 h-16 rounded-full mb-4">
-                <p class="text-gray-700 italic mb-4">“Smty’s dedication and diligence were instrumental in driving the program’s success, consistently providing thoughtful support and ensuring every detail was handled with care.”</p>
-                <div class="text-center">
-                    <span class="font-semibold text-gray-800">Sibabrata Choudhury</span>
-                    <div class="text-gray-500 text-sm">Co-founder, Aveti Learning</div>
-                    <a href="https://www.linkedin.com/in/csibabrata/" target="_blank" class="mt-2 inline-block text-blue-700 hover:text-blue-900">
-                        <i class="fab fa-linkedin fa-lg"></i>
-                    </a>
-                </div>
-            </div>
-            <!-- Testimonial 6 -->
-            <div class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center hover:shadow-lg transition-shadow duration-300">
-                <img src="assets/images/sh.jpeg" alt="Sneha Harinder" class="w-16 h-16 rounded-full mb-4">
-                <p class="text-gray-700 italic mb-4">“They approach problems methodically, ask the right questions, and bring clarity to complex situations.”</p>
-                <div class="text-center">
-                    <span class="font-semibold text-gray-800">Sneha Harinder</span>
-                    <div class="text-gray-500 text-sm">XR Lead, Deloitte (Emmy Nominee)</div>
-                    <a href="https://www.linkedin.com/in/snehaharinder/" target="_blank" class="mt-2 inline-block text-blue-700 hover:text-blue-900">
-                        <i class="fab fa-linkedin fa-lg"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section> 
-
-    <!-- Collaboration -->
-    <section id="collab" class="container mx-auto px-4 py-12 section-fade">
-        <h2 class="text-2xl font-bold text-gray-800 mb-12">Collaborations and Sessions</h2>
-        
-        <div class="swiper mySwiper max-w-4xl mx-auto">
-            <div class="swiper-wrapper">
-                
-                <!-- Slide 1 -->
-                <div class="swiper-slide bg-white p-6 flex flex-col items-center text-center space-y-4">
-                    <img src="assets/images/meta.jpeg" alt="META XR Startup Program" class="w-80 h-80 object-cover" />
-                    <div>
-                        <p class="font-bold text-base text-gray-800 dark:text-gray-900">META (parent company of Facebook and Instagram)</p>
-                        <p class="font-family text-gray-500 dark:text-gray-500">Led the implementation of XR Startup Program as SPOC for East Region working with startups building MVP and a Grand Challenge for Tourism / Agritech Sector.</p>
-                    </div>
-                </div>
-
-                <!-- Slide 2 -->
-                <div class="swiper-slide bg-white p-6 flex flex-col items-center text-center space-y-4">
-                    <img src="assets/images/ow.jpg" alt="Open Weaver" class="w-80 h-80 object-cover" />
-                    <div>
-                        <p class="font-bold text-base text-gray-800 dark:text-gray-900">Open Weaver</p>
-                        <p class="font-family text-gray-500 dark:text-gray-500">Hosted a session on "Accelerating Product Development," to help entrepreneurs launch their products faster using AI.</p>
-                    </div>
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="swiper-slide bg-white p-6 flex flex-col items-center text-center space-y-4">
-                    <img src="assets/images/nbgc.png" alt="Narbahadur Bhandari Govt College" class="w-80 h-80 object-cover" />
-                    <div>
-                        <p class="font-bold text-base text-gray-800 dark:text-gray-900">Narbahadur Bhandari Government College</p>
-                        <p class="font-family text-gray-500 dark:text-gray-500">Took a session on "Formulating a Business Plan" for startup founders from Sikkim, as part of the Entrepreneurship Development Program (EDP).</p>
-                    </div>
-                </div>
-
-                <!-- Slide 4 -->
-                <div class="swiper-slide bg-white p-6 flex flex-col items-center text-center space-y-4">
-                    <img src="assets/images/rc.jpeg" alt="Rhenock College" class="w-80 h-80 object-cover" />
-                    <div>
-                        <p class="font-bold text-base text-gray-800 dark:text-gray-900">Rhenock College</p>
-                        <p class="font-family text-gray-500 dark:text-gray-500">Took a session on "Entrepreneurship" exploring its essence through the lens of grit, talent, technology, innovation, capital, and culture during the Student Awareness Program.</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Add padding for spacing between paragraphs and pagination -->
-            <div class="py-6"></div>
-            <div class="swiper-pagination mt-12"></div>
-        </div>
-    </section>
-
-
-    <!-- Get in Touch -->
-    <section id="get-in-touch" class="p-6 mt-16 mb-8 text-left" style="animation: fadeIn 1s forwards;">
-        <h1 class="text-3xl font-bold text-gray-800 mb-4 text-center">Let's get to know each other.</h1>
-        <h3 class="text-2xl font-semibold text-gray-400 text-center">Get in touch.</h3> 
-    </section>
-
-    <!-- Footer (preserved as requested) -->
-<footer class="bg-footer">
-    <div class="footer-container">
-        <ul class="footer-links">
-            <li><a href="projects.html">View My Projects</a></li>
-            <li><a href="merry-go-round-of-life.html">Merry-go-round of Life</a></li>
-            <li><a href="blogs.html">Blogs</a></li>    
-        </ul>
-        <br>
-        <p class="text-gray-700 dark:text-black">&copy; 2024 Aumbide. All rights reserved.</p>
+    <!-- KPI Stats Block — strategy-relevant metrics -->
+    <div class="hero-right fade-up" style="transition-delay:0.15s">
+      <div class="stat-row">
+        <span class="stat-label">Seed Funding Facilitated</span>
+        <span class="stat-val">$3<em>M+</em></span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Startups Supported</span>
+        <span class="stat-val">100<em>+</em></span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Stakeholder Engagement Lift</span>
+        <span class="stat-val">25<em>%</em></span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">ML Model Accuracy</span>
+        <span class="stat-val">92<em>%</em></span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Current Status</span>
+        <span class="stat-val stat-val--status">
+          <span class="status-dot"></span>Open to Opportunities
+        </span>
+      </div>
     </div>
-</footer>
+  </section>
 
-    <!-- Include external JavaScript files -->
-    <script src="assets/js/carousel.js"></script>
-    <script src="assets/js/navigation.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/darkmode.js"></script>
-    <script src="assets/js/collab-swiper.js"></script>
-    <script src="assets/js/animation.js"></script>
+  <!-- ══════════════════════════════════════
+       TICKER STRIP
+  ══════════════════════════════════════ -->
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Business Strategy</span><span class="ticker-sep">·</span>
+      <span>Data Analytics</span><span class="ticker-sep">·</span>
+      <span>Startup Ecosystems</span><span class="ticker-sep">·</span>
+      <span>SQL &amp; Tableau</span><span class="ticker-sep">·</span>
+      <span>Financial Modelling</span><span class="ticker-sep">·</span>
+      <span>Stakeholder Management</span><span class="ticker-sep">·</span>
+      <span>Machine Learning</span><span class="ticker-sep">·</span>
+      <span>Executive Storytelling</span><span class="ticker-sep">·</span>
+      <span>Seed Funding Programs</span><span class="ticker-sep">·</span>
+      <span>Power BI</span><span class="ticker-sep">·</span>
+      <!-- duplicate for seamless loop -->
+      <span>Business Strategy</span><span class="ticker-sep">·</span>
+      <span>Data Analytics</span><span class="ticker-sep">·</span>
+      <span>Startup Ecosystems</span><span class="ticker-sep">·</span>
+      <span>SQL &amp; Tableau</span><span class="ticker-sep">·</span>
+      <span>Financial Modelling</span><span class="ticker-sep">·</span>
+      <span>Stakeholder Management</span><span class="ticker-sep">·</span>
+      <span>Machine Learning</span><span class="ticker-sep">·</span>
+      <span>Executive Storytelling</span><span class="ticker-sep">·</span>
+      <span>Seed Funding Programs</span><span class="ticker-sep">·</span>
+      <span>Power BI</span><span class="ticker-sep">·</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       PROJECTS
+  ══════════════════════════════════════ -->
+  <section id="projects">
+    <div class="projects-header fade-up">
+      <div>
+        <p class="section-label">02 / Selected Projects</p>
+        <h2 class="section-title">Work that <em>speaks for itself</em></h2>
+      </div>
+      <p class="projects-year">2021 — 2025</p>
+    </div>
+
+    <div class="projects-grid fade-up" style="transition-delay:0.1s">
+
+      <div class="project-card">
+        <p class="project-num">01</p>
+        <h3 class="project-title">Startup Funding Dashboard</h3>
+        <p class="project-desc">
+          Built an end-to-end analytics dashboard visualising global startup
+          funding trends using Crunchbase data. Designed for investors and
+          ecosystem stakeholders to identify emerging sectors and funding gaps.
+        </p>
+        <div class="project-meta-row">
+          <span class="impact-badge">Tableau · Public</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Tableau</span>
+          <span class="tag">Excel</span>
+          <span class="tag">Data Viz</span>
+          <span class="tag">Startup Ecosystem</span>
+        </div>
+        <a
+          href="https://public.tableau.com/app/profile/smriti3730/viz/StartupFundingRaised-CrunchbaseDataset/Dashboard-FundedStartups"
+          target="_blank"
+          class="project-link"
+        >View Dashboard →</a>
+      </div>
+
+      <div class="project-card">
+        <p class="project-num">02</p>
+        <h3 class="project-title">ML Lead Scoring for eCommerce</h3>
+        <p class="project-desc">
+          Built a logistic regression model in Python to score and prioritise
+          inbound eCommerce leads. Improved conversion rate from 30% to 92%,
+          enabling the sales team to focus on highest-intent prospects.
+        </p>
+        <div class="project-meta-row">
+          <span class="impact-badge">30% → 92% conversion</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Logistic Regression</span>
+          <span class="tag">eCommerce</span>
+        </div>
+        <a
+          href="https://github.com/smtypradhan/ML_for_eCommerce_Leads_Scoring"
+          target="_blank"
+          class="project-link"
+        >View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <p class="project-num">03</p>
+        <h3 class="project-title">META XR Startup Program — Strategy Lead</h3>
+        <p class="project-desc">
+          Led marketing, community-building, and investment strategy for the
+          META XR Accelerator Program. Facilitated connections between 100+
+          startups and investors; contributed to $3M+ in seed funding secured
+          through partnerships with META, Startup India, and Wadhwani Foundation.
+        </p>
+        <div class="project-meta-row">
+          <span class="impact-badge">$3M+ seed funding</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Strategy</span>
+          <span class="tag">Ecosystem Building</span>
+          <span class="tag">META XR</span>
+          <span class="tag">Stakeholder Mgmt</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <p class="project-num">04</p>
+        <h3 class="project-title">Integrated Marketing Campaign Analytics</h3>
+        <p class="project-desc">
+          Designed and measured multi-channel marketing campaigns for startup
+          programs, achieving a 25% uplift in stakeholder engagement.
+          Built reporting dashboards tracking funnel performance, reach, and
+          conversion across channels.
+        </p>
+        <div class="project-meta-row">
+          <span class="impact-badge">+25% engagement</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Marketing Analytics</span>
+          <span class="tag">Campaign Strategy</span>
+          <span class="tag">Dashboards</span>
+          <span class="tag">KPI Tracking</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <p class="project-num">05</p>
+        <h3 class="project-title">Founder Coaching & Incubation Analytics</h3>
+        <p class="project-desc">
+          Coached student founders across early-stage incubation programmes.
+          Tracked and improved cohort KPIs: achieved 30% acceptance rate into
+          incubation and 20% improvement in startup success rates through
+          structured mentoring and data-driven progress tracking.
+        </p>
+        <div class="project-meta-row">
+          <span class="impact-badge">30% incubation acceptance</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Coaching</span>
+          <span class="tag">Programme Design</span>
+          <span class="tag">KPI Tracking</span>
+          <span class="tag">EdTech</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <p class="project-num">06</p>
+        <h3 class="project-title">Creative Writing & Thought Leadership</h3>
+        <p class="project-desc">
+          Writes on growth, mindset, and strategy at the intersection of
+          data and human behaviour. Published on Medium — covering
+          entrepreneurship, Buddhist philosophy applied to business, and
+          analytical frameworks for everyday decisions.
+        </p>
+        <div class="project-meta-row">
+          <span class="impact-badge">Medium · Published</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Writing</span>
+          <span class="tag">Strategy</span>
+          <span class="tag">Thought Leadership</span>
+          <span class="tag">Medium</span>
+        </div>
+        <a
+          href="https://medium.com/@smty.pradhan"
+          target="_blank"
+          class="project-link"
+        >Read on Medium →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SKILLS
+  ══════════════════════════════════════ -->
+  <section id="skills">
+    <p class="section-label fade-up">03 / Capabilities</p>
+    <h2 class="section-title fade-up">What I <em>bring</em></h2>
+
+    <div class="skills-grid">
+
+      <div class="skill-group fade-up">
+        <h3>Strategy</h3>
+        <div class="skill-item"><span>Business Strategy</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:92%"></div></div></div>
+        <div class="skill-item"><span>Go-to-Market Planning</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:88%"></div></div></div>
+        <div class="skill-item"><span>Startup Ecosystem</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:95%"></div></div></div>
+        <div class="skill-item"><span>Programme Management</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div></div>
+        <div class="skill-item"><span>Business Case Dev.</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:85%"></div></div></div>
+      </div>
+
+      <div class="skill-group fade-up" style="transition-delay:0.1s">
+        <h3>Analytics</h3>
+        <div class="skill-item"><span>SQL</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:88%"></div></div></div>
+        <div class="skill-item"><span>Excel (Advanced)</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:95%"></div></div></div>
+        <div class="skill-item"><span>Tableau</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div></div>
+        <div class="skill-item"><span>Power BI</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:82%"></div></div></div>
+        <div class="skill-item"><span>Python / R (Basic)</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:72%"></div></div></div>
+      </div>
+
+      <div class="skill-group fade-up" style="transition-delay:0.2s">
+        <h3>Execution</h3>
+        <div class="skill-item"><span>Executive Storytelling</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:93%"></div></div></div>
+        <div class="skill-item"><span>Stakeholder Mgmt</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:92%"></div></div></div>
+        <div class="skill-item"><span>Marketing Analytics</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:87%"></div></div></div>
+        <div class="skill-item"><span>Mentoring Teams</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div></div>
+        <div class="skill-item"><span>Cross-Team Collab.</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:88%"></div></div></div>
+      </div>
+
+      <div class="skill-group fade-up" style="transition-delay:0.3s">
+        <h3>Certifications</h3>
+        <div class="skill-item"><span>Google Data Analytics</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:100%"></div></div></div>
+        <div class="skill-item"><span>IBM Data Analytics</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:100%"></div></div></div>
+        <div class="skill-item"><span>Gen AI Fundamentals</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:100%"></div></div></div>
+        <div class="skill-item"><span>Advanced Data Science</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:100%"></div></div></div>
+        <div class="skill-item"><span>META Social Media Mktg</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:100%"></div></div></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════ -->
+  <section id="about" class="about-section">
+    <div class="fade-up">
+      <p class="section-label">04 / About</p>
+      <h2 class="section-title about-title">
+        Curious mind,<br /><em>analytical heart</em>
+      </h2>
+      <div class="about-image-wrap">
+        <div class="about-image-placeholder">SP</div>
+        <div class="about-accent-block"></div>
+      </div>
+    </div>
+
+    <div class="about-text fade-up" style="transition-delay:0.15s">
+      <p>
+        I'm Smty Pradhan — a Business Strategy and Analytics professional
+        based in New York City. I combine an analytical mindset with a genuine
+        passion for the startup ecosystem, having worked with 100+ early-stage
+        companies across marketing, community-building, and investment programs.
+      </p>
+      <p>
+        My superpower is translating complex data into clear, compelling
+        narratives for non-technical audiences — whether that's a board room,
+        a cohort of founders, or a cross-functional team under pressure.
+      </p>
+      <p>
+        I've facilitated over $3M in seed funding through partnerships with
+        META, Startup India Seedfund, and the Wadhwani Foundation. I hold
+        certifications from Google, IBM, Databricks, and the Indian School of
+        Business, and an Advanced Programme in Data Science from IIIT Bangalore.
+      </p>
+      <p>
+        Outside of work, I write on Medium about growth and mindfulness,
+        produce music, study Buddhist philosophy, and I'm a three-time
+        State Typing Champion at 101 WPM.
+      </p>
+      <div class="about-meta">
+        <div class="meta-item">
+          <p class="meta-label">Location</p>
+          <p class="meta-val">New York City, NY</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">Available For</p>
+          <p class="meta-val">Full-time & Advisory</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">Education</p>
+          <p class="meta-val">Adv. Programme — IIIT-B</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">Interests</p>
+          <p class="meta-val">Startups, Writing, Music</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       TESTIMONIALS
+  ══════════════════════════════════════ -->
+  <section id="testimonials">
+    <p class="section-label fade-up">05 / Testimonials</p>
+    <h2 class="section-title fade-up">What people <em>say</em></h2>
+
+    <div class="testimonials-grid fade-up" style="transition-delay:0.1s">
+
+      <div class="testimonial-card">
+        <p class="testimonial-quote">
+          "Smty was a key enabler during Augtraveler's journey through the XR
+          Accelerator Program by MEITY and META, hosted at the Sikkim Manipal
+          University incubation centre."
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">PM</div>
+          <div>
+            <p class="testimonial-name">Pankaj Manchanda</p>
+            <p class="testimonial-role">Founder &amp; CEO, Augtraveler</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-quote">
+          "Smty's professionalism, proactive approach, and genuine interest in
+          helping startups grow truly set her apart. Any organization would be
+          lucky to have her on board!"
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">NR</div>
+          <div>
+            <p class="testimonial-name">Nitin Rai</p>
+            <p class="testimonial-role">Co-founder, O2 Himalaya</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-quote">
+          "They approach problems methodically, ask the right questions, and
+          bring clarity to complex situations."
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">SH</div>
+          <div>
+            <p class="testimonial-name">Sneha Harinder</p>
+            <p class="testimonial-role">XR Lead, Deloitte (Emmy Nominee)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-quote">
+          "Smty has played a key role in supporting and enabling several
+          promising startups in Northeast India. She brings a strong ability to
+          manage stakeholders effectively."
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">AU</div>
+          <div>
+            <p class="testimonial-name">Aditya Upadhyay</p>
+            <p class="testimonial-role">Technology Lead, MeMeraki</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-quote">
+          "Smty is skilled at solving problems and helps others succeed.
+          She is passionate about supporting startups and works to create
+          opportunities for growth and innovation in the community."
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">PN</div>
+          <div>
+            <p class="testimonial-name">Pratul Narayan Singh</p>
+            <p class="testimonial-role">Associate Director – ESG Advisory, KPMG India</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-quote">
+          "Smty's dedication and diligence were instrumental in driving the
+          program's success, consistently providing thoughtful support and
+          ensuring every detail was handled with care."
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">SC</div>
+          <div>
+            <p class="testimonial-name">Sibabrata Choudhury</p>
+            <p class="testimonial-role">Co-founder, Aveti Learning</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       AI CHAT
+  ══════════════════════════════════════ -->
+  <section id="ai-chat">
+    <p class="section-label">06 / AI Assistant</p>
+    <h2 class="section-title">
+      Ask anything about<br />Smty's <em>work</em>
+    </h2>
+    <p class="chat-subtitle">
+      This AI has been briefed on my background, projects, and experience.
+      Ask about specific work, my approach to analytics, skills,
+      or availability — anything.
+    </p>
+
+    <div class="chat-window fade-up">
+      <div class="chat-topbar">
+        <span class="dot dot-r"></span>
+        <span class="dot dot-y"></span>
+        <span class="dot dot-g"></span>
+        <span class="chat-title-bar">Portfolio AI · Powered by Claude</span>
+      </div>
+
+      <div class="chat-messages" id="chat-messages">
+        <div class="msg">
+          <div class="msg-avatar ai-av">AI</div>
+          <div class="msg-bubble">
+            <p class="msg-name">Portfolio Assistant</p>
+            <p class="msg-text ai">
+              Hi! I'm Smty's portfolio AI. I know her projects, skills, and
+              experience in business strategy and analytics. What would you like
+              to know?
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-suggestions">
+        <button class="suggestion-btn" onclick="askSuggestion(this)">Tell me about the startup funding work</button>
+        <button class="suggestion-btn" onclick="askSuggestion(this)">What analytics tools does Smty use?</button>
+        <button class="suggestion-btn" onclick="askSuggestion(this)">What's the ML lead scoring project?</button>
+        <button class="suggestion-btn" onclick="askSuggestion(this)">Is Smty open to new opportunities?</button>
+      </div>
+
+      <div class="chat-input-row">
+        <input
+          type="text"
+          id="chat-input"
+          placeholder="Ask about projects, skills, experience…"
+        />
+        <button id="chat-send" onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════ -->
+  <section id="contact" class="contact-section">
+    <div class="fade-up">
+      <p class="section-label">07 / Contact</p>
+      <h2 class="section-title contact-title">
+        Let's build<br />something <em>meaningful.</em>
+      </h2>
+      <p class="contact-intro">
+        Open to full-time roles, advisory projects, and collaborations in
+        business strategy, analytics, and startup ecosystems. I typically
+        respond within 24 hours.
+      </p>
+      <a href="mailto:smty@gmail.com" class="btn-primary">Send an Email</a>
+    </div>
+
+    <div class="fade-up" style="transition-delay:0.15s">
+      <div class="contact-item">
+        <span class="contact-label">Email</span>
+        <a href="mailto:smty@gmail.com">smty@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">LinkedIn</span>
+        <a href="https://www.linkedin.com/in/smtypradhan" target="_blank">linkedin.com/in/smtypradhan</a>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">GitHub</span>
+        <a href="https://www.github.com/smtypradhan" target="_blank">github.com/smtypradhan</a>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">Medium</span>
+        <a href="https://medium.com/@smty.pradhan" target="_blank">medium.com/@smty.pradhan</a>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">Portfolio</span>
+        <a href="https://smtypradhan.github.io/" target="_blank">smtypradhan.github.io</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer>
+    <p>© 2025 Smty Pradhan — All rights reserved</p>
+    <p>Built with Claude AI</p>
+  </footer>
+
+  <script src="js/chat.js"></script>
+  <script src="js/animations.js"></script>
 
 </body>
 </html>
-
