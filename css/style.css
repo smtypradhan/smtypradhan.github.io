@@ -28,18 +28,18 @@
    01. CSS Variables (Design Tokens)
    ────────────────────────────────────── */
 :root {
-  /* Warm off-white base with terracotta accent + forest green */
-  --cream:      #f8f4ef;
-  --cream2:     #f0ebe3;
-  --cream3:     #e6dfd5;
-  --bark:       #1c1712;
-  --bark2:      #3d3328;
-  --bark3:      #7a6e62;
-  --terra:      #b85c38;
-  --terra2:     #d4804f;
-  --forest:     #2d6a4f;
-  --line:       rgba(28, 23, 18, 0.09);
-  --line-lt:    rgba(28, 23, 18, 0.05);
+  /* Dark grey backgrounds · blue accents · white text */
+  --white:      #ffffff;   /* pure white for primary text */
+  --grey-200:   #2a2a2a;   /* elevated surface */
+  --grey-300:   #363636;   /* mid surface / borders */
+  --bark:       #1a1a1a;   /* deepest bg — dark grey */
+  --bark2:      #222222;   /* card / panel bg */
+  --bark3:      #888888;   /* muted secondary text */
+  --terra:      #3d7fd4;   /* blue accent — unchanged */
+  --terra2:     #5e9fe8;   /* lighter blue hover/accent */
+  --forest:     #4a7fa5;   /* steel blue — unchanged */
+  --line:       rgba(255, 255, 255, 0.08);
+  --line-lt:    rgba(255, 255, 255, 0.04);
 
   /* Typography */
   --font-serif: 'Cormorant Garamond', Georgia, serif;
@@ -387,6 +387,22 @@ h2.section-title em {
    09. Projects Section
    ────────────────────────────────────── */
 #projects { background: var(--cream2); }
+
+.projects-subheading {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 3rem 0 1.75rem;
+}
+
+.projects-subheading span {
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--terra);
+  white-space: nowrap;
+}
 
 .projects-header {
   display: flex;
