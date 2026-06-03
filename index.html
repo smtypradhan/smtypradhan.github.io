@@ -1,693 +1,498 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smty Pradhan — Business Strategy & Analytics</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Smty Pradhan — Data & Analytics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- Google Fonts: Cormorant Garamond (editorial serif) + Space Grotesk (clean sans) + JetBrains Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Space+Grotesk:wght@300;400;500&family=JetBrains+Mono:wght@300;400;500&display=swap"
-    rel="stylesheet"
-  />
-
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
-  <!-- ══════════════════════════════════════
-       NAVIGATION
-  ══════════════════════════════════════ -->
-  <nav>
-    <a href="#" class="nav-logo">Smty Pradhan</a>
-    <ul class="nav-links">
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#ai-chat">Ask AI</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button
-      class="nav-cta"
-      onclick="document.getElementById('ai-chat').scrollIntoView({ behavior: 'smooth' })"
-    >
-      Ask the AI
-    </button>
-  </nav>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
 
-  <!-- ══════════════════════════════════════
-       HERO
-  ══════════════════════════════════════ -->
-  <section class="hero">
-    <div class="hero-left fade-up">
-      <p class="hero-index"><span>01 /</span> Introduction</p>
-      <h1 class="hero-title">
-        Strategy.<br />Analytics.<br /><em>Impact.</em>
-      </h1>
-      <p class="hero-desc">
-        Business Strategy &amp; Analytics professional based in New York City.
-        I turn data into decisions — from startup ecosystems and seed funding
-        programs to ML-driven growth models and executive dashboards.
-      </p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn-primary">View Projects</a>
-        <a href="#ai-chat" class="btn-ghost">Ask the AI ↓</a>
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">Smty Pradhan</span>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#collab">Collaborated With</a></li>
+    <li><a href="#courses">Courses</a></li>
+    <li><a href="https://drive.google.com/file/d/1Jd1ku5oaOv8BIc50ffJ8KcO7Alil1a-b/view?usp=sharing" target="_blank" class="nav-resume">↓ Resume</a></li>
+    <li><a href="#contact" class="nav-contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- MODE BAR — Recruiters only -->
+<div class="mode-bar">
+  <button class="mode-btn active" id="btn-recruiters">Recruiters</button>
+</div>
+
+<!-- HERO -->
+<section class="hero-section border-top">
+  <div class="hero-grid">
+    <div class="hero">
+      <p class="hero-eyebrow">Analytics · Data Science · Strategy</p>
+      <h1>Turning data into <em><span style="text-decoration:underline;text-underline-offset:4px;">decisions</span></em> that move organizations forward.</h1>
+      <p class="hero-desc">MS Data Analytics candidate (4.0 GPA) at Touro GST, New York. Former startup ecosystem builder and marketing analyst. Seeking Analytics Manager, Senior Analyst, and Director of Insights roles.</p>
+      <div class="hero-links">
+        <a href="#work" class="link-primary">View Projects</a>
+        <span class="hero-sep"></span>
+        <a href="https://linkedin.com/in/smtypradhan" target="_blank" class="link-secondary">LinkedIn ↗</a>
+        <span class="hero-sep"></span>
+        <a href="https://github.com/smtypradhan" target="_blank" class="link-secondary">GitHub ↗</a>
+        <span class="hero-sep"></span>
+        <a href="https://drive.google.com/file/d/1Jd1ku5oaOv8BIc50ffJ8KcO7Alil1a-b/view?usp=sharing" target="_blank" class="btn-resume">↓ Resume</a>
       </div>
     </div>
-
-    <!-- KPI Stats Block — strategy-relevant metrics -->
-    <div class="hero-right fade-up" style="transition-delay:0.15s">
-      <div class="stat-row">
-        <span class="stat-label">Seed Funding Facilitated</span>
-        <span class="stat-val">$3<em>M+</em></span>
+    <div class="stats-col">
+      <div class="stat-card">
+        <div class="stat-num">$3M+</div>
+        <div class="stat-lbl">Seed Funding Facilitated</div>
       </div>
-      <div class="stat-row">
-        <span class="stat-label">Startups Supported</span>
-        <span class="stat-val">100<em>+</em></span>
+      <div class="stat-card">
+        <div class="stat-num">100+</div>
+        <div class="stat-lbl">Startups Supported</div>
       </div>
-      <div class="stat-row">
-        <span class="stat-label">Stakeholder Engagement Lift</span>
-        <span class="stat-val">25<em>%</em></span>
+      <div class="stat-card">
+        <div class="stat-num">25%</div>
+        <div class="stat-lbl">Stakeholder Engagement Lift</div>
       </div>
-      <div class="stat-row">
-        <span class="stat-label">ML Model Accuracy</span>
-        <span class="stat-val">92<em>%</em></span>
+      <div class="stat-card">
+        <div class="stat-num">87%</div>
+        <div class="stat-lbl">Startup Success Rate</div>
       </div>
-      <div class="stat-row">
-        <span class="stat-label">Current Status</span>
-        <span class="stat-val stat-val--status">
+      <div class="stat-card stat-card--open">
+        <div class="stat-num" style="font-size:18px;display:flex;align-items:center;gap:8px;">
           <span class="status-dot"></span>Open to Opportunities
-        </span>
+        </div>
+        <div class="stat-lbl">Current Status</div>
       </div>
     </div>
-  </section>
-
-  <!-- ══════════════════════════════════════
-       TICKER STRIP
-  ══════════════════════════════════════ -->
-  <div class="ticker-wrap" aria-hidden="true">
-    <div class="ticker-track">
-      <span>Business Strategy</span><span class="ticker-sep">·</span>
-      <span>Data Analytics</span><span class="ticker-sep">·</span>
-      <span>Startup Ecosystems</span><span class="ticker-sep">·</span>
-      <span>SQL &amp; Tableau</span><span class="ticker-sep">·</span>
-      <span>Financial Modelling</span><span class="ticker-sep">·</span>
-      <span>Stakeholder Management</span><span class="ticker-sep">·</span>
-      <span>Machine Learning</span><span class="ticker-sep">·</span>
-      <span>Executive Storytelling</span><span class="ticker-sep">·</span>
-      <span>Seed Funding Programs</span><span class="ticker-sep">·</span>
-      <span>Power BI</span><span class="ticker-sep">·</span>
-      <!-- duplicate for seamless loop -->
-      <span>Business Strategy</span><span class="ticker-sep">·</span>
-      <span>Data Analytics</span><span class="ticker-sep">·</span>
-      <span>Startup Ecosystems</span><span class="ticker-sep">·</span>
-      <span>SQL &amp; Tableau</span><span class="ticker-sep">·</span>
-      <span>Financial Modelling</span><span class="ticker-sep">·</span>
-      <span>Stakeholder Management</span><span class="ticker-sep">·</span>
-      <span>Machine Learning</span><span class="ticker-sep">·</span>
-      <span>Executive Storytelling</span><span class="ticker-sep">·</span>
-      <span>Seed Funding Programs</span><span class="ticker-sep">·</span>
-      <span>Power BI</span><span class="ticker-sep">·</span>
-    </div>
-  </div>
-
-  <!-- ══════════════════════════════════════
-       PROJECTS
-  ══════════════════════════════════════ -->
-  
-  <section id="projects">
-    <div class="projects-header fade-up">
-      <p class="section-label">02 / Projects</p>
-      <h2 class="section-title">Work that <em>speaks for itself</em></h2>
-    </div>
-
-    <!-- ── Data & AI ── -->
-    <div class="projects-subheading fade-up">
-      <span>Data &amp; Artificial Intelligence</span>
-    </div>
-
-  <div class="projects-grid fade-up" style="transition-delay:0.1s">
-
-    <div class="project-card">
-      <p class="project-num">01</p>
-      <h3 class="project-title">ML Lead Scoring for eCommerce</h3>
-      <p class="project-desc">
-        Built a logistic regression model in Python to score and prioritise
-        inbound eCommerce leads. Improved conversion rate from 30% to 92%,
-        enabling the sales team to focus on highest-intent prospects.
-      </p>
-      <div class="project-meta-row">
-        <span class="impact-badge">30% → 92% conversion</span>
-      </div>
-      <div class="project-tags">
-        <span class="tag">Python</span>
-        <span class="tag">Machine Learning</span>
-        <span class="tag">Logistic Regression</span>
-        <span class="tag">eCommerce</span>
-      </div>
-      <a href="https://github.com/smtypradhan/ML_for_eCommerce_Leads_Scoring" target="_blank" class="project-link">View on GitHub →</a>
-    </div>
-
-    <div class="project-card">
-      <p class="project-num">02</p>
-      <h3 class="project-title">EDA for Retail &amp; eCommerce</h3>
-      <p class="project-desc">
-        Performed exploratory data analysis on retail and eCommerce datasets
-        to uncover purchasing patterns, seasonal trends, and customer
-        segmentation insights. Visualised findings to inform inventory
-        planning and marketing decisions.
-      </p>
-      <div class="project-meta-row">
-        <span class="impact-badge">Python · Pandas</span>
-      </div>
-      <div class="project-tags">
-        <span class="tag">Python</span>
-        <span class="tag">Pandas</span>
-        <span class="tag">Seaborn</span>
-        <span class="tag">EDA</span>
-        <span class="tag">eCommerce</span>
-      </div>
-      <a href="https://github.com/smtypradhan/EDA_for_Retail_and_eCommerce" target="_blank" class="project-link">View on GitHub →</a>
-    </div>
-
-    <div class="project-card">
-      <p class="project-num">03</p>
-      <h3 class="project-title">EDA for Bank Loan Defaults</h3>
-      <p class="project-desc">
-        Conducted exploratory data analysis on bank loan datasets to identify
-        key drivers of default risk. Analysed borrower demographics, credit
-        history, and loan attributes to surface actionable risk signals for
-        financial decision-makers.
-      </p>
-      <div class="project-meta-row">
-        <span class="impact-badge">Risk Analytics</span>
-      </div>
-      <div class="project-tags">
-        <span class="tag">Python</span>
-        <span class="tag">Pandas</span>
-        <span class="tag">Matplotlib</span>
-        <span class="tag">EDA</span>
-        <span class="tag">Finance</span>
-      </div>
-      <a href="https://github.com/smtypradhan/EDA_for_bank_loan_defaults" target="_blank" class="project-link">View on GitHub →</a>
-    </div>
-
-  </div>
-
-  <!-- ── Dashboards & Visualisations ── -->
-  <div class="projects-subheading fade-up" style="transition-delay:0.05s">
-    <span>Dashboards &amp; Visualisations</span>
-  </div>
-
-  <div class="projects-grid fade-up" style="transition-delay:0.1s">
-
-    <div class="project-card">
-      <p class="project-num">01</p>
-      <h3 class="project-title">Startup Funding Dashboard</h3>
-      <p class="project-desc">
-        Built an end-to-end analytics dashboard visualising global startup
-        funding trends using Crunchbase data. Designed for investors and
-        ecosystem stakeholders to identify emerging sectors and funding gaps.
-      </p>
-      <div class="project-meta-row">
-        <span class="impact-badge">Tableau · Public</span>
-      </div>
-      <div class="project-tags">
-        <span class="tag">Tableau</span>
-        <span class="tag">Excel</span>
-        <span class="tag">Data Viz</span>
-        <span class="tag">Startup Ecosystem</span>
-      </div>
-        <a href="https://public.tableau.com/app/profile/smriti3730/viz/StartupFundingRaised-CrunchbaseDataset/Dashboard-FundedStartups"
-        target="_blank"
-        class="project-link">View Dashboard →</a>
-    </div>
-
-  </div>
-
-  <!-- ── Startup & Thought Leadership ── -->
-  <div class="projects-subheading fade-up" style="transition-delay:0.05s">
-    <span>Startup &amp; Thought Leadership</span>
-  </div>
-
-  <div class="projects-grid fade-up" style="transition-delay:0.1s">
-
-    <div class="project-card">
-      <p class="project-num">01</p>
-      <h3 class="project-title">Creative Writing &amp; Thought Leadership</h3>
-      <p class="project-desc">
-        Writes on growth, mindset, and strategy at the intersection of
-        data and human behaviour. Published on Medium — covering
-        entrepreneurship, Buddhist philosophy applied to business, and
-        analytical frameworks for everyday decisions.
-      </p>
-      <div class="project-meta-row">
-        <span class="impact-badge">Medium · Published</span>
-      </div>
-      <div class="project-tags">
-        <span class="tag">Writing</span>
-        <span class="tag">Strategy</span>
-        <span class="tag">Thought Leadership</span>
-        <span class="tag">Medium</span>
-      </div>
-      <a href="https://medium.com/@smty.pradhan" target="_blank" class="project-link">Read on Medium →</a>
-    </div>
-
-    <div class="project-card">
-      <p class="project-num">02</p>
-      <h3 class="project-title">META XR Startup Program — Strategy Lead</h3>
-      <p class="project-desc">
-        Led marketing, community-building, and investment strategy for the
-        META XR Accelerator Program. Facilitated connections between 100+
-        startups and investors; contributed to $3M+ in seed funding secured
-        through partnerships with META, Startup India, and Wadhwani Foundation.
-      </p>
-      <div class="project-meta-row">
-        <span class="impact-badge">$3M+ seed funding</span>
-      </div>
-      <div class="project-tags">
-        <span class="tag">Strategy</span>
-        <span class="tag">Ecosystem Building</span>
-        <span class="tag">META XR</span>
-        <span class="tag">Stakeholder Mgmt</span>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <p class="project-num">03</p>
-      <h3 class="project-title">Founder Coaching &amp; Incubation Analytics</h3>
-      <p class="project-desc">
-        Coached student founders across early-stage incubation programmes.
-        Tracked and improved cohort KPIs: achieved 30% acceptance rate into
-        incubation and 20% improvement in startup success rates through
-        structured mentoring and data-driven progress tracking.
-      </p>
-      <div class="project-meta-row">
-        <span class="impact-badge">30% incubation acceptance</span>
-      </div>
-      <div class="project-tags">
-        <span class="tag">Coaching</span>
-        <span class="tag">Programme Design</span>
-        <span class="tag">KPI Tracking</span>
-        <span class="tag">EdTech</span>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <p class="project-num">04</p>
-      <h3 class="project-title">Integrated Marketing Campaign Analytics</h3>
-      <p class="project-desc">
-        Designed and measured multi-channel marketing campaigns for startup
-        programs, achieving a 25% uplift in stakeholder engagement. Built
-        reporting dashboards tracking funnel performance, reach, and
-        conversion across channels.
-      </p>
-      <div class="project-meta-row">
-        <span class="impact-badge">+25% engagement</span>
-      </div>
-      <div class="project-tags">
-        <span class="tag">Marketing Analytics</span>
-        <span class="tag">Campaign Strategy</span>
-        <span class="tag">Dashboards</span>
-        <span class="tag">KPI Tracking</span>
-      </div>
-    </div>
-
   </div>
 </section>
 
-  <!-- ══════════════════════════════════════
-       SKILLS
-  ══════════════════════════════════════ -->
-  <section id="skills">
-    <p class="section-label fade-up">03 / Capabilities</p>
-    <h2 class="section-title fade-up">What I <em>bring</em></h2>
+<!-- PROJECTS -->
+<section class="border-top" id="work">
+  <div class="section-inner">
+    <div class="section-header-row">
+      <div>
+        <p class="eyebrow">Selected Work</p>
+        <h2 class="section-title" style="margin-bottom:0">Projects</h2>
+      </div>
+      <a href="https://github.com/smtypradhan" target="_blank" class="see-all">All on GitHub ↗</a>
+    </div>
+    <div style="margin-top:2rem"></div>
+    <div class="filter-tabs">
+      <button class="ftab active" onclick="filterProjects('all',this)">All</button>
+      <button class="ftab" onclick="filterProjects('data',this)">Data &amp; AI</button>
+      <button class="ftab" onclick="filterProjects('dashboard',this)">Dashboards</button>
+      <button class="ftab" onclick="filterProjects('strategy',this)">Strategy</button>
+    </div>
+    <div class="project-grid" id="project-grid">
+      <div class="project-card" data-cat="data">
+        <span class="proj-tag">ML · Retail</span>
+        <h3>Schuster Vendor Payment Intelligence</h3>
+        <p>Two-stage ML pipeline: K-Means segmentation + Random Forest late payment prediction across 500+ vendors.</p>
+        <div class="proj-footer"><div class="chips"><span class="chip">Python</span><span class="chip">scikit-learn</span><span class="chip">PowerBI</span></div><span class="proj-arrow">↗</span></div>
+      </div>
+      <div class="project-card" data-cat="dashboard">
+        <span class="proj-tag">Nonprofit · Analytics</span>
+        <h3>Zero Point Meditation Center Analytics System</h3>
+        <p>End-to-end analytics build: GA4 dashboard, email segmentation, website performance report and 30-page playbook.</p>
+        <div class="proj-footer"><div class="chips"><span class="chip">GA4</span><span class="chip">Looker Studio</span><span class="chip">Excel</span></div><span class="proj-arrow">↗</span></div>
+      </div>
+      <div class="project-card" data-cat="dashboard">
+        <span class="proj-tag">Higher Ed · Funnel</span>
+        <h3>Touro GST Recruiting Funnel Analysis</h3>
+        <p>Interactive enrollment pipeline dashboard + bottleneck map identifying 3 critical drop-off points for Dean leadership.</p>
+        <div class="proj-footer"><div class="chips"><span class="chip">Excel</span><span class="chip">Python</span><span class="chip">Data Viz</span></div><span class="proj-arrow">↗</span></div>
+      </div>
+      <div class="project-card" data-cat="data">
+        <span class="proj-tag">Web App · Asset Mgmt</span>
+        <h3>Local Asset Manager</h3>
+        <p>Full-stack web application for tracking and managing digital assets locally, demonstrating end-to-end build thinking.</p>
+        <div class="proj-footer"><div class="chips"><span class="chip">JavaScript</span><span class="chip">Node.js</span><span class="chip">HTML/CSS</span></div><span class="proj-arrow">↗</span></div>
+      </div>
+      <div class="project-card" data-cat="strategy">
+        <span class="proj-tag">Startup · Pitch</span>
+        <h3>Ren — Wellness Platform</h3>
+        <p>Concept pitch deck combining market sizing, user persona mapping, and go-to-market strategy for a community wellness platform.</p>
+        <div class="proj-footer"><div class="chips"><span class="chip">Strategy</span><span class="chip">UX Research</span><span class="chip">Slides</span></div><span class="proj-arrow">↗</span></div>
+      </div>
+      <div class="project-card" data-cat="strategy">
+        <span class="proj-tag">Tooling · Job Search</span>
+        <h3>Analytics Job Tracker Dashboard</h3>
+        <p>HTML + Excel dual-format tracker with fit scoring, OPT compatibility flags, and recruiter contact management across 50+ firms.</p>
+        <div class="proj-footer"><div class="chips"><span class="chip">Excel</span><span class="chip">HTML/CSS</span><span class="chip">JS</span></div><span class="proj-arrow">↗</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- EXPERIENCE -->
+<section class="border-top" id="experience">
+  <div class="section-inner">
+    <p class="eyebrow">Background</p>
+    <h2 class="section-title">Experience</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">2024–Present</div>
+        <div class="tl-line"><div class="tl-dot"></div></div>
+        <div>
+          <div class="tl-role">Graduate Assistant, Data Analytics</div>
+          <div class="tl-org">Touro Graduate School of Technology, NYC</div>
+          <div class="tl-desc">Supporting graduate instruction, research, and program analytics. Hackathon organizing and curriculum support for Dean Dr. Shlomo Argamon.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2024</div>
+        <div class="tl-line"><div class="tl-dot"></div></div>
+        <div>
+          <div class="tl-role">Marketing Analytics Intern</div>
+          <div class="tl-org">Zero Point Meditation Center, NYC</div>
+          <div class="tl-desc">Designed and delivered a full analytics system from scratch: GA4 integration, live Looker Studio dashboard, email segmentation analysis, and 6-tab Excel reporting workbook.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Prior</div>
+        <div class="tl-line"><div class="tl-dot"></div></div>
+        <div>
+          <div class="tl-role">Startup Ecosystem Builder</div>
+          <div class="tl-org">Accelerator &amp; Venture Programs</div>
+          <div class="tl-desc">Managed a portfolio of 34 startups, facilitated seed funding rounds, and built community infrastructure for early-stage founders.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">MBA</div>
+        <div class="tl-line"><div class="tl-dot"></div></div>
+        <div>
+          <div class="tl-role">Master of Business Administration</div>
+          <div class="tl-org">Graduate Education</div>
+          <div class="tl-desc">Marketing, strategy, and entrepreneurship. Foundation for current MS in Data Analytics (in progress, 4.0 GPA).</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="border-top">
+  <div class="section-inner">
+    <p class="eyebrow">Capabilities</p>
+    <h2 class="section-title">Skills</h2>
     <div class="skills-grid">
-
-      <div class="skill-group fade-up">
-        <h3>Strategy</h3>
-        <div class="skill-item"><span>Business Strategy</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:92%"></div></div></div>
-        <div class="skill-item"><span>Go-to-Market Planning</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:88%"></div></div></div>
-        <div class="skill-item"><span>Startup Ecosystem</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:95%"></div></div></div>
-        <div class="skill-item"><span>Programme Management</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div></div>
-        <div class="skill-item"><span>Business Case Dev.</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:85%"></div></div></div>
-      </div>
-
-      <div class="skill-group fade-up" style="transition-delay:0.1s">
-        <h3>Analytics</h3>
-        <div class="skill-item"><span>SQL</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:88%"></div></div></div>
-        <div class="skill-item"><span>Excel (Advanced)</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:95%"></div></div></div>
-        <div class="skill-item"><span>Tableau</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div></div>
-        <div class="skill-item"><span>Power BI</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:82%"></div></div></div>
-        <div class="skill-item"><span>Python / R (Basic)</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:72%"></div></div></div>
-      </div>
-
-      <div class="skill-group fade-up" style="transition-delay:0.2s">
-        <h3>Execution</h3>
-        <div class="skill-item"><span>Executive Storytelling</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:93%"></div></div></div>
-        <div class="skill-item"><span>Stakeholder Mgmt</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:92%"></div></div></div>
-        <div class="skill-item"><span>Marketing Analytics</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:87%"></div></div></div>
-        <div class="skill-item"><span>Mentoring Teams</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div></div>
-        <div class="skill-item"><span>Cross-Team Collab.</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:88%"></div></div></div>
-      </div>
-
-      <div class="skill-group fade-up" style="transition-delay:0.3s">
-        <h3>Certifications</h3>
-        <div class="skill-item"><span>Google Data Analytics</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:100%"></div></div></div>
-        <div class="skill-item"><span>IBM Data Analytics</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:100%"></div></div></div>
-        <div class="skill-item"><span>Gen AI Fundamentals</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:100%"></div></div></div>
-        <div class="skill-item"><span>Advanced Data Science</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:100%"></div></div></div>
-        <div class="skill-item"><span>META Social Media Mktg</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:100%"></div></div></div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════
-       ABOUT
-  ══════════════════════════════════════ -->
-  <section id="about" class="about-section">
-    <div class="fade-up">
-      <p class="section-label">04 / About</p>
-      <h2 class="section-title about-title">
-        Curious mind,<br /><em>analytical heart</em>
-      </h2>
-      <div class="about-image-wrap">
-        <div class="about-image-placeholder">SP</div>
-        <div class="about-accent-block"></div>
-      </div>
-    </div>
-
-    <div class="about-text fade-up" style="transition-delay:0.15s">
-      <p>
-        I'm Smty Pradhan — a Business Strategy and Analytics professional
-        based in New York City. I combine an analytical mindset with a genuine
-        passion for the startup ecosystem, having worked with 100+ early-stage
-        companies across marketing, community-building, and investment programs.
-      </p>
-      <p>
-        My superpower is translating complex data into clear, compelling
-        narratives for non-technical audiences — whether that's a board room,
-        a cohort of founders, or a cross-functional team under pressure.
-      </p>
-      <p>
-        I've facilitated over $3M in seed funding through partnerships with
-        META, Startup India Seedfund, and the Wadhwani Foundation. I hold
-        certifications from Google, IBM, Databricks, and the Indian School of
-        Business, and an Advanced Programme in Data Science from IIIT Bangalore.
-      </p>
-      <p>
-        Outside of work, I write on Medium about growth and mindfulness,
-        produce music, study Buddhist philosophy, and I'm a three-time
-        State Typing Champion at 101 WPM.
-      </p>
-      <div class="about-meta">
-        <div class="meta-item">
-          <p class="meta-label">Location</p>
-          <p class="meta-val">New York City, NY</p>
+      <div>
+        <div class="sg-label">Languages</div>
+        <div class="skill-tags">
+          <span class="stag">Python</span><span class="stag">SQL</span><span class="stag">R</span><span class="stag">JavaScript</span><span class="stag">HTML/CSS</span>
         </div>
-        <div class="meta-item">
-          <p class="meta-label">Available For</p>
-          <p class="meta-val">Full-time & Advisory</p>
+      </div>
+      <div>
+        <div class="sg-label">Analytics &amp; BI</div>
+        <div class="skill-tags">
+          <span class="stag">Looker Studio</span><span class="stag">Power BI</span><span class="stag">GA4</span><span class="stag">Excel</span>
         </div>
-        <div class="meta-item">
-          <p class="meta-label">Education</p>
-          <p class="meta-val">Adv. Programme — IIIT-B</p>
+      </div>
+      <div>
+        <div class="sg-label">Data Science</div>
+        <div class="skill-tags">
+          <span class="stag">scikit-learn</span><span class="stag">Pandas</span><span class="stag">NLP</span><span class="stag">K-Means</span><span class="stag">Random Forest</span>
         </div>
-        <div class="meta-item">
-          <p class="meta-label">Interests</p>
-          <p class="meta-val">Startups, Writing, Music</p>
+      </div>
+      <div>
+        <div class="sg-label">Strategy</div>
+        <div class="skill-tags">
+          <span class="stag">Stakeholder Mgmt</span><span class="stag">Data Storytelling</span><span class="stag">Nonprofit Analytics</span><span class="stag">Startup Strategy</span>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ══════════════════════════════════════
-       TESTIMONIALS
-  ══════════════════════════════════════ -->
-  <section id="testimonials">
-    <p class="section-label fade-up">05 / Testimonials</p>
-    <h2 class="section-title fade-up">What people <em>say</em></h2>
-
-    <div class="testimonials-grid fade-up" style="transition-delay:0.1s">
-
-      <div class="testimonial-card">
-        <p class="testimonial-quote">
-          "Smty was a standout contributor during Out in Tech's Digital Corps. As Team Lead, I was consistently impressed by how quickly she got up to speed and how much she accomplished."
-        </p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">PM</div>
-          <div>
-            <p class="testimonial-name">Richard Uy</p>
-            <p class="testimonial-role">Team Lead &amp; Out in Tech</p>
-          </div>
+<!-- COLLABORATED WITH -->
+<section class="border-top" id="collab">
+  <div class="section-inner">
+    <p class="eyebrow">Community &amp; Ecosystem</p>
+    <h2 class="section-title">Collaborated With</h2>
+    <div class="collab-carousel-wrap">
+      <div class="collab-track" id="collab-track">
+<div class="collab-slide">
+<div class="logo-cell collab-cell">
+        <img src="assets/images/techcrunch.png" alt="TechCrunch" />
+        <span class="logo-label">TechCrunch</span>
+      </div>
+<div class="logo-cell collab-cell">
+        <img src="assets/images/thus-org.png" alt="Thus.org" />
+        <span class="logo-label">Thus.org</span>
+      </div>
+<div class="logo-cell collab-cell">
+        <img src="assets/images/out-in-tech.png" alt="Out in Tech" />
+        <span class="logo-label">Out in Tech</span>
+      </div>
+<div class="logo-cell collab-cell">
+        <img src="assets/images/yale-som.png" alt="Yale SOM" />
+        <span class="logo-label">Yale SOM</span>
+      </div>
+<div class="logo-cell collab-cell">
+        <img src="assets/images/tie-new-york.png" alt="TiE New York" />
+        <span class="logo-label">TiE New York</span>
+      </div>
+</div>
+<div class="collab-slide">
+<div class="logo-cell collab-cell">
+        <img src="assets/images/un-volunteers-india.png" alt="UN Volunteers India" />
+        <span class="logo-label">UN Volunteers India</span>
+      </div>
+<div class="logo-cell collab-cell">
+        <img src="assets/images/round-square.png" alt="Round Square" />
+        <span class="logo-label">Round Square</span>
+      </div>
+<div class="logo-cell collab-cell">
+        <img src="assets/images/tedx-smit.png" alt="TEDx SMIT" />
+        <span class="logo-label">TEDx SMIT</span>
+      </div>
+<div class="logo-cell collab-cell">
+        <img src="assets/images/niti-aayog-move.png" alt="NITI Aayog · MOVE" />
+        <span class="logo-label">NITI Aayog · MOVE</span>
+      </div>
+<div class="logo-cell collab-cell">
+        <img src="assets/images/atal-innovation-mission.png" alt="Atal Innovation Mission" />
+        <span class="logo-label">Atal Innovation Mission</span>
+      </div>
+</div>
+<div class="collab-slide">
+<div class="logo-cell collab-cell">
+        <img src="assets/images/aiesec.png" alt="AIESEC" />
+        <span class="logo-label">AIESEC</span>
+      </div>
+</div>
+      </div>
+      <div class="carousel-controls" style="margin-top:1.75rem;">
+        <div class="carousel-dots" id="collab-dots">
+          <div class="c-dot  active" onclick="goCollab(0)"></div><div class="c-dot" onclick="goCollab(1)"></div><div class="c-dot" onclick="goCollab(2)"></div>
         </div>
-      </div>
-
-      <div class="testimonial-card">
-        <p class="testimonial-quote">
-          "Smriti was exceptional in her handling of the META XR startup search program.  
-          The program sifted through hundreds of applications and coordinated thousands of founders. 
-          Her involvement was crucial in the success of the program and demonstrated her talents in managing large scale project implementation. "
-        </p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">PM</div>
-          <div>
-            <p class="testimonial-name">Atanu Roy Chowdhury</p>
-            <p class="testimonial-role">Chairman and MD &amp; Capsule Labs</p>
-          </div>
+        <div class="carousel-arrows">
+          <button class="c-arrow" onclick="prevCollab()" aria-label="Previous">←</button>
+          <button class="c-arrow" onclick="nextCollab()" aria-label="Next">→</button>
         </div>
-      </div>
-
-
-
-      <div class="testimonial-card">
-        <p class="testimonial-quote">
-          "Smty was a key enabler during Augtraveler's journey through the XR
-          Accelerator Program by MEITY and META, hosted at the Sikkim Manipal
-          University incubation centre."
-        </p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">PM</div>
-          <div>
-            <p class="testimonial-name">Pankaj Manchanda</p>
-            <p class="testimonial-role">Founder &amp; CEO, Augtraveler</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <p class="testimonial-quote">
-          "Smty is a very hard working and responsible person who has always helped and supported various startups associated.
-          Her professionalism, proactive approach, and genuine interest in helping startups grow truly set her apart."
-        </p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">NR</div>
-          <div>
-            <p class="testimonial-name">Karma Thutop Chechutharpa</p>
-            <p class="testimonial-role">Founder, OurGuest.in</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <p class="testimonial-quote">
-          "Smty's professionalism, proactive approach, and genuine interest in
-          helping startups grow truly set her apart. Any organization would be
-          lucky to have her on board!"
-        </p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">NR</div>
-          <div>
-            <p class="testimonial-name">Nitin Rai</p>
-            <p class="testimonial-role">Co-founder, O2 Himalaya</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <p class="testimonial-quote">
-          "They approach problems methodically, ask the right questions, and
-          bring clarity to complex situations."
-        </p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">SH</div>
-          <div>
-            <p class="testimonial-name">Sneha Harinder</p>
-            <p class="testimonial-role">XR Lead, Deloitte (Emmy Nominee)</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <p class="testimonial-quote">
-          "Smty has played a key role in supporting and enabling several
-          promising startups in Northeast India. She brings a strong ability to
-          manage stakeholders effectively."
-        </p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">AU</div>
-          <div>
-            <p class="testimonial-name">Aditya Upadhyay</p>
-            <p class="testimonial-role">Technology Lead, MeMeraki</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <p class="testimonial-quote">
-          "Smty is skilled at solving problems and helps others succeed.
-          She is passionate about supporting startups and works to create
-          opportunities for growth and innovation in the community."
-        </p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">PN</div>
-          <div>
-            <p class="testimonial-name">Pratul Narayan Singh</p>
-            <p class="testimonial-role">Associate Director – ESG Advisory, KPMG India</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <p class="testimonial-quote">
-          "Smty's dedication and diligence were instrumental in driving the
-          program's success, consistently providing thoughtful support and
-          ensuring every detail was handled with care."
-        </p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">SC</div>
-          <div>
-            <p class="testimonial-name">Sibabrata Choudhury</p>
-            <p class="testimonial-role">Co-founder, Aveti Learning</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <p class="testimonial-quote">
-          "Smty has demonstrated commendable dedication in working closely with startups across various sectors. 
-          She has been actively involved in programs that offer comprehensive support to startups in the Northeast region of India. 
-          She contributed to supporting the successful implementation of several government and corporate startup initiatives."
-        </p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">SC</div>
-          <div>
-            <p class="testimonial-name">Thiyam Akuvan</p>
-            <p class="testimonial-role">Founder, Akumen Artificial Intelligence</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════
-       AI CHAT
-  ══════════════════════════════════════ -->
-  <section id="ai-chat">
-    <p class="section-label">06 / AI Assistant</p>
-    <h2 class="section-title">
-      Ask anything about<br />Smty's <em>work</em>
-    </h2>
-    <p class="chat-subtitle">
-      This AI has been briefed on my background, projects, and experience.
-      Ask about specific work, my approach to analytics, skills,
-      or availability — anything.
-    </p>
-
-    <div class="chat-window fade-up">
-      <div class="chat-topbar">
-        <span class="dot dot-r"></span>
-        <span class="dot dot-y"></span>
-        <span class="dot dot-g"></span>
-        <span class="chat-title-bar">Portfolio AI · Powered by Claude</span>
-      </div>
-
-      <div class="chat-messages" id="chat-messages">
-        <div class="msg">
-          <div class="msg-avatar ai-av">AI</div>
-          <div class="msg-bubble">
-            <p class="msg-name">Portfolio Assistant</p>
-            <p class="msg-text ai">
-              Hi! I'm Smty's portfolio AI. I know her projects, skills, and
-              experience in business strategy and analytics. What would you like
-              to know?
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="chat-suggestions">
-        <button class="suggestion-btn" onclick="askSuggestion(this)">Tell me about the startup funding work</button>
-        <button class="suggestion-btn" onclick="askSuggestion(this)">What analytics tools does Smty use?</button>
-        <button class="suggestion-btn" onclick="askSuggestion(this)">What's the ML lead scoring project?</button>
-        <button class="suggestion-btn" onclick="askSuggestion(this)">Is Smty open to new opportunities?</button>
-      </div>
-
-      <div class="chat-input-row">
-        <input
-          type="text"
-          id="chat-input"
-          placeholder="Ask about projects, skills, experience…"
-        />
-        <button id="chat-send" onclick="sendMessage()">Send</button>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ══════════════════════════════════════
-       CONTACT
-  ══════════════════════════════════════ -->
-  <section id="contact" class="contact-section">
-    <div class="fade-up">
-      <p class="section-label">07 / Contact</p>
-      <h2 class="section-title contact-title">
-        Let's build<br />something <em>meaningful.</em>
-      </h2>
-      <p class="contact-intro">
-        Open to full-time roles, advisory projects, and collaborations in
-        business strategy, analytics, and startup ecosystems. I typically
-        respond within 24 hours.
-      </p>
-      <a href="mailto:smty@gmail.com" class="btn-primary">Send an Email</a>
+<!-- COURSES TAKEN -->
+<section class="border-top" id="courses">
+  <div class="section-inner">
+    <p class="eyebrow">Learning &amp; Certifications</p>
+    <h2 class="section-title">Courses Taken</h2>
+    <div class="logos-grid">
+      <div class="logo-cell">
+        <img src="assets/images/university-of-chicago.png" alt="University of Chicago" />
+        <span class="logo-label">University of Chicago</span>
+      </div>
+      <div class="logo-cell">
+        <img src="assets/images/meta.png" alt="Meta" />
+        <span class="logo-label">Meta</span>
+      </div>
+      <div class="logo-cell">
+        <img src="assets/images/macquarie-university.png" alt="Macquarie University" />
+        <span class="logo-label">Macquarie University</span>
+      </div>
+      <div class="logo-cell">
+        <img src="assets/images/london-business-school.png" alt="London Business School" />
+        <span class="logo-label">London Business School</span>
+      </div>
+      <div class="logo-cell">
+        <img src="assets/images/isb.png" alt="ISB" />
+        <span class="logo-label">ISB</span>
+      </div>
+      <div class="logo-cell">
+        <img src="assets/images/iiit-bangalore.png" alt="IIIT Bangalore" />
+        <span class="logo-label">IIIT Bangalore</span>
+      </div>
+      <div class="logo-cell">
+        <img src="assets/images/ie-business-school.png" alt="IE Business School" />
+        <span class="logo-label">IE Business School</span>
+      </div>
+      <div class="logo-cell">
+        <img src="assets/images/ibm.png" alt="IBM" />
+        <span class="logo-label">IBM</span>
+      </div>
+      <div class="logo-cell">
+        <img src="assets/images/google.png" alt="Google" />
+        <span class="logo-label">Google</span>
+      </div>
+      <div class="logo-cell">
+        <img src="assets/images/deep-teaching-solutions.png" alt="Deep Teaching Solutions" />
+        <span class="logo-label">Deep Teaching Solutions</span>
+      </div>
+      <div class="logo-cell">
+        <img src="assets/images/databricks.svg" alt="Databricks" />
+        <span class="logo-label">Databricks</span>
+      </div>
     </div>
+  </div>
+</section>
 
-    <div class="fade-up" style="transition-delay:0.15s">
-      <div class="contact-item">
-        <span class="contact-label">Email</span>
-        <a href="mailto:smty@gmail.com">smty@gmail.com</a>
+<!-- RECOMMENDATIONS CAROUSEL -->
+<section class="border-top" id="recs">
+  <div class="section-inner">
+    <p class="eyebrow">Voices</p>
+    <h2 class="section-title">Recommendations</h2>
+    <div class="rec-list" id="rec-list">
+
+    <div class="rec-row" id="rec-row-0" onclick="highlightRec(0)">
+      <div class="rec-row-left">
+        <div class="rec-avatar">RU</div>
+        <div class="rec-row-meta">
+          <div class="rec-name">Richard Uy</div>
+          <div class="rec-title">Team Lead, Out in Tech</div>
+        </div>
       </div>
-      <div class="contact-item">
-        <span class="contact-label">LinkedIn</span>
-        <a href="https://www.linkedin.com/in/smtypradhan" target="_blank">linkedin.com/in/smtypradhan</a>
-      </div>
-      <div class="contact-item">
-        <span class="contact-label">GitHub</span>
-        <a href="https://www.github.com/smtypradhan" target="_blank">github.com/smtypradhan</a>
-      </div>
-      <div class="contact-item">
-        <span class="contact-label">Medium</span>
-        <a href="https://medium.com/@smty.pradhan" target="_blank">medium.com/@smty.pradhan</a>
-      </div>
-      <div class="contact-item">
-        <span class="contact-label">Portfolio</span>
-        <a href="https://smtypradhan.github.io/" target="_blank">smtypradhan.github.io</a>
+      <div class="rec-row-quote">
+        <p class="rec-quote">Smty was a standout contributor during Out in Tech's Digital Corps. As Team Lead, I was consistently impressed by how quickly she got up to speed and how much she accomplished.</p>
       </div>
     </div>
-  </section>
+    <div class="rec-row" id="rec-row-1" onclick="highlightRec(1)">
+      <div class="rec-row-left">
+        <div class="rec-avatar">AR</div>
+        <div class="rec-row-meta">
+          <div class="rec-name">Atanu Roy Chowdhury</div>
+          <div class="rec-title">Chairman and MD, Capsule Labs</div>
+              <div class="rec-extra">Harvard SEAS Alum</div>
+        </div>
+      </div>
+      <div class="rec-row-quote">
+        <p class="rec-quote">Smriti was exceptional in her handling of the META XR startup search program — sifting through hundreds of applications and coordinating thousands of founders. Her involvement was crucial in the success of the program and demonstrated her talents in managing large scale project implementation.</p>
+      </div>
+    </div>
+    <div class="rec-row" id="rec-row-2" onclick="highlightRec(2)">
+      <div class="rec-row-left">
+        <div class="rec-avatar">PM</div>
+        <div class="rec-row-meta">
+          <div class="rec-name">Pankaj Manchanda</div>
+          <div class="rec-title">Founder & CEO, Augtraveler</div>
+        </div>
+      </div>
+      <div class="rec-row-quote">
+        <p class="rec-quote">Smty was a key enabler during Augtraveler's journey through the XR Accelerator Program by MEITY and META. Hosted at the Sikkim Manipal University incubation centre, her support was invaluable throughout the program.</p>
+      </div>
+    </div>
+    <div class="rec-row" id="rec-row-3" onclick="highlightRec(3)">
+      <div class="rec-row-left">
+        <div class="rec-avatar">KC</div>
+        <div class="rec-row-meta">
+          <div class="rec-name">Karma Thutop Chechutharpa</div>
+          <div class="rec-title">Founder, OurGuest.in</div>
+        </div>
+      </div>
+      <div class="rec-row-quote">
+        <p class="rec-quote">Smty is a very hard working and responsible person who has always helped and supported various startups. Her professionalism, proactive approach, and genuine interest in helping startups grow truly set her apart.</p>
+      </div>
+    </div>
+    <div class="rec-row" id="rec-row-4" onclick="highlightRec(4)">
+      <div class="rec-row-left">
+        <div class="rec-avatar">NR</div>
+        <div class="rec-row-meta">
+          <div class="rec-name">Nitin Rai</div>
+          <div class="rec-title">Co-founder, O2 Himalaya</div>
+        </div>
+      </div>
+      <div class="rec-row-quote">
+        <p class="rec-quote">Smty's professionalism, proactive approach, and genuine interest in helping startups grow truly set her apart. Any organization would be lucky to have her on board!</p>
+      </div>
+    </div>
+    <div class="rec-row" id="rec-row-5" onclick="highlightRec(5)">
+      <div class="rec-row-left">
+        <div class="rec-avatar">SH</div>
+        <div class="rec-row-meta">
+          <div class="rec-name">Sneha Harinder</div>
+          <div class="rec-title">XR Lead, Deloitte</div>
+              <div class="rec-extra">Emmy Nominee</div>
+        </div>
+      </div>
+      <div class="rec-row-quote">
+        <p class="rec-quote">They approach problems methodically, ask the right questions, and bring clarity to complex situations. A rare combination of analytical rigour and human-centred thinking.</p>
+      </div>
+    </div>
+    <div class="rec-row" id="rec-row-6" onclick="highlightRec(6)">
+      <div class="rec-row-left">
+        <div class="rec-avatar">AU</div>
+        <div class="rec-row-meta">
+          <div class="rec-name">Aditya Upadhyay</div>
+          <div class="rec-title">Technology Lead, MeMeraki</div>
+        </div>
+      </div>
+      <div class="rec-row-quote">
+        <p class="rec-quote">Smty has played a key role in supporting and enabling several promising startups in Northeast India. She brings a strong ability to manage stakeholders effectively.</p>
+      </div>
+    </div>
+    <div class="rec-row" id="rec-row-7" onclick="highlightRec(7)">
+      <div class="rec-row-left">
+        <div class="rec-avatar">PN</div>
+        <div class="rec-row-meta">
+          <div class="rec-name">Pratul Narayan Singh</div>
+          <div class="rec-title">Associate Director – ESG Advisory, KPMG India</div>
+        </div>
+      </div>
+      <div class="rec-row-quote">
+        <p class="rec-quote">Smty is skilled at solving problems and helps others succeed. She is passionate about supporting startups and works to create opportunities for growth and innovation in the community.</p>
+      </div>
+    </div>
+    <div class="rec-row" id="rec-row-8" onclick="highlightRec(8)">
+      <div class="rec-row-left">
+        <div class="rec-avatar">SC</div>
+        <div class="rec-row-meta">
+          <div class="rec-name">Sibabrata Choudhury</div>
+          <div class="rec-title">Co-founder, Aveti Learning</div>
+        </div>
+      </div>
+      <div class="rec-row-quote">
+        <p class="rec-quote">Smty's dedication and diligence were instrumental in driving the program's success. She consistently provided thoughtful support and ensured every detail was handled with care.</p>
+      </div>
+    </div>
+    <div class="rec-row" id="rec-row-9" onclick="highlightRec(9)">
+      <div class="rec-row-left">
+        <div class="rec-avatar">TA</div>
+        <div class="rec-row-meta">
+          <div class="rec-name">Thiyam Akuvan</div>
+          <div class="rec-title">Founder, Akumen Artificial Intelligence</div>
+        </div>
+      </div>
+      <div class="rec-row-quote">
+        <p class="rec-quote">Smty has demonstrated commendable dedication in working closely with startups across various sectors. She contributed to supporting the successful implementation of several government and corporate startup initiatives.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
 
-  <!-- ══════════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════ -->
-  <footer>
-    <p>© 2025 Smty Pradhan — All rights reserved</p>
-  </footer>
+<!-- CTA -->
+<div class="cta-band" id="contact">
+  <h2>Let's build something together.</h2>
+  <p>Open to full-time analytics roles and interesting conversations. Based in Queens, NYC.</p>
+  <div class="cta-links">
+    <a href="mailto:smtypradhan@gmail.com" class="cta-a primary">Email Me</a>
+    <a href="https://linkedin.com/in/smtypradhan" target="_blank" class="cta-a">LinkedIn</a>
+    <a href="https://github.com/smtypradhan" target="_blank" class="cta-a">GitHub</a>
+  </div>
+</div>
 
-  <script src="js/chat.js"></script>
-  <script src="js/animations.js"></script>
+<footer>
+  <span>© 2026 Smty Pradhan · Queens, New York</span>
+  <span>
+    <a href="https://linkedin.com/in/smtypradhan" target="_blank">LinkedIn</a> &nbsp;·&nbsp;
+    <a href="https://github.com/smtypradhan" target="_blank">GitHub</a>
+  </span>
+</footer>
 
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>

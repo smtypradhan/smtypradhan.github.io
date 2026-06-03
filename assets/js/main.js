@@ -1,156 +1,55 @@
-// Portfolio JavaScript - Save as assets/js/portfolio.js
+/* CURSOR */
+const dot = document.getElementById('cursor-dot');
+const ring = document.getElementById('cursor-ring');
+let mx = -100, my = -100, rx = -100, ry = -100;
 
-document.addEventListener('DOMContentLoaded', () => {
-    // ========================================
-    // FEATURED PROJECTS CAROUSEL
-    // ========================================
-    const projectsTrack = document.getElementById('projectsTrack');
-    const projectsPrev = document.getElementById('projectsPrev');
-    const projectsNext = document.getElementById('projectsNext');
-    const indicators = document.querySelectorAll('[data-index]');
-    
-    let currentSlide = 0;
-    const totalSlides = 3;
-    let autoPlayInterval;
+document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
 
-    // Update carousel position and indicators
-    function updateProjectsCarousel() {
-        projectsTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
-        
-        // Update indicators
-        indicators.forEach((indicator, index) => {
-            if (index === currentSlide) {
-                indicator.classList.remove('bg-gray-300');
-                indicator.classList.add('bg-blue-600');
-            } else {
-                indicator.classList.remove('bg-blue-600');
-                indicator.classList.add('bg-gray-300');
-            }
-        });
-    }
+function animCursor() {
+  dot.style.left = mx + 'px'; dot.style.top = my + 'px';
+  rx += (mx - rx) * 0.14;
+  ry += (my - ry) * 0.14;
+  ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+  requestAnimationFrame(animCursor);
+}
+animCursor();
 
-    // Go to previous slide
-    function goToPrevSlide() {
-        currentSlide = currentSlide === 0 ? totalSlides - 1 : currentSlide - 1;
-        updateProjectsCarousel();
-    }
-
-    // Go to next slide
-    function goToNextSlide() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        updateProjectsCarousel();
-    }
-
-    // Event listeners for navigation buttons
-    projectsPrev.addEventListener('click', () => {
-        goToPrevSlide();
-        resetAutoPlay();
-    });
-
-    projectsNext.addEventListener('click', () => {
-        goToNextSlide();
-        resetAutoPlay();
-    });
-
-    // Indicator click events
-    indicators.forEach((indicator) => {
-        indicator.addEventListener('click', () => {
-            currentSlide = parseInt(indicator.dataset.index);
-            updateProjectsCarousel();
-            resetAutoPlay();
-        });
-    });
-
-    // Auto-play functionality
-    function startAutoPlay() {
-        autoPlayInterval = setInterval(() => {
-            goToNextSlide();
-        }, 5000); // Change slide every 5 seconds
-    }
-
-    function stopAutoPlay() {
-        clearInterval(autoPlayInterval);
-    }
-
-    function resetAutoPlay() {
-        stopAutoPlay();
-        startAutoPlay();
-    }
-
-    // Start auto-play on load
-    startAutoPlay();
-
-    // Pause auto-play on hover
-    const carouselContainer = projectsTrack.parentElement.parentElement;
-    carouselContainer.addEventListener('mouseenter', stopAutoPlay);
-    carouselContainer.addEventListener('mouseleave', startAutoPlay);
-
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') {
-            goToPrevSlide();
-            resetAutoPlay();
-        } else if (e.key === 'ArrowRight') {
-            goToNextSlide();
-            resetAutoPlay();
-        }
-    });
-
-    // ========================================
-    // VISUAL STORYTELLING SCROLL ANIMATIONS
-    // ========================================
-    const storyItems = document.querySelectorAll('[data-story-item]');
-
-    // Intersection Observer for scroll animations
-    const observerOptions = {
-        threshold: 0.2,
-        rootMargin: '0px 0px -100px 0px'
-    };
-
-    const storyObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.remove('opacity-0', 'translate-y-5');
-                entry.target.classList.add('opacity-100', 'translate-y-0');
-            }
-        });
-    }, observerOptions);
-
-    // Observe all story items
-    storyItems.forEach(item => {
-        storyObserver.observe(item);
-    });
-
-    // ========================================
-    // SMOOTH SCROLL FOR ANCHOR LINKS
-    // ========================================
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-
-    // ========================================
-    // RESPONSIVE BEHAVIOR
-    // ========================================
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => {
-            updateProjectsCarousel();
-        }, 250);
-    });
-
-    // ========================================
-    // INITIALIZE
-    // ========================================
-    updateProjectsCarousel();
-    console.log('Portfolio initialized successfully!');
+const hoverEls = 'a, button, .project-card, .org-card, .c-dot, .ftab';
+document.querySelectorAll(hoverEls).forEach(el => {
+  el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+  el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
 });
+
+/* PROJECT FILTER */
+function filterProjects(cat, btn) {
+  document.querySelectorAll('.ftab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.style.display = (cat === 'all' || card.dataset.cat === cat) ? 'flex' : 'none';
+  });
+}
+
+/* CAROUSEL */
+
+
+/* COLLAB CAROUSEL */
+let collabCur = 0;
+const collabTotal = 3;
+function goCollab(n) {
+  collabCur = n;
+  document.getElementById('collab-track').style.transform = 'translateX(-' + (collabCur * 100) + '%)';
+  document.querySelectorAll('#collab-dots .c-dot').forEach((d,i) => d.classList.toggle('active', i === collabCur));
+}
+function nextCollab() { goCollab((collabCur + 1) % collabTotal); }
+function prevCollab() { goCollab((collabCur - 1 + collabTotal) % collabTotal); }
+setInterval(nextCollab, 4000);
+
+
+/* RECOMMENDATIONS HIGHLIGHT */
+function highlightRec(n) {
+  document.querySelectorAll('.rec-row').forEach((r, i) => {
+    r.classList.toggle('active', i === n);
+  });
+}
+// Highlight first on load
+document.addEventListener('DOMContentLoaded', () => { highlightRec(0); });
