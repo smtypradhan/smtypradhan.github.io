@@ -1,0 +1,59 @@
+{
+  "id": "life-path-constellation",
+  "slug": "life-path-constellation",
+  "title": "Life Path Constellation",
+  "tagline": "A 10-year life plan turned into a game you actually reopen.",
+  "summary": "An interactive constellation map that turns a five-pillar life plan — spirituality, career, finance, relationships, health — into something explorable instead of a document written once and forgotten. Check off goals, add your own, and carry progress between sessions with a portable save file — no backend required.",
+  "audienceHooks": {
+    "recruiter": "Solo-shipped an interactive data product — modeling, accessible SVG visualization, client-side state — tested end to end.",
+    "consultant": "A working demo of turning an abstract strategy framework into a tool people actually keep using."
+  },
+  "category": "Data & AI",
+  "tags": ["data-visualization", "gamification", "personal-productivity", "javascript", "svg", "accessibility", "ai-assisted-build"],
+  "status": "shipped",
+  "publishReady": true,
+  "featured": true,
+  "order": 1,
+  "dateStart": "2026-08-14",
+  "dateEnd": null,
+  "dateModified": "2026-08-14",
+  "role": "Sole designer & builder — concept, information design, interaction design, accessibility, and implementation.",
+  "technologies": [
+    { "name": "HTML5 / CSS3", "category": "language" },
+    { "name": "Vanilla JavaScript", "category": "language" },
+    { "name": "SVG", "category": "tool" },
+    { "name": "Claude (Cowork)", "category": "ai-tool" },
+    { "name": "Playwright", "category": "tool" }
+  ],
+  "caseStudy": {
+    "problem": "A five-pillar life plan (spirituality, career, finance, relationships, health) mapped across now/5-year/10-year horizons existed only as a static written doc — easy to draft once and easy to never open again.",
+    "approach": [
+      "Modeled each pillar as a branch of a radial 'skill tree' / constellation, with three time-horizon stars per branch radiating out from a central 'you are here' hub.",
+      "Applied a colorblind-safe, contrast-validated categorical color system — checked with a validator script rather than eyeballed — so each pillar reads as a distinct identity in both the visual map and a plain-text accessible table view.",
+      "Built a client-side goal-tracking layer: checkboxes, custom goal entry, per-star progress rings, and an overall progress bar.",
+      "Replaced browser storage with an explicit save/load file, so progress is portable across devices and never silently disappears.",
+      "QA'd every state — desktop, mobile, post-interaction, save/load round-trip — with headless-browser screenshot testing before calling it done."
+    ],
+    "solution": "A single self-contained HTML file that opens instantly with no install or server: an interactive constellation map (or a plain accessible table, toggled with one click) where goals can be checked off, new ones added per pillar, and progress exported to and restored from a small JSON file.",
+    "impactMetrics": [
+      { "label": "Goals tracked", "value": "33+", "description": "across 5 pillars × 3 time horizons, plus unlimited user-added goals" },
+      { "label": "Footprint", "value": "1 file, 0 dependencies", "description": "fully portable — opens in any modern browser" },
+      { "label": "Accessibility", "value": "CVD-validated palette + non-visual table view", "description": "colorblind-safe categorical colors, checked with a validator rather than eyeballed" }
+    ],
+    "learnings": "Building under a strict no-browser-storage constraint initially felt like a limitation — it ended up being the better design for a personal tool meant to be reopened across devices: an exportable save file is more trustworthy than invisible local state that can quietly reset."
+  },
+  "links": {
+    "liveUrl": "https://smtypradhan.github.io/demos/life-path-constellation/",
+    "caseStudyUrl": "https://smtypradhan.github.io/projects/life-path-constellation/"
+  },
+  "coverImage": {
+    "src": "/assets/images/projects/life-path-constellation/cover.png",
+    "alt": "A dark radial constellation map with five colored branches — spirituality, career, finance, relationships, and health — radiating from a central 'you are here' hub, each branch ending in three stars labeled Now, 5-Year, and 10-Year.",
+    "width": 1600,
+    "height": 1000
+  },
+  "seo": {
+    "schemaType": "SoftwareApplication",
+    "keywords": ["life planning tool", "goal tracker", "data visualization", "interactive svg", "gamified productivity"]
+  }
+}
