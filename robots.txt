@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://smtypradhan.github.io/sitemap.xml
