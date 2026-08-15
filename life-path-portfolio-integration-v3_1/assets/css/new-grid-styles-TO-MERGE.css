@@ -1,0 +1,46 @@
+/*
+  new-grid-styles-TO-MERGE.css
+
+  ONLY the new rules needed for the data-driven project grid and the
+  case-study pages. Append these into your REAL style.css — do not upload
+  the old "style.css" stand-in from earlier; that was a reconstruction for
+  previewing only and could overwrite your actual stylesheet.
+
+  Colors are hardcoded (not CSS variables) so this drops in cleanly
+  regardless of what your existing variable names are. If you already have
+  variables for these same colors, feel free to swap them in by hand.
+*/
+
+/* ---- Filter tabs (for #projects-filter above the grid) ---- */
+#projects-filter { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
+.filter-tab {
+  font: inherit; font-size: 13px; font-weight: 600; color: #52565f;
+  background: #f5f6f7; border: 1px solid #e4e5e8; border-radius: 999px;
+  padding: 8px 16px; cursor: pointer;
+}
+.filter-tab.is-active { background: #1a2e4a; color: #fff; border-color: #1a2e4a; }
+
+/* ---- Project grid / cards (for #projects-grid) ---- */
+#projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+.project-card {
+  border: 1px solid #e4e5e8; border-radius: 14px; overflow: hidden;
+  background: #ffffff; transition: transform .15s ease, box-shadow .15s ease;
+}
+.project-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(26,46,74,0.12); }
+.project-card__link { text-decoration: none; display: block; color: inherit; }
+.project-card__media { position: relative; aspect-ratio: 16/10; background: #f5f6f7; overflow: hidden; }
+.project-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.project-card__badge {
+  position: absolute; top: 12px; left: 12px; background: #1a2e4a; color: #fff;
+  font-size: 11px; font-weight: 700; letter-spacing: .3px; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 999px;
+}
+.project-card__body { padding: 18px 20px 22px; }
+.project-card__category { font-size: 11px; font-weight: 700; letter-spacing: .4px; text-transform: uppercase; color: #2563a8; }
+.project-card__title { font-size: 18px; margin: 6px 0 6px; font-weight: 700; }
+.project-card__tagline { font-size: 13.5px; color: #52565f; margin: 0 0 10px; }
+.project-card__stack { font-size: 12px; color: #8a8f98; margin: 0; }

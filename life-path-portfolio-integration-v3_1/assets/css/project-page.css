@@ -1,0 +1,49 @@
+/* project-page.css — styles specific to the new /projects/<slug>/ case-study pages. */
+
+.project-page { max-width: 780px; margin: 0 auto; padding: 32px 24px 80px; }
+
+.back-link {
+  display: inline-block; font-size: 13.5px; font-weight: 600; color: var(--accent-2);
+  text-decoration: none; margin-bottom: 28px;
+}
+.back-link:hover { text-decoration: underline; }
+
+.project-hero { margin-bottom: 28px; }
+.project-hero__category {
+  font-size: 12px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase;
+  color: var(--accent-2); margin: 0 0 8px;
+}
+.project-hero__title { font-size: 34px; margin: 0 0 10px; }
+.project-hero__tagline { font-size: 17px; color: var(--ink-secondary); margin: 0 0 20px; }
+
+.project-links { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn {
+  display: inline-block; font-size: 13.5px; font-weight: 600; text-decoration: none;
+  padding: 10px 18px; border-radius: 8px; border: 1px solid var(--border); color: var(--ink);
+}
+.btn--primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+.project-hero__image {
+  width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--border);
+  margin-bottom: 40px; display: block;
+}
+
+.project-body section { margin-bottom: 36px; }
+.project-body h2 { font-size: 20px; margin-bottom: 12px; }
+.project-body p { color: var(--ink-secondary); }
+
+.approach-steps { padding-left: 20px; color: var(--ink-secondary); }
+.approach-steps li { margin-bottom: 10px; }
+
+.metrics-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+.metric {
+  display: flex; flex-direction: column; gap: 4px; padding: 16px; border-radius: 10px;
+  background: var(--surface-alt); border: 1px solid var(--border);
+}
+.metric__value { font-size: 22px; font-weight: 700; color: var(--accent); }
+.metric__label { font-size: 12.5px; font-weight: 600; color: var(--ink); }
+.metric__desc { font-size: 12px; color: var(--ink-muted); }
+
+.project-meta dl { display: grid; grid-template-columns: 120px 1fr; gap: 8px 16px; margin: 0; }
+.project-meta dt { font-size: 12.5px; font-weight: 700; color: var(--ink-muted); }
+.project-meta dd { font-size: 14px; margin: 0; color: var(--ink-secondary); }

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life Path Constellation — Smty Pradhan — Data &amp; Analytics</title>
+<meta name="description" content="An interactive constellation map that turns a five-pillar life plan — spirituality, career, finance, relationships, health — into something explorable instead of a document written once and forgotten. Check off goals, add your own, and carry progress between sessions with a portable save file — no backend required.">
+<link rel="canonical" href="https://smtypradhan.github.io/projects/life-path-constellation/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Smty Pradhan — Data &amp; Analytics">
+<meta property="og:title" content="Life Path Constellation">
+<meta property="og:description" content="An interactive constellation map that turns a five-pillar life plan — spirituality, career, finance, relationships, health — into something explorable instead of a document written once and forgotten. Check off goals, add your own, and carry progress between sessions with a portable save file — no backend required.">
+<meta property="og:url" content="https://smtypradhan.github.io/projects/life-path-constellation/">
+<meta property="og:image" content="https://smtypradhan.github.io/assets/images/projects/life-path-constellation/cover.png">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="1000">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Life Path Constellation">
+<meta name="twitter:description" content="An interactive constellation map that turns a five-pillar life plan — spirituality, career, finance, relationships, health — into something explorable instead of a document written once and forgotten. Check off goals, add your own, and carry progress between sessions with a portable save file — no backend required.">
+<meta name="twitter:image" content="https://smtypradhan.github.io/assets/images/projects/life-path-constellation/cover.png">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Life Path Constellation",
+  "description": "An interactive constellation map that turns a five-pillar life plan — spirituality, career, finance, relationships, health — into something explorable instead of a document written once and forgotten. Check off goals, add your own, and carry progress between sessions with a portable save file — no backend required.",
+  "url": "https://smtypradhan.github.io/projects/life-path-constellation/",
+  "image": "https://smtypradhan.github.io/assets/images/projects/life-path-constellation/cover.png",
+  "dateCreated": "2026-08-14",
+  "dateModified": "2026-08-14",
+  "creator": {
+    "@type": "Person",
+    "name": "Smty Pradhan",
+    "url": "https://smtypradhan.github.io"
+  },
+  "keywords": "life planning tool, goal tracker, data visualization, interactive svg, gamified productivity",
+  "applicationCategory": "WebApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/project-page.css">
+</head>
+<body class="project-page">
+  <a class="back-link" href="/#projects">&larr; All projects</a>
+
+  <header class="project-hero">
+    <p class="project-hero__category">Data &amp; AI</p>
+    <h1 class="project-hero__title">Life Path Constellation</h1>
+    <p class="project-hero__tagline">A 10-year life plan turned into a game you actually reopen.</p>
+    <div class="project-links"><a class="btn btn--primary" href="https://smtypradhan.github.io/projects/life-path-constellation/demos/">View live demo</a></div>
+  </header>
+
+  <img class="project-hero__image" src="/assets/images/projects/life-path-constellation/cover.png" alt="A dark radial constellation map with five colored branches — spirituality, career, finance, relationships, and health — radiating from a central &#39;you are here&#39; hub, each branch ending in three stars labeled Now, 5-Year, and 10-Year." width="1600" height="1000">
+
+  <main class="project-body">
+    <section><h2>The problem</h2><p>A five-pillar life plan (spirituality, career, finance, relationships, health) mapped across now/5-year/10-year horizons existed only as a static written doc — easy to draft once and easy to never open again.</p></section>
+
+    <section>
+      <h2>Approach</h2>
+      <ol class="approach-steps">
+        <li>Modeled each pillar as a branch of a radial &#39;skill tree&#39; / constellation, with three time-horizon stars per branch radiating out from a central &#39;you are here&#39; hub.</li>
+        <li>Applied a colorblind-safe, contrast-validated categorical color system — checked with a validator script rather than eyeballed — so each pillar reads as a distinct identity in both the visual map and a plain-text accessible table view.</li>
+        <li>Built a client-side goal-tracking layer: checkboxes, custom goal entry, per-star progress rings, and an overall progress bar.</li>
+        <li>Replaced browser storage with an explicit save/load file, so progress is portable across devices and never silently disappears.</li>
+        <li>QA&#39;d every state — desktop, mobile, post-interaction, save/load round-trip — with headless-browser screenshot testing before calling it done.</li>
+      </ol>
+    </section>
+    <section><h2>Solution</h2><p>A single self-contained HTML file that opens instantly with no install or server: an interactive constellation map (or a plain accessible table, toggled with one click) where goals can be checked off, new ones added per pillar, and progress exported to and restored from a small JSON file.</p></section>
+
+    <section>
+      <h2>Impact</h2>
+      <div class="metrics-row">
+
+        <div class="metric">
+          <span class="metric__value">33+</span>
+          <span class="metric__label">Goals tracked</span>
+          <span class="metric__desc">across 5 pillars × 3 time horizons, plus unlimited user-added goals</span>
+        </div>
+
+        <div class="metric">
+          <span class="metric__value">1 file, 0 dependencies</span>
+          <span class="metric__label">Footprint</span>
+          <span class="metric__desc">fully portable — opens in any modern browser</span>
+        </div>
+
+        <div class="metric">
+          <span class="metric__value">CVD-validated palette + non-visual table view</span>
+          <span class="metric__label">Accessibility</span>
+          <span class="metric__desc">colorblind-safe categorical colors, checked with a validator rather than eyeballed</span>
+        </div>
+      </div>
+    </section>
+    <section><h2>What I'd carry forward</h2><p>Building under a strict no-browser-storage constraint initially felt like a limitation — it ended up being the better design for a personal tool meant to be reopened across devices: an exportable save file is more trustworthy than invisible local state that can quietly reset.</p></section>
+
+    <section class="project-meta">
+      <h2>Details</h2>
+      <dl>
+        <dt>Role</dt><dd>Sole designer &amp; builder — concept, information design, interaction design, accessibility, and implementation.</dd>
+        <dt>Timeline</dt><dd>2026-08-14 – ongoing</dd>
+        <dt>Built with</dt><dd>HTML5 / CSS3, Vanilla JavaScript, SVG, Claude (Cowork), Playwright</dd>
+      </dl>
+    </section>
+  </main>
+</body>
+</html>
