@@ -43,7 +43,7 @@
     "learnings": "Building under a strict no-browser-storage constraint initially felt like a limitation — it ended up being the better design for a personal tool meant to be reopened across devices: an exportable save file is more trustworthy than invisible local state that can quietly reset."
   },
   "links": {
-    "liveUrl": "https://smtypradhan.github.io/demos/life-path-constellation/",
+    "liveUrl": "https://smtypradhan.github.io/projects/life-path-constellation/demos/",
     "caseStudyUrl": "https://smtypradhan.github.io/projects/life-path-constellation/"
   },
   "coverImage": {
