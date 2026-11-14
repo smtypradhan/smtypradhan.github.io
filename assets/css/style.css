@@ -536,6 +536,7 @@ button.c-dot { border: none; padding: 0; }
 
 
 .rec-quote::before { content: '\201C'; }
+.rec-quote::after { content: '\201D'; }
 
 
 .rec-extra {
