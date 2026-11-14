@@ -1,0 +1,43 @@
+{
+  "id": "zero-point-meditation-analytics",
+  "slug": "zero-point-meditation-analytics",
+  "title": "Zero Point Meditation Center Analytics System",
+  "cardTag": "Nonprofit · Analytics",
+  "tagline": "End-to-end analytics build: GA4 dashboard, email segmentation, website performance report and 30-page playbook.",
+  "summary": "An end-to-end analytics system for a nonprofit meditation center: a GA4 dashboard, email list segmentation, a website performance report and a 30-page analytics playbook.",
+  "category": "Dashboards",
+  "tags": ["nonprofit", "web-analytics", "ga4", "email-marketing", "dashboard"],
+  "status": "shipped",
+  "publishReady": true,
+  "featured": false,
+  "order": 3,
+  "dateStart": null,
+  "dateEnd": null,
+  "dateModified": "2026-11-14",
+  "role": null,
+  "technologies": [
+    { "name": "GA4", "category": "tool" },
+    { "name": "Looker Studio", "category": "tool" },
+    { "name": "Excel", "category": "tool" }
+  ],
+  "caseStudy": {
+    "problem": null,
+    "approach": [
+      "Built a GA4 dashboard.",
+      "Segmented the email audience.",
+      "Produced a website performance report.",
+      "Wrote a 30-page analytics playbook."
+    ],
+    "solution": "An end-to-end analytics build covering web analytics, email segmentation, reporting and documentation.",
+    "impactMetrics": [
+      { "label": "Playbook", "value": "30 pages" }
+    ],
+    "learnings": null
+  },
+  "links": {},
+  "coverImage": {},
+  "seo": {
+    "schemaType": "CreativeWork",
+    "keywords": ["nonprofit analytics", "ga4 dashboard", "looker studio", "email segmentation"]
+  }
+}

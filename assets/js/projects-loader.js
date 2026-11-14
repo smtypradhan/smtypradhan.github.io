@@ -87,7 +87,7 @@
 
     return `
       <a class="project-card" data-cat="${escapeHTML(cat)}" data-slug="${escapeHTML(project.slug)}" href="${escapeHTML(caseStudyUrl)}">
-        <span class="proj-tag">${escapeHTML(project.category)}</span>
+        <span class="proj-tag">${escapeHTML(project.cardTag || project.category)}</span>
         <h3>${escapeHTML(project.title)}</h3>
         <p>${escapeHTML(project.tagline)}</p>
         <div class="proj-footer"><div class="chips">${stack.map((name) => `<span class="chip">${escapeHTML(name)}</span>`).join("")}</div><span class="proj-arrow">↗</span></div>

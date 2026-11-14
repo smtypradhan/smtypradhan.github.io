@@ -1,0 +1,43 @@
+{
+  "id": "analytics-job-tracker",
+  "slug": "analytics-job-tracker",
+  "title": "Analytics Job Tracker Dashboard",
+  "cardTag": "Tooling · Job Search",
+  "tagline": "HTML + Excel dual-format tracker with fit scoring, OPT compatibility flags, and recruiter contact management across 50+ firms.",
+  "summary": "A dual-format (HTML and Excel) job search tracker with fit scoring, OPT compatibility flags and recruiter contact management across 50+ firms.",
+  "category": "Strategy",
+  "tags": ["tooling", "job-search", "dashboard", "excel", "javascript"],
+  "status": "shipped",
+  "publishReady": true,
+  "featured": false,
+  "order": 7,
+  "dateStart": null,
+  "dateEnd": null,
+  "dateModified": "2026-11-14",
+  "role": null,
+  "technologies": [
+    { "name": "Excel", "category": "tool" },
+    { "name": "HTML/CSS", "category": "language" },
+    { "name": "JS", "category": "language" }
+  ],
+  "caseStudy": {
+    "problem": null,
+    "approach": [
+      "Built the tracker in two formats: an HTML dashboard and an Excel workbook.",
+      "Added fit scoring for each role.",
+      "Flagged OPT compatibility.",
+      "Tracked recruiter contacts."
+    ],
+    "solution": "A dual-format tracker covering 50+ firms.",
+    "impactMetrics": [
+      { "label": "Firms tracked", "value": "50+" }
+    ],
+    "learnings": null
+  },
+  "links": {},
+  "coverImage": {},
+  "seo": {
+    "schemaType": "CreativeWork",
+    "keywords": ["job tracker", "analytics job search", "excel dashboard"]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "ren-wellness-platform",
+  "slug": "ren-wellness-platform",
+  "title": "Ren — Wellness Platform",
+  "cardTag": "Startup · Pitch",
+  "tagline": "Concept pitch deck combining market sizing, user persona mapping, and go-to-market strategy for a community wellness platform.",
+  "summary": "A concept pitch deck for Ren, a community wellness platform, combining market sizing, user persona mapping and a go-to-market strategy.",
+  "category": "Strategy",
+  "tags": ["startup", "pitch-deck", "market-sizing", "ux-research", "go-to-market"],
+  "status": "concept",
+  "publishReady": true,
+  "featured": false,
+  "order": 6,
+  "dateStart": null,
+  "dateEnd": null,
+  "dateModified": "2026-11-14",
+  "role": null,
+  "technologies": [
+    { "name": "Strategy", "category": "skill" },
+    { "name": "UX Research", "category": "skill" },
+    { "name": "Slides", "category": "tool" }
+  ],
+  "caseStudy": {
+    "problem": null,
+    "approach": [
+      "Sized the market.",
+      "Mapped user personas.",
+      "Developed a go-to-market strategy."
+    ],
+    "solution": "A concept pitch deck for a community wellness platform.",
+    "impactMetrics": [],
+    "learnings": null
+  },
+  "links": {},
+  "coverImage": {},
+  "seo": {
+    "schemaType": "CreativeWork",
+    "keywords": ["wellness startup", "pitch deck", "market sizing", "go-to-market strategy"]
+  }
+}

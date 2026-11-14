@@ -57,6 +57,7 @@ function buildJsonLd(project) {
     base.operatingSystem = "Web";
     base.offers = { "@type": "Offer", price: "0", priceCurrency: "USD" };
   }
+  Object.keys(base).forEach((k) => { if (base[k] == null || base[k] === "") delete base[k]; });
   return JSON.stringify(base, null, 2);
 }
 
@@ -118,7 +119,7 @@ ${buildJsonLd(project)}
 <link rel="stylesheet" href="/assets/css/project-page.css">
 </head>
 <body class="project-page">
-  <a class="back-link" href="/#projects">&larr; All projects</a>
+  <a class="back-link" href="/#work">&larr; All projects</a>
 
   <header class="project-hero">
     <p class="project-hero__category">${esc(project.category)}</p>
@@ -151,8 +152,8 @@ ${buildJsonLd(project)}
     <section class="project-meta">
       <h2>Details</h2>
       <dl>
-        <dt>Role</dt><dd>${esc(project.role)}</dd>
-        <dt>Timeline</dt><dd>${esc(project.dateStart)}${project.dateEnd ? " – " + esc(project.dateEnd) : " – ongoing"}</dd>
+        ${project.role ? `<dt>Role</dt><dd>${esc(project.role)}</dd>` : ""}
+        ${project.dateStart ? `<dt>Timeline</dt><dd>${esc(project.dateStart)}${project.dateEnd ? " – " + esc(project.dateEnd) : " – ongoing"}</dd>` : ""}
         <dt>Built with</dt><dd>${(project.technologies || []).map((t) => esc(t.name)).join(", ")}</dd>
       </dl>
     </section>

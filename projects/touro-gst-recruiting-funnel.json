@@ -1,0 +1,41 @@
+{
+  "id": "touro-gst-recruiting-funnel",
+  "slug": "touro-gst-recruiting-funnel",
+  "title": "Touro GST Recruiting Funnel Analysis",
+  "cardTag": "Higher Ed · Funnel",
+  "tagline": "Interactive enrollment pipeline dashboard + bottleneck map identifying 3 critical drop-off points for Dean leadership.",
+  "summary": "An interactive enrollment pipeline dashboard and bottleneck map for Touro Graduate School of Technology that identified three critical drop-off points for Dean leadership.",
+  "category": "Dashboards",
+  "tags": ["higher-education", "funnel-analysis", "enrollment", "dashboard", "data-visualization"],
+  "status": "shipped",
+  "publishReady": true,
+  "featured": false,
+  "order": 4,
+  "dateStart": null,
+  "dateEnd": null,
+  "dateModified": "2026-11-14",
+  "role": null,
+  "technologies": [
+    { "name": "Excel", "category": "tool" },
+    { "name": "Python", "category": "language" },
+    { "name": "Data Viz", "category": "skill" }
+  ],
+  "caseStudy": {
+    "problem": null,
+    "approach": [
+      "Built an interactive enrollment pipeline dashboard.",
+      "Mapped bottlenecks across the recruiting funnel."
+    ],
+    "solution": "A dashboard and bottleneck map presented to Dean leadership.",
+    "impactMetrics": [
+      { "label": "Drop-off points identified", "value": "3", "description": "critical bottlenecks in the enrollment funnel" }
+    ],
+    "learnings": null
+  },
+  "links": {},
+  "coverImage": {},
+  "seo": {
+    "schemaType": "CreativeWork",
+    "keywords": ["recruiting funnel", "enrollment analytics", "higher education dashboard"]
+  }
+}

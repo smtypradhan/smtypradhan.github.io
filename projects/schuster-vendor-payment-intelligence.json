@@ -1,0 +1,41 @@
+{
+  "id": "schuster-vendor-payment-intelligence",
+  "slug": "schuster-vendor-payment-intelligence",
+  "title": "Schuster Vendor Payment Intelligence",
+  "cardTag": "ML · Retail",
+  "tagline": "Two-stage ML pipeline: K-Means segmentation + Random Forest late payment prediction across 500+ vendors.",
+  "summary": "A two-stage machine learning pipeline that segments 500+ vendors with K-Means clustering and predicts late payments with a Random Forest model, with results reported in Power BI.",
+  "category": "Data & AI",
+  "tags": ["machine-learning", "clustering", "classification", "retail", "python"],
+  "status": "shipped",
+  "publishReady": true,
+  "featured": false,
+  "order": 2,
+  "dateStart": null,
+  "dateEnd": null,
+  "dateModified": "2026-11-14",
+  "role": null,
+  "technologies": [
+    { "name": "Python", "category": "language" },
+    { "name": "scikit-learn", "category": "library" },
+    { "name": "PowerBI", "category": "tool" }
+  ],
+  "caseStudy": {
+    "problem": null,
+    "approach": [
+      "Stage 1: segmented vendors with K-Means clustering.",
+      "Stage 2: trained a Random Forest model to predict late payments."
+    ],
+    "solution": "A two-stage ML pipeline covering 500+ vendors, combining vendor segmentation with late-payment prediction, with results surfaced in Power BI.",
+    "impactMetrics": [
+      { "label": "Vendors analyzed", "value": "500+" }
+    ],
+    "learnings": null
+  },
+  "links": {},
+  "coverImage": {},
+  "seo": {
+    "schemaType": "CreativeWork",
+    "keywords": ["vendor segmentation", "late payment prediction", "k-means", "random forest", "power bi"]
+  }
+}
