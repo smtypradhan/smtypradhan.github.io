@@ -33,16 +33,66 @@ function filterProjects(cat, btn) {
 
 
 /* COLLAB CAROUSEL */
+const collabTrack = document.getElementById('collab-track');
+const collabSlides = collabTrack ? [...collabTrack.querySelectorAll('.collab-slide')] : [];
+const collabTotal = collabSlides.length;
+const collabDotsEl = document.getElementById('collab-dots');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 let collabCur = 0;
-const collabTotal = 3;
-function goCollab(n) {
-  collabCur = n;
-  document.getElementById('collab-track').style.transform = 'translateX(-' + (collabCur * 100) + '%)';
-  document.querySelectorAll('#collab-dots .c-dot').forEach((d,i) => d.classList.toggle('active', i === collabCur));
+let collabTimer = null;
+
+// One dot per slide, built from the markup so dots and slides can never disagree.
+if (collabDotsEl) {
+  collabDotsEl.innerHTML = collabSlides.map((_, i) =>
+    `<button type="button" class="c-dot${i === 0 ? ' active' : ''}" aria-label="Show logos ${i + 1} of ${collabTotal}"></button>`
+  ).join('');
+  collabDotsEl.querySelectorAll('.c-dot').forEach((d, i) => {
+    d.addEventListener('click', () => goCollab(i));
+    d.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+    d.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+  });
 }
-function nextCollab() { goCollab((collabCur + 1) % collabTotal); }
-function prevCollab() { goCollab((collabCur - 1 + collabTotal) % collabTotal); }
-setInterval(nextCollab, 4000);
+
+function goCollab(n) {
+  if (!collabTotal) return;
+  collabCur = (n + collabTotal) % collabTotal;
+  collabTrack.style.transform = 'translateX(-' + (collabCur * 100) + '%)';
+  collabSlides.forEach((s, i) => s.setAttribute('aria-hidden', i === collabCur ? 'false' : 'true'));
+  if (collabDotsEl) collabDotsEl.querySelectorAll('.c-dot').forEach((d, i) => {
+    d.classList.toggle('active', i === collabCur);
+    d.setAttribute('aria-current', i === collabCur ? 'true' : 'false');
+  });
+  restartCollabTimer(); // a manual move gets a full 4 s before the next auto-advance
+}
+function nextCollab() { goCollab(collabCur + 1); }
+function prevCollab() { goCollab(collabCur - 1); }
+
+function stopCollabTimer() { clearInterval(collabTimer); collabTimer = null; }
+function restartCollabTimer() {
+  stopCollabTimer();
+  if (!reduceMotion && collabTotal > 1) collabTimer = setInterval(nextCollab, 4000);
+}
+
+if (collabTotal) {
+  // Pause while the visitor is hovering or using the keyboard inside the carousel.
+  const wrap = collabTrack.closest('.collab-carousel-wrap');
+  wrap.addEventListener('mouseenter', stopCollabTimer);
+  wrap.addEventListener('mouseleave', restartCollabTimer);
+  wrap.addEventListener('focusin', stopCollabTimer);
+  wrap.addEventListener('focusout', restartCollabTimer);
+
+  // Swipe left/right on touch screens.
+  let touchX = null;
+  collabTrack.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; stopCollabTimer(); }, { passive: true });
+  collabTrack.addEventListener('touchend', e => {
+    if (touchX === null) return;
+    const dx = e.changedTouches[0].clientX - touchX;
+    touchX = null;
+    if (Math.abs(dx) > 40) (dx < 0 ? nextCollab : prevCollab)(); else restartCollabTimer();
+  });
+
+  goCollab(0);
+}
 
 
 /* RECOMMENDATIONS HIGHLIGHT */
