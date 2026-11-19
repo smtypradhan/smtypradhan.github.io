@@ -1,0 +1,64 @@
+{
+  "id": "ml-ecommerce-lead-scoring",
+  "slug": "ml-ecommerce-lead-scoring",
+  "title": "X Education Lead Scoring Model",
+  "cardTag": "ML · EdTech Sales",
+  "tagline": "Logistic-regression lead scoring (0–100) to lift an online-education sales team off a ~30% conversion rate: AUC 0.97, and 92% of flagged 'hot' leads converted.",
+  "summary": "A lead scoring model for X Education, an online course platform whose leads converted at only about 30% against a CEO target of 80%. A 12-variable logistic regression scores ~9,000 leads from 0 to 100 (AUC 0.97, ~92% accuracy on held-out data), so the sales team can focus calls on the leads most likely to buy.",
+  "category": "Data & AI",
+  "tags": ["machine-learning", "logistic-regression", "lead-scoring", "sales-analytics", "edtech", "python"],
+  "status": "shipped",
+  "publishReady": true,
+  "featured": false,
+  "order": 3,
+  "dateStart": null,
+  "dateEnd": null,
+  "dateModified": "2026-11-19",
+  "role": "Analyst and modeler: data cleaning, EDA, feature selection, model building and evaluation, the sales playbooks, and the stakeholder deck and executive summary.",
+  "technologies": [
+    { "name": "Python", "category": "language" },
+    { "name": "statsmodels", "category": "library" },
+    { "name": "scikit-learn", "category": "library" },
+    { "name": "pandas", "category": "library" },
+    { "name": "Matplotlib / Seaborn", "category": "library" },
+    { "name": "Jupyter", "category": "tool" }
+  ],
+  "caseStudy": {
+    "problem": "X Education generated plenty of leads but converted only about 30% of them. The CEO's target was 80%. Without any way to rank leads, the sales team spent equal time on every lead, most of whom would never buy.",
+    "stakeholders": [
+      { "who": "CEO", "role": "Set the 80% conversion target and was the audience for the executive summary and recommendations." },
+      { "who": "Sales team", "role": "Primary users of the 0–100 lead scores, using them to decide who to call first and who to move to email nurturing." },
+      { "who": "Seasonal sales interns (~10 per cycle)", "role": "Given an 'aggressive mode' call list for the two-month intern period, when the goal is to reach as many likely converters as possible." },
+      { "who": "Marketing", "role": "Given recommendations on website engagement, SMS outreach and targeting management specializations." }
+    ],
+    "approach": [
+      "Cleaned ~9,000 leads across 37 fields: dropped columns over 40% empty or filled in by sales only after a call, added an 'Others' category instead of losing the 37% of leads with no specialization, and standardized inconsistent labels.",
+      "EDA found that time spent on the website was the strongest behavioral signal (r = 0.36 with conversion) and that visits and page views overlapped heavily (r = 0.77).",
+      "Dummy-encoded the data to 81 features, used RFE to narrow it to 20, then refined over 9 GLM iterations, dropping variables with high p-values and VIF scores above 5.",
+      "Settled on a 12-variable logistic regression, chose a 0.38 probability cutoff from the sensitivity/specificity trade-off, and turned probabilities into 0–100 lead scores.",
+      "Turned the model's coefficients into two sales playbooks: one for intern season and one for quarters when the target is already met."
+    ],
+    "solution": "A lead scoring pipeline that gives every lead a 0–100 conversion score, plus a stakeholder deck, an executive summary and scenario playbooks that tell the sales team who to call, who to email and who to skip.",
+    "impactMetrics": [
+      { "label": "AUC-ROC", "value": "0.97", "description": "near-perfect separation of converters from non-converters" },
+      { "label": "Hot-lead precision", "value": "91.8%", "description": "of leads the model flags as likely to convert, about 92% did (training set)" },
+      { "label": "Held-out accuracy", "value": "91.9%", "description": "with 96% sensitivity on the test set, so the model generalizes rather than overfits" },
+      { "label": "Baseline → target", "value": "30% → 80%", "description": "the conversion gap the scoring model was built to close" }
+    ],
+    "businessOutcome": [
+      "Showed a path to the CEO's 80% target: leads the model flags as likely to convert did convert about 92% of the time historically, compared with a ~30% baseline across all leads.",
+      "Gave sales a 'conservation mode' for quarters when the target is met early: call only leads scoring 80 or more, move mid-tier leads to automated email, and drop leads tagged 'Ringing', 'Might be' or 'Worst' to cut wasted calls.",
+      "Gave the intern season an 'aggressive mode' call list prioritizing working professionals, highly engaged website visitors, SMS-responsive leads and management specializations, plus time-limited sign-up incentives.",
+      "Pointed marketing to the strongest signals of intent: website engagement, form fills (Lead Add Form) and SMS activity."
+    ],
+    "learnings": "Keeping the model interpretable was the point. A 12-variable logistic regression with readable coefficients gave the sales team rules they could act on, like 'call working professionals who got an SMS', not just a score they had to take on faith."
+  },
+  "links": {
+    "repoUrl": "https://github.com/smtypradhan/ML_for_eCommerce_Leads_Scoring"
+  },
+  "coverImage": {},
+  "seo": {
+    "schemaType": "CreativeWork",
+    "keywords": ["lead scoring", "logistic regression", "sales analytics", "conversion rate optimization", "edtech"]
+  }
+}

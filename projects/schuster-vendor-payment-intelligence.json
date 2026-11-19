@@ -3,39 +3,61 @@
   "slug": "schuster-vendor-payment-intelligence",
   "title": "Schuster Vendor Payment Intelligence",
   "cardTag": "ML · Retail",
-  "tagline": "Two-stage ML pipeline: K-Means segmentation + Random Forest late payment prediction across 500+ vendors.",
-  "summary": "A two-stage machine learning pipeline that segments 500+ vendors with K-Means clustering and predicts late payments with a Random Forest model, with results reported in Power BI.",
+  "tagline": "Two-stage ML pipeline: K-Means payer segmentation + Random Forest late-payment prediction — 81% precision across 94K invoices and $466M in open receivables.",
+  "summary": "A two-stage machine learning pipeline for Schuster, a global sports-goods retailer: K-Means segments 690 customer accounts into three payer profiles, and a tuned Random Forest flags late payments with 81% precision. Applied to 78K open invoices ($466M) so the collections team can work the riskiest accounts first.",
   "category": "Data & AI",
-  "tags": ["machine-learning", "clustering", "classification", "retail", "python"],
+  "tags": ["machine-learning", "clustering", "classification", "accounts-receivable", "retail", "python"],
   "status": "shipped",
   "publishReady": true,
   "featured": false,
   "order": 2,
   "dateStart": null,
   "dateEnd": null,
-  "dateModified": "2026-11-14",
-  "role": null,
+  "dateModified": "2026-11-19",
+  "role": "Sole analyst: data cleaning, feature engineering, segmentation, modeling, deployment to open invoices, and the stakeholder presentation.",
   "technologies": [
     { "name": "Python", "category": "language" },
+    { "name": "pandas", "category": "library" },
     { "name": "scikit-learn", "category": "library" },
-    { "name": "PowerBI", "category": "tool" }
+    { "name": "GridSearchCV", "category": "library" },
+    { "name": "Matplotlib / Seaborn / Plotly", "category": "library" },
+    { "name": "Jupyter", "category": "tool" }
   ],
   "caseStudy": {
-    "problem": null,
+    "problem": "Two-thirds (66%) of Schuster's 94K historical invoices were paid late, straining cash flow and supplier relationships. The collections team treated every account the same, and the top 10 customers held 94% of all receivables, so a few slow payers carried most of the risk.",
+    "stakeholders": [
+      { "who": "Collections team", "role": "Primary users of the risk-ranked open-invoice list and the segment playbooks for follow-up." },
+      { "who": "Finance / accounts-receivable leadership", "role": "Audience for the 20-slide findings deck on cash-flow risk, concentration and payment-term policy." },
+      { "who": "Key-account owners for the top 10 customers", "role": "Given per-customer late-payment profiles (e.g., ~175 vs ~35 days late on average) to tailor treatment." }
+    ],
     "approach": [
-      "Stage 1: segmented vendors with K-Means clustering.",
-      "Stage 2: trained a Random Forest model to predict late payments."
+      "Cleaned 94K received-payment records: removed invalid amounts, trimmed outliers at the 1st–99th percentile, and engineered the late-payment target plus payment-term and payment-time features.",
+      "EDA surfaced where lateness concentrates: SAR, USD and AED invoices; goods over services; 30/60-day terms from invoice date; and repeating weekly spikes.",
+      "Segmented customers with K-Means on mean and variability of payment time, choosing k = 3 by silhouette score: Punctual, Erratic and Variable payers.",
+      "Fed the segment label into a Random Forest classifier, tuned with 5-fold GridSearchCV and optimized for the late-payment class.",
+      "Scored every open invoice through the same pipeline to produce a prioritized, risk-ranked collections list."
     ],
-    "solution": "A two-stage ML pipeline covering 500+ vendors, combining vendor segmentation with late-payment prediction, with results surfaced in Power BI.",
+    "solution": "A reproducible notebook pipeline (EDA → segmentation → prediction → open-invoice scoring) plus a stakeholder deck that turns model output into segment-specific collection playbooks.",
     "impactMetrics": [
-      { "label": "Vendors analyzed", "value": "500+" }
+      { "label": "Late-payment precision", "value": "81%", "description": "when the model flags an invoice as late, it is right 4 times in 5" },
+      { "label": "Open receivables scored", "value": "$466M", "description": "78K open invoices risk-ranked for the collections team" },
+      { "label": "Invoices modeled", "value": "94K", "description": "historical payments across 690 customer accounts" },
+      { "label": "Receivables concentration", "value": "94%", "description": "held by the top 10 customers — where collections effort pays off most" }
     ],
-    "learnings": null
+    "businessOutcome": [
+      "Moved collections from contacting every account the same way to a ranked worklist: on a 66% late base rate, the model's flags are correct 81% of the time.",
+      "Gave each payer segment its own playbook: early-payment discounts and rewards for Punctual payers, explicit term agreements for Erratic payers, and flexible schedules with personal follow-up for Variable payers.",
+      "Recommended moving 30/60-day invoice-date terms to end-of-month terms (15 or 60 days EOM), which showed better on-time compliance.",
+      "Gave the team a seasonal calendar to add collections capacity before the late-payment spikes in late January, mid-April and late May."
+    ],
+    "learnings": "Optimizing for the class the business acts on mattered more than overall accuracy (64%). A model that is trustworthy when it says 'late' is what lets a collections team act on it."
   },
-  "links": {},
+  "links": {
+    "repoUrl": "https://github.com/smtypradhan/EDA_for_Retail_and_eCommerce"
+  },
   "coverImage": {},
   "seo": {
     "schemaType": "CreativeWork",
-    "keywords": ["vendor segmentation", "late payment prediction", "k-means", "random forest", "power bi"]
+    "keywords": ["late payment prediction", "accounts receivable analytics", "customer segmentation", "k-means", "random forest", "collections strategy"]
   }
 }

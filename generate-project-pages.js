@@ -70,6 +70,27 @@ function renderMetricRow(m) {
         </div>`;
 }
 
+function renderStakeholders(list) {
+  if (!list || !list.length) return "";
+  return `
+    <section>
+      <h2>Stakeholders</h2>
+      <ul class="stakeholder-list">
+        ${list.map((s) => `<li><span class="stakeholder__who">${esc(s.who)}</span>${s.role ? `<span class="stakeholder__role">${esc(s.role)}</span>` : ""}</li>`).join("\n        ")}
+      </ul>
+    </section>`;
+}
+
+function renderOutcome(outcome) {
+  if (!outcome) return "";
+  const items = Array.isArray(outcome) ? outcome : [outcome];
+  return `
+    <section>
+      <h2>Business outcome</h2>
+      ${items.length === 1 ? `<p>${esc(items[0])}</p>` : `<ul class="outcome-list">${items.map((o) => `<li>${esc(o)}</li>`).join("")}</ul>`}
+    </section>`;
+}
+
 function renderLinks(links) {
   if (!links) return "";
   const buttons = [];
@@ -132,6 +153,7 @@ ${buildJsonLd(project)}
 
   <main class="project-body">
     ${cs.problem ? `<section><h2>The problem</h2><p>${esc(cs.problem)}</p></section>` : ""}
+    ${renderStakeholders(cs.stakeholders)}
     ${cs.approach && cs.approach.length ? `
     <section>
       <h2>Approach</h2>
@@ -147,6 +169,7 @@ ${buildJsonLd(project)}
         ${cs.impactMetrics.map(renderMetricRow).join("\n")}
       </div>
     </section>` : ""}
+    ${renderOutcome(cs.businessOutcome)}
     ${cs.learnings ? `<section><h2>What I'd carry forward</h2><p>${esc(cs.learnings)}</p></section>` : ""}
 
     <section class="project-meta">

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X Education Lead Scoring Model — Smty Pradhan — Data &amp; Analytics</title>
+<meta name="description" content="A lead scoring model for X Education, an online course platform whose leads converted at only about 30% against a CEO target of 80%. A 12-variable logistic regression scores ~9,000 leads from 0 to 100 (AUC 0.97, ~92% accuracy on held-out data), so the sales team can focus calls on the leads most likely to buy.">
+<link rel="canonical" href="https://smtypradhan.github.io/projects/ml-ecommerce-lead-scoring/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Smty Pradhan — Data &amp; Analytics">
+<meta property="og:title" content="X Education Lead Scoring Model">
+<meta property="og:description" content="A lead scoring model for X Education, an online course platform whose leads converted at only about 30% against a CEO target of 80%. A 12-variable logistic regression scores ~9,000 leads from 0 to 100 (AUC 0.97, ~92% accuracy on held-out data), so the sales team can focus calls on the leads most likely to buy.">
+<meta property="og:url" content="https://smtypradhan.github.io/projects/ml-ecommerce-lead-scoring/">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="X Education Lead Scoring Model">
+<meta name="twitter:description" content="A lead scoring model for X Education, an online course platform whose leads converted at only about 30% against a CEO target of 80%. A 12-variable logistic regression scores ~9,000 leads from 0 to 100 (AUC 0.97, ~92% accuracy on held-out data), so the sales team can focus calls on the leads most likely to buy.">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "X Education Lead Scoring Model",
+  "description": "A lead scoring model for X Education, an online course platform whose leads converted at only about 30% against a CEO target of 80%. A 12-variable logistic regression scores ~9,000 leads from 0 to 100 (AUC 0.97, ~92% accuracy on held-out data), so the sales team can focus calls on the leads most likely to buy.",
+  "url": "https://smtypradhan.github.io/projects/ml-ecommerce-lead-scoring/",
+  "dateModified": "2026-11-19",
+  "creator": {
+    "@type": "Person",
+    "name": "Smty Pradhan",
+    "url": "https://smtypradhan.github.io"
+  },
+  "keywords": "lead scoring, logistic regression, sales analytics, conversion rate optimization, edtech"
+}
+</script>
+
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/project-page.css">
+</head>
+<body class="project-page">
+  <a class="back-link" href="/#work">&larr; All projects</a>
+
+  <header class="project-hero">
+    <p class="project-hero__category">Data &amp; AI</p>
+    <h1 class="project-hero__title">X Education Lead Scoring Model</h1>
+    <p class="project-hero__tagline">Logistic-regression lead scoring (0–100) to lift an online-education sales team off a ~30% conversion rate: AUC 0.97, and 92% of flagged &#39;hot&#39; leads converted.</p>
+    <div class="project-links"><a class="btn" href="https://github.com/smtypradhan/ML_for_eCommerce_Leads_Scoring">View code</a></div>
+  </header>
+
+  
+
+  <main class="project-body">
+    <section><h2>The problem</h2><p>X Education generated plenty of leads but converted only about 30% of them. The CEO&#39;s target was 80%. Without any way to rank leads, the sales team spent equal time on every lead, most of whom would never buy.</p></section>
+    
+    <section>
+      <h2>Stakeholders</h2>
+      <ul class="stakeholder-list">
+        <li><span class="stakeholder__who">CEO</span><span class="stakeholder__role">Set the 80% conversion target and was the audience for the executive summary and recommendations.</span></li>
+        <li><span class="stakeholder__who">Sales team</span><span class="stakeholder__role">Primary users of the 0–100 lead scores, using them to decide who to call first and who to move to email nurturing.</span></li>
+        <li><span class="stakeholder__who">Seasonal sales interns (~10 per cycle)</span><span class="stakeholder__role">Given an &#39;aggressive mode&#39; call list for the two-month intern period, when the goal is to reach as many likely converters as possible.</span></li>
+        <li><span class="stakeholder__who">Marketing</span><span class="stakeholder__role">Given recommendations on website engagement, SMS outreach and targeting management specializations.</span></li>
+      </ul>
+    </section>
+    
+    <section>
+      <h2>Approach</h2>
+      <ol class="approach-steps">
+        <li>Cleaned ~9,000 leads across 37 fields: dropped columns over 40% empty or filled in by sales only after a call, added an &#39;Others&#39; category instead of losing the 37% of leads with no specialization, and standardized inconsistent labels.</li>
+        <li>EDA found that time spent on the website was the strongest behavioral signal (r = 0.36 with conversion) and that visits and page views overlapped heavily (r = 0.77).</li>
+        <li>Dummy-encoded the data to 81 features, used RFE to narrow it to 20, then refined over 9 GLM iterations, dropping variables with high p-values and VIF scores above 5.</li>
+        <li>Settled on a 12-variable logistic regression, chose a 0.38 probability cutoff from the sensitivity/specificity trade-off, and turned probabilities into 0–100 lead scores.</li>
+        <li>Turned the model&#39;s coefficients into two sales playbooks: one for intern season and one for quarters when the target is already met.</li>
+      </ol>
+    </section>
+    <section><h2>Solution</h2><p>A lead scoring pipeline that gives every lead a 0–100 conversion score, plus a stakeholder deck, an executive summary and scenario playbooks that tell the sales team who to call, who to email and who to skip.</p></section>
+    
+    <section>
+      <h2>Impact</h2>
+      <div class="metrics-row">
+        
+        <div class="metric">
+          <span class="metric__value">0.97</span>
+          <span class="metric__label">AUC-ROC</span>
+          <span class="metric__desc">near-perfect separation of converters from non-converters</span>
+        </div>
+
+        <div class="metric">
+          <span class="metric__value">91.8%</span>
+          <span class="metric__label">Hot-lead precision</span>
+          <span class="metric__desc">of leads the model flags as likely to convert, about 92% did (training set)</span>
+        </div>
+
+        <div class="metric">
+          <span class="metric__value">91.9%</span>
+          <span class="metric__label">Held-out accuracy</span>
+          <span class="metric__desc">with 96% sensitivity on the test set, so the model generalizes rather than overfits</span>
+        </div>
+
+        <div class="metric">
+          <span class="metric__value">30% → 80%</span>
+          <span class="metric__label">Baseline → target</span>
+          <span class="metric__desc">the conversion gap the scoring model was built to close</span>
+        </div>
+      </div>
+    </section>
+    
+    <section>
+      <h2>Business outcome</h2>
+      <ul class="outcome-list"><li>Showed a path to the CEO&#39;s 80% target: leads the model flags as likely to convert did convert about 92% of the time historically, compared with a ~30% baseline across all leads.</li><li>Gave sales a &#39;conservation mode&#39; for quarters when the target is met early: call only leads scoring 80 or more, move mid-tier leads to automated email, and drop leads tagged &#39;Ringing&#39;, &#39;Might be&#39; or &#39;Worst&#39; to cut wasted calls.</li><li>Gave the intern season an &#39;aggressive mode&#39; call list prioritizing working professionals, highly engaged website visitors, SMS-responsive leads and management specializations, plus time-limited sign-up incentives.</li><li>Pointed marketing to the strongest signals of intent: website engagement, form fills (Lead Add Form) and SMS activity.</li></ul>
+    </section>
+    <section><h2>What I'd carry forward</h2><p>Keeping the model interpretable was the point. A 12-variable logistic regression with readable coefficients gave the sales team rules they could act on, like &#39;call working professionals who got an SMS&#39;, not just a score they had to take on faith.</p></section>
+
+    <section class="project-meta">
+      <h2>Details</h2>
+      <dl>
+        <dt>Role</dt><dd>Analyst and modeler: data cleaning, EDA, feature selection, model building and evaluation, the sales playbooks, and the stakeholder deck and executive summary.</dd>
+        
+        <dt>Built with</dt><dd>Python, statsmodels, scikit-learn, pandas, Matplotlib / Seaborn, Jupyter</dd>
+      </dl>
+    </section>
+  </main>
+</body>
+</html>

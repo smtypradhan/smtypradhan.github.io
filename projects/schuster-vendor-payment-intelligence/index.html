@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Schuster Vendor Payment Intelligence — Smty Pradhan — Data &amp; Analytics</title>
-<meta name="description" content="A two-stage machine learning pipeline that segments 500+ vendors with K-Means clustering and predicts late payments with a Random Forest model, with results reported in Power BI.">
+<meta name="description" content="A two-stage machine learning pipeline for Schuster, a global sports-goods retailer: K-Means segments 690 customer accounts into three payer profiles, and a tuned Random Forest flags late payments with 81% precision. Applied to 78K open invoices ($466M) so the collections team can work the riskiest accounts first.">
 <link rel="canonical" href="https://smtypradhan.github.io/projects/schuster-vendor-payment-intelligence/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,13 +14,13 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Smty Pradhan — Data &amp; Analytics">
 <meta property="og:title" content="Schuster Vendor Payment Intelligence">
-<meta property="og:description" content="A two-stage machine learning pipeline that segments 500+ vendors with K-Means clustering and predicts late payments with a Random Forest model, with results reported in Power BI.">
+<meta property="og:description" content="A two-stage machine learning pipeline for Schuster, a global sports-goods retailer: K-Means segments 690 customer accounts into three payer profiles, and a tuned Random Forest flags late payments with 81% precision. Applied to 78K open invoices ($466M) so the collections team can work the riskiest accounts first.">
 <meta property="og:url" content="https://smtypradhan.github.io/projects/schuster-vendor-payment-intelligence/">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Schuster Vendor Payment Intelligence">
-<meta name="twitter:description" content="A two-stage machine learning pipeline that segments 500+ vendors with K-Means clustering and predicts late payments with a Random Forest model, with results reported in Power BI.">
+<meta name="twitter:description" content="A two-stage machine learning pipeline for Schuster, a global sports-goods retailer: K-Means segments 690 customer accounts into three payer profiles, and a tuned Random Forest flags late payments with 81% precision. Applied to 78K open invoices ($466M) so the collections team can work the riskiest accounts first.">
 
 <!-- Structured data -->
 <script type="application/ld+json">
@@ -28,15 +28,15 @@
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "Schuster Vendor Payment Intelligence",
-  "description": "A two-stage machine learning pipeline that segments 500+ vendors with K-Means clustering and predicts late payments with a Random Forest model, with results reported in Power BI.",
+  "description": "A two-stage machine learning pipeline for Schuster, a global sports-goods retailer: K-Means segments 690 customer accounts into three payer profiles, and a tuned Random Forest flags late payments with 81% precision. Applied to 78K open invoices ($466M) so the collections team can work the riskiest accounts first.",
   "url": "https://smtypradhan.github.io/projects/schuster-vendor-payment-intelligence/",
-  "dateModified": "2026-11-14",
+  "dateModified": "2026-11-19",
   "creator": {
     "@type": "Person",
     "name": "Smty Pradhan",
     "url": "https://smtypradhan.github.io"
   },
-  "keywords": "vendor segmentation, late payment prediction, k-means, random forest, power bi"
+  "keywords": "late payment prediction, accounts receivable analytics, customer segmentation, k-means, random forest, collections strategy"
 }
 </script>
 
@@ -49,43 +49,78 @@
   <header class="project-hero">
     <p class="project-hero__category">Data &amp; AI</p>
     <h1 class="project-hero__title">Schuster Vendor Payment Intelligence</h1>
-    <p class="project-hero__tagline">Two-stage ML pipeline: K-Means segmentation + Random Forest late payment prediction across 500+ vendors.</p>
-    
+    <p class="project-hero__tagline">Two-stage ML pipeline: K-Means payer segmentation + Random Forest late-payment prediction — 81% precision across 94K invoices and $466M in open receivables.</p>
+    <div class="project-links"><a class="btn" href="https://github.com/smtypradhan/EDA_for_Retail_and_eCommerce">View code</a></div>
   </header>
 
   
 
   <main class="project-body">
+    <section><h2>The problem</h2><p>Two-thirds (66%) of Schuster&#39;s 94K historical invoices were paid late, straining cash flow and supplier relationships. The collections team treated every account the same, and the top 10 customers held 94% of all receivables, so a few slow payers carried most of the risk.</p></section>
     
+    <section>
+      <h2>Stakeholders</h2>
+      <ul class="stakeholder-list">
+        <li><span class="stakeholder__who">Collections team</span><span class="stakeholder__role">Primary users of the risk-ranked open-invoice list and the segment playbooks for follow-up.</span></li>
+        <li><span class="stakeholder__who">Finance / accounts-receivable leadership</span><span class="stakeholder__role">Audience for the 20-slide findings deck on cash-flow risk, concentration and payment-term policy.</span></li>
+        <li><span class="stakeholder__who">Key-account owners for the top 10 customers</span><span class="stakeholder__role">Given per-customer late-payment profiles (e.g., ~175 vs ~35 days late on average) to tailor treatment.</span></li>
+      </ul>
+    </section>
     
     <section>
       <h2>Approach</h2>
       <ol class="approach-steps">
-        <li>Stage 1: segmented vendors with K-Means clustering.</li>
-        <li>Stage 2: trained a Random Forest model to predict late payments.</li>
+        <li>Cleaned 94K received-payment records: removed invalid amounts, trimmed outliers at the 1st–99th percentile, and engineered the late-payment target plus payment-term and payment-time features.</li>
+        <li>EDA surfaced where lateness concentrates: SAR, USD and AED invoices; goods over services; 30/60-day terms from invoice date; and repeating weekly spikes.</li>
+        <li>Segmented customers with K-Means on mean and variability of payment time, choosing k = 3 by silhouette score: Punctual, Erratic and Variable payers.</li>
+        <li>Fed the segment label into a Random Forest classifier, tuned with 5-fold GridSearchCV and optimized for the late-payment class.</li>
+        <li>Scored every open invoice through the same pipeline to produce a prioritized, risk-ranked collections list.</li>
       </ol>
     </section>
-    <section><h2>Solution</h2><p>A two-stage ML pipeline covering 500+ vendors, combining vendor segmentation with late-payment prediction, with results surfaced in Power BI.</p></section>
+    <section><h2>Solution</h2><p>A reproducible notebook pipeline (EDA → segmentation → prediction → open-invoice scoring) plus a stakeholder deck that turns model output into segment-specific collection playbooks.</p></section>
     
     <section>
       <h2>Impact</h2>
       <div class="metrics-row">
         
         <div class="metric">
-          <span class="metric__value">500+</span>
-          <span class="metric__label">Vendors analyzed</span>
-          
+          <span class="metric__value">81%</span>
+          <span class="metric__label">Late-payment precision</span>
+          <span class="metric__desc">when the model flags an invoice as late, it is right 4 times in 5</span>
+        </div>
+
+        <div class="metric">
+          <span class="metric__value">$466M</span>
+          <span class="metric__label">Open receivables scored</span>
+          <span class="metric__desc">78K open invoices risk-ranked for the collections team</span>
+        </div>
+
+        <div class="metric">
+          <span class="metric__value">94K</span>
+          <span class="metric__label">Invoices modeled</span>
+          <span class="metric__desc">historical payments across 690 customer accounts</span>
+        </div>
+
+        <div class="metric">
+          <span class="metric__value">94%</span>
+          <span class="metric__label">Receivables concentration</span>
+          <span class="metric__desc">held by the top 10 customers — where collections effort pays off most</span>
         </div>
       </div>
     </section>
     
+    <section>
+      <h2>Business outcome</h2>
+      <ul class="outcome-list"><li>Moved collections from contacting every account the same way to a ranked worklist: on a 66% late base rate, the model&#39;s flags are correct 81% of the time.</li><li>Gave each payer segment its own playbook: early-payment discounts and rewards for Punctual payers, explicit term agreements for Erratic payers, and flexible schedules with personal follow-up for Variable payers.</li><li>Recommended moving 30/60-day invoice-date terms to end-of-month terms (15 or 60 days EOM), which showed better on-time compliance.</li><li>Gave the team a seasonal calendar to add collections capacity before the late-payment spikes in late January, mid-April and late May.</li></ul>
+    </section>
+    <section><h2>What I'd carry forward</h2><p>Optimizing for the class the business acts on mattered more than overall accuracy (64%). A model that is trustworthy when it says &#39;late&#39; is what lets a collections team act on it.</p></section>
 
     <section class="project-meta">
       <h2>Details</h2>
       <dl>
+        <dt>Role</dt><dd>Sole analyst: data cleaning, feature engineering, segmentation, modeling, deployment to open invoices, and the stakeholder presentation.</dd>
         
-        
-        <dt>Built with</dt><dd>Python, scikit-learn, PowerBI</dd>
+        <dt>Built with</dt><dd>Python, pandas, scikit-learn, GridSearchCV, Matplotlib / Seaborn / Plotly, Jupyter</dd>
       </dl>
     </section>
   </main>
