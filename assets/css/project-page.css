@@ -66,12 +66,22 @@
   display: block;
 }
 
-.project-body section { margin-bottom: 36px; }
+/* style.css gives every <section> 5.5rem of vertical padding for the
+   homepage's full-width bands; reset it here so case-study sections read
+   as one continuous document, separated by a hairline instead of whitespace. */
+.project-body section {
+  padding: 32px 0;
+  margin: 0;
+  border-top: 0.5px solid var(--line);
+}
+.project-body section:first-child { border-top: 0; padding-top: 8px; }
+.project-body section:last-child { padding-bottom: 0; }
 .project-body h2 {
   font-family: var(--font-serif);
   font-size: 18px; font-weight: 500; color: var(--black);
-  margin-bottom: 12px;
+  margin: 0 0 14px;
 }
+.project-body p { margin: 0; }
 .project-body p { font-size: 13px; color: var(--gray-2); line-height: 1.65; }
 
 .approach-steps { padding-left: 20px; font-size: 13px; color: var(--gray-2); line-height: 1.65; }
@@ -79,8 +89,8 @@
 
 .metrics-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  gap: 12px;
 }
 .metric {
   display: flex; flex-direction: column; gap: 4px;
