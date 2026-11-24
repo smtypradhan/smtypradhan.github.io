@@ -44,7 +44,7 @@ let collabTimer = null;
 // One dot per slide, built from the markup so dots and slides can never disagree.
 if (collabDotsEl) {
   collabDotsEl.innerHTML = collabSlides.map((_, i) =>
-    `<button type="button" class="c-dot${i === 0 ? ' active' : ''}" aria-label="Show logos ${i + 1} of ${collabTotal}"></button>`
+    `<button type="button" class="c-dot${i === 0 ? ' active' : ''}" aria-label="Show logo ${i + 1} of ${collabTotal}"></button>`
   ).join('');
   collabDotsEl.querySelectorAll('.c-dot').forEach((d, i) => {
     d.addEventListener('click', () => goCollab(i));
@@ -62,7 +62,7 @@ function goCollab(n) {
     d.classList.toggle('active', i === collabCur);
     d.setAttribute('aria-current', i === collabCur ? 'true' : 'false');
   });
-  restartCollabTimer(); // a manual move gets a full 4 s before the next auto-advance
+  restartCollabTimer(); // a manual move gets a full 3 s before the next auto-advance
 }
 function nextCollab() { goCollab(collabCur + 1); }
 function prevCollab() { goCollab(collabCur - 1); }
@@ -70,7 +70,7 @@ function prevCollab() { goCollab(collabCur - 1); }
 function stopCollabTimer() { clearInterval(collabTimer); collabTimer = null; }
 function restartCollabTimer() {
   stopCollabTimer();
-  if (!reduceMotion && collabTotal > 1) collabTimer = setInterval(nextCollab, 4000);
+  if (!reduceMotion && collabTotal > 1) collabTimer = setInterval(nextCollab, 3000);
 }
 
 if (collabTotal) {

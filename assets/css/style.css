@@ -431,46 +431,45 @@ footer a:hover { color: var(--black); }
   min-width: 0;
   box-sizing: border-box;
   display: flex;
-  flex-wrap: wrap;      /* logos wrap to a new row instead of overflowing into the next slide */
   align-items: center;
   justify-content: center;
-  gap: 1.5rem 2rem;
   padding: 2rem 0;
 }
+/* One large logo per slide */
 .collab-cell {
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
-  gap: 1rem;
-  width: 190px;
+  gap: 1.25rem;
+  width: min(100%, 420px);
   box-sizing: border-box;
   border: none;
   background: transparent;
-  padding: 1.5rem;
+  padding: 2rem 1.5rem;
   border-radius: var(--r-lg);
   transition: background 0.15s;
 }
 .collab-cell:hover { background: var(--gray-6); }
 .collab-cell img {
-  width: 140px !important;
-  height: 90px !important;
+  width: 300px !important;
+  max-width: 100%;
+  height: 180px !important;
   object-fit: contain;
-  opacity: 0.9;
+  opacity: 0.95;
   transition: opacity 0.2s, transform 0.2s;
 }
-.collab-cell:hover img { opacity: 1; transform: scale(1.05); }
+.collab-cell:hover img { opacity: 1; transform: scale(1.04); }
 .collab-cell .logo-label {
-  font-size: 12px;
-  color: var(--gray-3);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--gray-2);
   text-align: center;
 }
-@media (max-width: 900px) {
-  /* two logos per row on tablets and phones, so a 4-logo slide is a tidy 2×2 */
-  .collab-slide { gap: 0.5rem; }
-  .collab-cell { width: calc(50% - 0.5rem); padding: 1rem 0.5rem; }
-}
 @media (max-width: 640px) {
-  .collab-cell img { width: 110px !important; height: 70px !important; }
+  .collab-cell { padding: 1.25rem 1rem; }
+  .collab-cell img { width: 220px !important; height: 130px !important; }
+  .collab-cell .logo-label { font-size: 14px; }
 }
+.carousel-dots { flex-wrap: wrap; max-width: 70%; }
 .collab-track { touch-action: pan-y; }
 button.c-dot { border: none; padding: 0; }
 .c-dot:focus-visible, .c-arrow:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 3px; }
@@ -610,3 +609,32 @@ button.c-dot { border: none; padding: 0; }
 @media (max-width: 640px) {
   .rec-row { grid-template-columns: 1fr; gap: 0.75rem; }
 }
+/* COURSES TAKEN — text links to certificates */
+.course-links {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: 10px;
+}
+.course-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 14px; color: var(--black);
+  padding: 10px 16px;
+  background: var(--white);
+  border: 0.5px solid var(--line);
+  border-radius: var(--r-lg);
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.course-link__arrow { font-size: 12px; color: var(--gray-4); transition: color 0.15s, transform 0.15s; }
+.course-link:hover { background: var(--accent-muted); border-color: var(--accent-bright); color: var(--accent); }
+.course-link:hover .course-link__arrow { color: var(--accent-bright); transform: translate(2px, -2px); }
+.course-link:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 2px; }
+
+/* Recommendation → LinkedIn link */
+.rec-link {
+  display: inline-flex; align-items: center; gap: 4px;
+  margin-top: 6px; width: fit-content;
+  font-size: 11px; font-weight: 500; color: var(--accent-bright);
+  border-bottom: 0.5px solid transparent;
+  transition: border-color 0.15s, color 0.15s;
+}
+.rec-link:hover { color: var(--accent); border-bottom-color: currentColor; }
+.rec-link:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 2px; }
