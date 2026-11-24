@@ -53,24 +53,31 @@ if (collabDotsEl) {
   });
 }
 
-function goCollab(n) {
+// Slides are stacked; the active one fades and drifts in while the previous one
+// fades and drifts out in the direction of travel. No rewind when looping.
+function goCollab(n, dir) {
   if (!collabTotal) return;
+  const prev = collabCur;
   collabCur = (n + collabTotal) % collabTotal;
-  collabTrack.style.transform = 'translateX(-' + (collabCur * 100) + '%)';
-  collabSlides.forEach((s, i) => s.setAttribute('aria-hidden', i === collabCur ? 'false' : 'true'));
+  collabTrack.dataset.dir = dir || (n < prev ? 'prev' : 'next');
+  collabSlides.forEach((s, i) => {
+    s.classList.toggle('is-active', i === collabCur);
+    s.classList.toggle('is-leaving', i === prev && prev !== collabCur);
+    s.setAttribute('aria-hidden', i === collabCur ? 'false' : 'true');
+  });
   if (collabDotsEl) collabDotsEl.querySelectorAll('.c-dot').forEach((d, i) => {
     d.classList.toggle('active', i === collabCur);
     d.setAttribute('aria-current', i === collabCur ? 'true' : 'false');
   });
-  restartCollabTimer(); // a manual move gets a full 3 s before the next auto-advance
+  restartCollabTimer(); // a manual move gets a full 3.5 s before the next auto-advance
 }
-function nextCollab() { goCollab(collabCur + 1); }
-function prevCollab() { goCollab(collabCur - 1); }
+function nextCollab() { goCollab(collabCur + 1, 'next'); }
+function prevCollab() { goCollab(collabCur - 1, 'prev'); }
 
 function stopCollabTimer() { clearInterval(collabTimer); collabTimer = null; }
 function restartCollabTimer() {
   stopCollabTimer();
-  if (!reduceMotion && collabTotal > 1) collabTimer = setInterval(nextCollab, 3000);
+  if (!reduceMotion && collabTotal > 1) collabTimer = setInterval(nextCollab, 3500);
 }
 
 if (collabTotal) {
@@ -91,7 +98,7 @@ if (collabTotal) {
     if (Math.abs(dx) > 40) (dx < 0 ? nextCollab : prevCollab)(); else restartCollabTimer();
   });
 
-  goCollab(0);
+  goCollab(0, 'next');
 }
 
 
