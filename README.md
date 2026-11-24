@@ -1,6 +1,6 @@
 # smtypradhan.github.io
 
-Personal portfolio — Smty Pradhan · Data & Analytics · New York City
+Personal portfolio — Smirti Pradhan · Data & Analytics · New York City
 
 ---
 

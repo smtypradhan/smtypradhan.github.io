@@ -23,7 +23,7 @@ const ROOT = __dirname;
 const PROJECTS_DIR = path.join(ROOT, "projects");
 const OUT_DIR = path.join(ROOT, "projects"); // projects/<slug>/index.html
 const SITE_ORIGIN = "https://smtypradhan.github.io";
-const SITE_NAME = "Smty Pradhan — Data & Analytics";
+const SITE_NAME = "Smirti Pradhan — Data & Analytics";
 
 function readJSON(p) { return JSON.parse(fs.readFileSync(p, "utf8")); }
 
@@ -49,7 +49,7 @@ function buildJsonLd(project) {
     image: absoluteUrl(project.coverImage && project.coverImage.src),
     dateCreated: project.dateStart,
     dateModified: project.dateModified,
-    creator: { "@type": "Person", name: "Smty Pradhan", url: SITE_ORIGIN },
+    creator: { "@type": "Person", name: "Smirti Pradhan", url: SITE_ORIGIN },
     keywords: (project.seo && project.seo.keywords || []).join(", ")
   };
   if (type === "SoftwareApplication") {
